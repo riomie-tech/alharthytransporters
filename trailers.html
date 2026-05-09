@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#6a87af",
+                    "tertiary-container": "#001e3b",
+                    "on-tertiary-fixed": "#001c38",
+                    "background": "#f7fafc",
+                    "error": "#ba1a1a",
+                    "tertiary": "#00030b",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "on-secondary-fixed-variant": "#862200",
+                    "on-primary-fixed-variant": "#364763",
+                    "outline": "#75777e",
+                    "on-tertiary-fixed-variant": "#2a486d",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-container": "#541100",
+                    "surface-variant": "#e0e3e5",
+                    "surface": "#f7fafc",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#c5c6ce",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e5e9eb",
+                    "surface-bright": "#f7fafc",
+                    "on-secondary-fixed": "#3b0900",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "surface-tint": "#4e5f7c",
+                    "tertiary-fixed-dim": "#abc8f4",
+                    "inverse-primary": "#b6c7e9",
+                    "on-primary-container": "#7586a5",
+                    "secondary-fixed": "#ffdbd1",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474d",
+                    "surface-dim": "#d7dadc",
+                    "surface-container": "#ebeef0",
+                    "on-primary-fixed": "#081c36",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#0a1d37",
+                    "inverse-on-surface": "#eef1f3",
+                    "primary": "#00030a",
+                    "on-surface": "#181c1e",
+                    "secondary": "#b02f00",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f1f4f6",
+                    "secondary-container": "#ff5722",
+                    "tertiary-fixed": "#d3e4ff",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-background": "#181c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "section-padding": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h1": ["Work Sans"],
+                    "h3": ["Work Sans"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h2": ["Work Sans"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 3, 10, 0.9) 0%, rgba(0, 3, 10, 0.4) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary docked full-width top-0 sticky z-50 shadow-md border-b border-outline-variant/20 dark:border-outline/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-h3 text-h3 font-bold tracking-tight text-on-primary dark:text-on-primary">AL HARTHY TRANSPORTERS</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-primary/80 font-medium hover:text-secondary-container transition-colors" href="#">Home</a>
+<a class="text-secondary-container font-bold border-b-2 border-secondary-container pb-1" href="#">Fleet Catalog</a>
+<a class="text-on-primary/80 font-medium hover:text-secondary-container transition-colors" href="#">Safety</a>
+<a class="text-on-primary/80 font-medium hover:text-secondary-container transition-colors" href="#">Careers</a>
+<button class="bg-secondary-container text-white px-6 py-3 font-button text-button rounded hover:bg-secondary-container/90 transition-all duration-200">REQUEST A QUOTE</button>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-primary">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="A professional, high-angle wide shot of a vast industrial logistics terminal during sunset. Dozens of heavy-duty semi-trucks and specialized transport trailers are neatly arranged in rows. The lighting is dramatic, with warm orange sunlight contrasting against deep navy blue shadows of the machinery. The aesthetic is modern, clean, and highlights industrial precision and scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGCfRTWtz-suDynsvivc0PXcXwolCUduc3kGfCbWNEDYrGQ9yLFMruKaHVLjINy_ElyjZtRi5zgzjqGDGlGA16tEPm0lWbwixawuAS8TTsGxU24e75aDa6vsvcrxmP5I1vKCa_4mBRYevqxHM8frLfCPV0puoMOJ3WLR0SqC2SLSZ_iacYpa6BzTP5_3Owhhc4AtEm1TVYttSXN81lW14WLVqMXVRFRzQUjJ6hLrLnRhVWh_1iJI7Y3SJRkk8gXAtlq4MyCnJwYw0"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">INDUSTRIAL LOGISTICAL PRECISION</span>
+<h1 class="font-h1 text-h1 text-white mb-6">Fleet Specification Catalog</h1>
+<p class="font-body-lg text-body-lg text-white/90">A deep dive into our heavy-duty trailer configurations, engineered for reliability and optimized for global logistical demands.</p>
+</div>
+</div>
+</section>
+<!-- Catalog Section -->
+<section class="py-section-padding px-8 max-w-container-max mx-auto">
+<div class="mb-stack-lg">
+<h2 class="font-h2 text-h2 text-primary border-l-4 border-secondary-container pl-6">Technical Configurations</h2>
+<p class="mt-4 text-on-surface-variant max-w-3xl">Explore our diverse range of trailer units, each specialized for specific cargo types and operational environments. All units are maintained to ISO safety standards.</p>
+</div>
+<!-- Bento Grid Catalog -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Flatbed Trailer -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A side view of a heavy-duty industrial flatbed trailer parked on a clean asphalt lot. The trailer is stark white with a reinforced steel frame, reflecting bright daylight. The background features a blurred industrial warehouse in neutral tones. The image captures a clean, professional, and reliable logistical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuvuo-qPu5hkhyrsVHdvXHgodUUIHRFzsV67ua-eDDGTIJ6xM1z_FYrEy1X259nnaM4dwJQnWQe4HnaSziP3T-MxURQBW0TR8Zsc9D2L9-I21qtH4jiMPFQQE58aQ3IZcqP3I6HkfVTFawH_K-e67MKA-PGrf7xx0rzwaXhnumDijfQR0yq3XuPIiTCdNfM7fEodNqxOCgLKCgtui12VJVGrrzkC3qAdYLvD7TZbXpNlFzJulNzJY9ZrKvvmhp_AJPVrqKFqj7s9w"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Flatbed Trailer</h3>
+<p class="text-on-surface-variant mb-stack-md">Versatile platform for oversized, heavy machinery and construction materials.</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">MAX PAYLOAD</span>
+<span class="font-bold text-primary">45 Tons</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">DIMENSIONS</span>
+<span class="font-bold text-primary">13.6m x 2.5m</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">Reinforced Anchor Points</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Skeletal Trailer -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A skeletal trailer designed for shipping containers, featuring a red steel chassis. The trailer is shown from a low angle to emphasize its structural strength. The background is a bright, high-contrast port setting with blue skies. The lighting is crisp, highlighting the industrial engineering of the container locks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-32LPj8EmeadWbBl9y43t3qnSmLrDw0l-oAazACQreeSvN0bmpz0muRI-b6BPL5OCB8B125sx_sjZWFSlwqjzrkbZ2i7_oO0jNKZLtVVMcNbcOXWi7iuYqZiNWVLhNrkWpQBJzST1ee1T0YAyqDRNEq31ib7teqKuzMWTydsB9Vks6xsOfZi9UNMeSUZjWs06n_0VaI5tJ2U2pzqKt6GcslBW3SjbalSnmvfnuBxzPl73gFy-v2cfRTa3DJ2CYDvFhQ0CNnIhug"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Skeletal Trailer</h3>
+<p class="text-on-surface-variant mb-stack-md">Optimized for container transport (20ft, 40ft, and 45ft configurations).</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">MAX PAYLOAD</span>
+<span class="font-bold text-primary">40 Tons</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">DIMENSIONS</span>
+<span class="font-bold text-primary">Tri-Axle Rigid Frame</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">Twist-Lock Systems</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Low-Loader -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A massive low-loader trailer carrying a large piece of industrial mining equipment. The vehicle is depicted on a paved industrial road under clear, bright midday sun. The low-profile design of the trailer and its heavy-duty wheels are clearly visible, emphasizing its capability to move extreme weight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJz0XpMxw0c5wA1jnQMLDxQ6RUuXXjwzwRJtT1_UC9SmQyHcbdWPZrj1DfmZWrSou6MsPEIF24j3hTH-wjKktXSl_V69gNWnSWk8JgQDUWqRMLKN9SVGvjnufb5K9wngboe6azy2fT_IvAlsPJoYxWkHRTmF7gqH8CeSF-moGtWrIpHgmk2WZvCy9UBNRsUQXm55_p6Fg8amTR237bmyPM0oPpTdelxSL_xzulidgNFPN_oSFs-XbGV-JKn_SFoABbmq5WlwUVMvw"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Low-Loader (Low-boy)</h3>
+<p class="text-on-surface-variant mb-stack-md">Specialized for extremely tall or heavy machinery requiring low clearance.</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">MAX PAYLOAD</span>
+<span class="font-bold text-primary">80 Tons</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">DIMENSIONS</span>
+<span class="font-bold text-primary">Detachable Gooseneck</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">Hydraulic Ramps</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Side-Loader -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A side-loader container trailer in action, its hydraulic arms lifting a blue shipping container from the ground. The setting is a clean, modern logistics yard with a bright blue sky. The lighting is natural and crisp, highlighting the precision and power of the hydraulic lifting mechanism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh7mkfChlgBSt2A-c1aICnbDACX1fSTGUTdPhYdVq_tYEdL0Y4kHTOh6OitpLXTr6F_sooEMisjUVNLUaq_a2SZc_PBsDdPxKDCCakd2zVMGl_G_YGF6qWz5wIlL8D4NHGct1bcN2skLpNjtb5OktwhU-ScofRkjpNmvsAfnqae2L6XBbyCOUY0KvAoiCRCT2NN9ZpA7Mc38S2K4dFnh5dA0T8igfG6Zet-npnIQvjBCTmh5cF1Kxo0Vrx8ML43ho-H8rKa3Ml5PM"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Side-Loader</h3>
+<p class="text-on-surface-variant mb-stack-md">Self-loading container trailer for sites without crane access.</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">MAX PAYLOAD</span>
+<span class="font-bold text-primary">36 Tons</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">DIMENSIONS</span>
+<span class="font-bold text-primary">Dual Crane Arms</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">Remote Operation</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Fuel Tanker -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A gleaming silver fuel tanker trailer reflecting the morning sun. The polished aluminum surface shows a mirrored reflection of the environment. The background is a clean, professional refueling terminal. The style is ultra-modern, emphasizing the safety and cleanliness of hazardous material transport." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEAUNIGQqC_QsTSt7ec-buzChR6aEl4OcRCDuR4VU0AnrKG7Xll2EhMGwzU43NIc-UOOeqI_vDWCPF5LfpXYsLztqQ-DmFldM09Tfep2ssoNf0plh4GydJ5J075nMAWfJTetlKBY1zmm4yg1X4ufu_Ph4rVEmwlMkROqs0097-Qqs19-Uqv3wFNWCaezH7Bs97Uu5bPqKwlKV7nxcaKRY4HQsUhChrp_ObzIoORCnKzufPPbvhJsXJQhi0Yf2hnSBn6PH0BR1WCok"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Fuel Tanker</h3>
+<p class="text-on-surface-variant mb-stack-md">Hazardous liquid transport units with multi-compartment setups.</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">CAPACITY</span>
+<span class="font-bold text-primary">45,000 Liters</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">COMPARTMENTS</span>
+<span class="font-bold text-primary">6 Independent Units</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">Bottom Loading System</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Refrigerated Trailer -->
+<div class="bg-white border border-outline-variant/30 rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+<div class="h-56 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A pristine white refrigerated trailer with a prominent Carrier cooling unit at the front. The trailer is parked in a modern, cold-chain distribution center with bright, even lighting. The image emphasizes sterility, advanced technology, and temperature-controlled logistics in a high-trust professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEX_vR8zGgTBHV-caVMRmfi_KjtOfxm9Qy6oazchkEvzCrqa4WTsOF_fHY9Mo-2ZJawxGbXQOyit_t34Zwa1xEtlHwGNO0HWfESGeFgsNsMf3aXVhpfwts_kLjmBWNXhGlFV6lZdlvsfuoIcCUQK3M0yDlCa9wf5zYN_nFLybgI05H9q5Yw8RBwDKQTmjzfMlzXZnfplkUCXpw6Su13CUOmn-a6hzWflYK2vFgR3di239PwvZOPv3yk3XTl9DJsX62Lj9TwejFSI8"/>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-2 uppercase">Reefer (Refrigerated)</h3>
+<p class="text-on-surface-variant mb-stack-md">Climate-controlled units for perishable goods and pharmaceuticals.</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">RANGE</span>
+<span class="font-bold text-primary">-25°C to +25°C</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">PAYLOAD</span>
+<span class="font-bold text-primary">28 Tons</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label-caps text-label-caps text-outline">FEATURES</span>
+<span class="font-bold text-secondary">GPS Temp Tracking</span>
+</div>
+</div>
+</div>
+<div class="p-stack-md pt-0">
+<button class="w-full py-3 bg-primary text-white font-button text-button rounded hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+                            BOOK THIS TRAILER <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Comparison -->
+<section class="bg-surface-container-low py-section-padding px-8">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg text-center">
+<h2 class="font-h2 text-h2 text-primary">Operational Comparison</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto mt-4">Cross-reference our fleet capabilities to find the exact match for your cargo requirements.</p>
+</div>
+<div class="overflow-x-auto bg-white rounded shadow-sm border border-outline-variant/30">
+<table class="w-full border-collapse">
+<thead class="bg-primary text-white font-label-caps">
+<tr>
+<th class="p-6 text-left border-r border-white/10">TRAILER TYPE</th>
+<th class="p-6 text-center border-r border-white/10">MAX PAYLOAD</th>
+<th class="p-6 text-center border-r border-white/10">AXLE CONFIG</th>
+<th class="p-6 text-center border-r border-white/10">UNLOADING TYPE</th>
+<th class="p-6 text-center">BEST FOR</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="p-6 font-bold text-primary border-r border-outline-variant/10">Flatbed</td>
+<td class="p-6 text-center border-r border-outline-variant/10">45,000 kg</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Tri-Axle</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Overhead Crane</td>
+<td class="p-6 text-center">Steel &amp; Wood</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="p-6 font-bold text-primary border-r border-outline-variant/10">Low-Loader</td>
+<td class="p-6 text-center border-r border-outline-variant/10">80,000 kg</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Multi-Axle</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Drive-Off Ramp</td>
+<td class="p-6 text-center">Heavy Excavators</td>
+</tr>
+<tr class="border-b border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<td class="p-6 font-bold text-primary border-r border-outline-variant/10">Fuel Tanker</td>
+<td class="p-6 text-center border-r border-outline-variant/10">45,000 L</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Tri-Axle</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Gravity/Pump</td>
+<td class="p-6 text-center">Liquid Energy</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-6 font-bold text-primary border-r border-outline-variant/10">Reefer</td>
+<td class="p-6 text-center border-r border-outline-variant/10">28,000 kg</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Tri-Axle</td>
+<td class="p-6 text-center border-r border-outline-variant/10">Rear Dock</td>
+<td class="p-6 text-center">Cold Chain Goods</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding px-8 bg-primary">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-h2 text-h2 text-white mb-6">Need a Specialized Configuration?</h2>
+<p class="text-white/80 max-w-2xl mx-auto mb-stack-lg font-body-lg">Our engineering team can provide custom logistical solutions for non-standard cargo and specialized industrial projects.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-4 bg-secondary-container text-white font-button text-button rounded hover:opacity-90 transition-all flex items-center justify-center gap-2">
+                        REQUEST FULL CATALOG (PDF) <span class="material-symbols-outlined">download</span>
+</button>
+<button class="px-10 py-4 border-2 border-white text-white font-button text-button rounded hover:bg-white hover:text-primary transition-all">
+                        CONSULT A LOGISTICS EXPERT
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary text-on-primary dark:text-on-tertiary full-width bottom-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-8 py-section-padding max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-h3 text-h3 font-bold text-on-primary dark:text-on-tertiary block mb-4">AL HARTHY TRANSPORTERS</span>
+<p class="text-on-primary/60 max-w-sm font-body-md">Delivering industrial logistical precision across the region with a fleet built for durability and speed.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-container">SOLUTIONS</span>
+<a class="text-on-primary-container dark:text-on-tertiary-container hover:text-on-primary hover:text-secondary-container underline transition-all font-body-md" href="#">Fleet Catalog</a>
+<a class="text-on-primary-container dark:text-on-tertiary-container hover:text-on-primary hover:text-secondary-container underline transition-all font-body-md" href="#">Global Logistics</a>
+<a class="text-on-primary-container dark:text-on-tertiary-container hover:text-on-primary hover:text-secondary-container underline transition-all font-body-md" href="#">Safety Standards</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-container">COMPANY</span>
+<a class="text-on-primary-container dark:text-on-tertiary-container hover:text-on-primary hover:text-secondary-container underline transition-all font-body-md" href="#">Career Opportunities</a>
+<a class="text-on-primary-container dark:text-on-tertiary-container hover:text-on-primary hover:text-secondary-container underline transition-all font-body-md" href="#">Contact Dispatch</a>
+<div class="mt-4 pt-4 border-t border-white/10">
+<p class="text-on-primary/40 font-body-md text-sm">© 2024 Al Harthy Transporters. Industrial Logistical Precision.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
