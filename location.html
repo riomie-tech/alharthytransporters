@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Areas &amp; Locations | Al Harthy Transporters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e0e3e5",
+                      "surface": "#f7fafc",
+                      "secondary-fixed-dim": "#ffb5a0",
+                      "surface-container": "#ebeef0",
+                      "on-tertiary-container": "#6a87af",
+                      "surface-tint": "#4e5f7c",
+                      "surface-container-low": "#f1f4f6",
+                      "surface-container-high": "#e5e9eb",
+                      "tertiary-fixed": "#d3e4ff",
+                      "surface-bright": "#f7fafc",
+                      "on-primary-fixed-variant": "#364763",
+                      "tertiary-fixed-dim": "#abc8f4",
+                      "primary-container": "#0a1d37",
+                      "outline-variant": "#c5c6ce",
+                      "primary-fixed-dim": "#b6c7e9",
+                      "primary": "#00030a",
+                      "on-surface-variant": "#44474d",
+                      "surface-dim": "#d7dadc",
+                      "secondary-fixed": "#ffdbd1",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#ff5722",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#b6c7e9",
+                      "on-tertiary-fixed-variant": "#2a486d",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#541100",
+                      "inverse-on-surface": "#eef1f3",
+                      "tertiary": "#00030b",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#001c38",
+                      "surface-variant": "#e0e3e5",
+                      "secondary": "#b02f00",
+                      "on-secondary-fixed-variant": "#862200",
+                      "on-primary-container": "#7586a5",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary-fixed": "#081c36",
+                      "tertiary-container": "#001e3b",
+                      "on-background": "#181c1e",
+                      "outline": "#75777e",
+                      "inverse-surface": "#2d3133",
+                      "background": "#f7fafc",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#3b0900",
+                      "on-surface": "#181c1e",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "stack-sm": "12px",
+                      "section-padding": "80px",
+                      "stack-md": "24px",
+                      "stack-lg": "48px"
+              },
+              "fontFamily": {
+                      "h3": ["Work Sans"],
+                      "body-lg": ["Inter"],
+                      "h2": ["Work Sans"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "button": ["Inter"],
+                      "h1": ["Work Sans"]
+              },
+              "fontSize": {
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-gradient {
+            background: linear-gradient(135deg, #f1f4f6 0%, #d6e3ff 100%);
+        }
+        .industrial-overlay {
+            background: linear-gradient(to right, rgba(10, 29, 55, 0.9) 0%, rgba(10, 29, 55, 0.4) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#0A1D37] dark:text-slate-100 text-3xl">local_shipping</span>
+<span class="text-xl font-black text-[#0A1D37] dark:text-white uppercase tracking-wider font-['Work_Sans']">Al Harthy Transporters</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors" href="#">Fleet</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors" href="#">Services</a>
+<a class="text-orange-600 dark:text-orange-400 font-bold border-b-2 border-orange-600" href="#">Locations</a>
+<button class="bg-secondary-container text-white px-6 py-2 font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity">Request Quote</button>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide panoramic shot of a modern logistics terminal in the Arabian desert at dusk. High-quality heavy-duty trucks are lined up precisely against a backdrop of a deep blue evening sky and orange horizon. The lighting is dramatic and cinematic, emphasizing industrial scale and regional dominance. The aesthetic is professional, clean, and high-trust, using a palette of navy and warm sunset tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvYQOw4WX5uP-K3l4E4P467WPNVRRCN1fGoRihvIPYDhdTvkne4P-V2cwtl-dYMyZL9Y_DGEXXc-mZxkfi02C2ieouFfGlJJYLLiq9XyB3-HCf7a8_hGQgkOSZN4H9TWJ4q9sx7TBn-Kv4VYvKKMsaOQUgeMS-HG5H8BnS_-d5JEcgZI6ZamyI-D0PWxe_B5wC6MCkFBK5p6c7KAswwZAaQBdZxjkdIWcI6p1ifZfNPIHjoe7zBhS05Xelv8XDjHhngB6kXhA4sfo"/>
+<div class="absolute inset-0 industrial-overlay"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-h1 text-h1 text-white mb-6">Our Operational Reach</h1>
+<p class="font-body-lg text-body-lg text-slate-200 mb-8 leading-relaxed">
+                        Establishing regional dominance across the GCC through precision logistics and a robust network that connects Oman, UAE, and Saudi Arabia with unmatched reliability.
+                    </p>
+<div class="flex gap-4">
+<div class="h-1 w-20 bg-secondary-container self-center"></div>
+<span class="font-label-caps text-label-caps text-white uppercase tracking-widest">Across the Arabian Peninsula</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Coverage Map Section -->
+<section class="py-section-padding bg-surface">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">Strategic GCC Network</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Our core transit corridors are designed for speed and safety, ensuring your cargo moves seamlessly through the region's most vital economic zones.
+                    </p>
+</div>
+<div class="relative aspect-video max-w-5xl mx-auto rounded-xl border border-outline-variant bg-white shadow-sm overflow-hidden p-8 map-gradient border-primary/10">
+<!-- Map Graphic Placeholder / Representation -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full border-[20px] border-dotted border-secondary-container opacity-20 rounded-full scale-150"></div>
+</div>
+<div class="relative w-full h-full flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply opacity-40" data-alt="A high-contrast, clean technical map representation of the Arabian Peninsula focusing on Oman, UAE, and Saudi Arabia. The map uses a minimalist navy blue and white color scheme with bright orange dashed lines indicating major transit corridors and shipping routes. Small pulsing dots represent strategic hubs. The style is professional, data-driven, and modern industrial, resembling a sophisticated logistics dashboard." data-location="Arabian Peninsula" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfIMn4sAlG6bPY-Dzq63TAu3ph0I_wReCl869homAjcZw2QKv8oPef_2kvsZCT4iGdVS8w4P9sj3AAfEjauDfqUkv0hlpZx-ItyTvjjw-cMemoH7B8cFDTkUVxcpErr7XWz60t0eeDUtXBzongMHd5DmV9Xd8wfDQ0pzgOxacAYolRxAjQzR7v-Qj1M49sZhb2_tiZKCFXFEtlFM9h2apnS7O2BYN0-ktOW_LosR_1DYyO2oyD3_a9_899dF29BEFFj3HiulFItyg"/>
+<!-- Transit Corridor Annotations -->
+<div class="absolute top-1/4 left-1/4 flex items-center gap-2 group">
+<div class="w-3 h-3 bg-secondary-container rounded-full animate-pulse"></div>
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-tighter">Saudi Hub</span>
+</div>
+<div class="absolute top-1/2 left-1/2 flex items-center gap-2 group">
+<div class="w-3 h-3 bg-secondary-container rounded-full animate-pulse"></div>
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-tighter">Dubai JAFZA</span>
+</div>
+<div class="absolute bottom-1/3 right-1/4 flex items-center gap-2 group">
+<div class="w-3 h-3 bg-secondary-container rounded-full animate-pulse"></div>
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold uppercase tracking-tighter">Muscat HQ</span>
+</div>
+<!-- Dashed Corridor Lines (SVG Representation) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 100 100">
+<path d="M25,25 L50,50 L75,66" fill="none" stroke="#ff5722" stroke-dasharray="2,2" stroke-width="0.5"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Hubs -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container uppercase">Strategic Points</span>
+<h2 class="font-h2 text-h2 text-primary mt-2">Our Key Logistics Hubs</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-md">
+                        Manned by logistics professionals 24/7, our hubs serve as the backbone for regional distribution and fleet maintenance.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Muscat HQ -->
+<div class="bg-white p-8 border border-slate-200 group hover:border-secondary-container transition-all shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container">corporate_fare</span>
+<span class="text-[10px] font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Headquarters</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Muscat HQ</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Oman Industrial Zone, Plot 442. Sultanate of Oman.</p>
+<div class="space-y-3 border-t border-slate-100 pt-6">
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">call</span>
+                                +968 2444 0000
+                            </div>
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                hq@alharthytrans.om
+                            </div>
+</div>
+</div>
+<!-- Dubai Hub -->
+<div class="bg-white p-8 border border-slate-200 group hover:border-secondary-container transition-all shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container">hub</span>
+<span class="text-[10px] font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Regional Link</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Dubai Hub</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Jebel Ali Free Zone (JAFZA), South Block B, Dubai, UAE.</p>
+<div class="space-y-3 border-t border-slate-100 pt-6">
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">call</span>
+                                +971 4 888 1234
+                            </div>
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                dubai@alharthytrans.com
+                            </div>
+</div>
+</div>
+<!-- Sohar Logistics Center -->
+<div class="bg-white p-8 border border-slate-200 group hover:border-secondary-container transition-all shadow-sm">
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container">precision_manufacturing</span>
+<span class="text-[10px] font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Port Operations</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">Sohar Logistics Center</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Near Sohar Port, Industrial Area Phase 3, Sohar, Oman.</p>
+<div class="space-y-3 border-t border-slate-100 pt-6">
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">call</span>
+                                +968 2666 1111
+                            </div>
+<div class="flex items-center gap-3 text-sm text-primary font-medium">
+<span class="material-symbols-outlined text-sm">mail</span>
+                                sohar@alharthytrans.om
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cross-Border Expertise Section -->
+<section class="py-section-padding bg-white">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-8">Specialized Cross-Border Logistics</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg mb-2">Seamless Customs Clearance</h4>
+<p class="text-on-surface-variant">Expert handling of documentation and clearance at all GCC borders to prevent costly transit delays.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">approval_delegation</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg mb-2">Regional Transit Permits</h4>
+<p class="text-on-surface-variant">Comprehensive permit management for specialized, oversized, or hazardous cargo across multiple jurisdictions.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg mb-2">Multimodal Integration</h4>
+<p class="text-on-surface-variant">Connecting sea, road, and air logistics for a truly integrated supply chain solution across the Middle East.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img class="w-full aspect-square object-cover rounded-sm shadow-xl" data-alt="Detailed close-up of heavy-duty industrial shipping containers being loaded onto a large transporter truck in a bright, sunny industrial port setting. The focus is on the mechanical precision and the high-contrast lighting of a clear desert day. The colors feature vibrant oranges, deep navy blues, and clean whites, reinforcing the brand identity of Al Harthy Transporters. The style is crisp, professional, and powerful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOGlxbb0Ov2-8QifE8Dr1m487x57Owq9xEHO5M4WVC_c6ZUzTNimaLV24o3Y1nePgoqDIgAYn3UJ6bMDF5WiyJ5yHN2B6AFEDTdhuTYeg7KQ4oXSqlwpMAKt7oLQeW6OOVt_43Ruu-Rs_vVWdc48_qoV9HZ3U-IhLq5IdDRwbJhmjeCXwpUzOv6G5v0tMJOSqA7VKcEbHlNlNIO2-YM8fxM3R1Wq_1GphZfRuQ4DnwbS1nB7osn5f5vPLzKx8l2MUiwR3hieuU7gY"/>
+<div class="absolute -bottom-6 -left-6 bg-primary-container text-white p-8 max-w-xs hidden md:block">
+<p class="font-h2 text-4xl mb-2">15+</p>
+<p class="font-label-caps text-on-primary-container">Years of GCC Transit Expertise</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 bg-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<svg class="w-full h-full text-white fill-current" viewbox="0 0 100 100">
+<path d="M0,100 L100,100 L100,0 Z"></path>
+</svg>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<h2 class="font-h2 text-h2 text-white mb-6">Need a Regional Route?</h2>
+<p class="text-on-primary-container text-lg mb-10 max-w-xl mx-auto">
+                    Contact our logistics planners today for a custom route assessment and transparent quote.
+                </p>
+<button class="bg-secondary-container text-white px-12 py-5 font-button text-button uppercase tracking-widest hover:opacity-90 transition-all transform active:scale-95 shadow-lg">
+                    Request a Quote
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A1D37] dark:bg-black w-full py-12 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-white">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-orange-400">local_shipping</span>
+<span class="font-bold text-lg uppercase tracking-wider">Al Harthy Transporters</span>
+</div>
+<p class="text-slate-400 font-['Work_Sans'] text-sm">© 2024 Al Harthy Transporters. Precision Logistics.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white transition-colors" href="#">Coverage Map</a>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white transition-colors" href="#">Safety Standards</a>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white transition-colors" href="#">Fleet Specs</a>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white dark:bg-slate-900 pb-safe border-t border-slate-200 dark:border-slate-800 shadow-[0px_-4px_20px_rgba(10,29,55,0.05)]">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-transform active:scale-95">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-['Work_Sans'] text-[10px] font-semibold uppercase tracking-tighter mt-1">Fleet</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-transform active:scale-95">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-['Work_Sans'] text-[10px] font-semibold uppercase tracking-tighter mt-1">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-transform active:scale-95">
+<span class="material-symbols-outlined">map</span>
+<span class="font-['Work_Sans'] text-[10px] font-semibold uppercase tracking-tighter mt-1">Locations</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-transform active:scale-95">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-['Work_Sans'] text-[10px] font-semibold uppercase tracking-tighter mt-1">Quote</span>
+</div>
+</nav>
+</body></html>
