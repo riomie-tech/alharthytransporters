@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#b02f00",
+                    "tertiary": "#00030b",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#3b0900",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-low": "#f1f4f6",
+                    "tertiary-fixed-dim": "#abc8f4",
+                    "secondary-fixed": "#ffdbd1",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-dim": "#d7dadc",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#4e5f7c",
+                    "primary-container": "#0a1d37",
+                    "on-tertiary-container": "#6a87af",
+                    "on-surface-variant": "#44474d",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9eb",
+                    "on-secondary-fixed-variant": "#862200",
+                    "on-primary-fixed-variant": "#364763",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#2a486d",
+                    "on-tertiary-fixed": "#001c38",
+                    "tertiary-fixed": "#d3e4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f7fafc",
+                    "on-background": "#181c1e",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "surface-container": "#ebeef0",
+                    "background": "#f7fafc",
+                    "surface-bright": "#f7fafc",
+                    "secondary-container": "#ff5722",
+                    "error": "#ba1a1a",
+                    "primary": "#00030a",
+                    "inverse-primary": "#b6c7e9",
+                    "tertiary-container": "#001e3b",
+                    "on-primary-container": "#7586a5",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#eef1f3",
+                    "outline": "#75777e",
+                    "on-surface": "#181c1e",
+                    "on-secondary-container": "#541100",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c5c6ce",
+                    "on-primary-fixed": "#081c36",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "stack-sm": "12px",
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h2": ["Work Sans"],
+                    "h1": ["Work Sans"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Work Sans"],
+                    "button": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 29, 55, 0.85), rgba(10, 29, 55, 0.85));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#0A1D37] dark:text-white text-3xl">local_shipping</span>
+<span class="text-2xl font-black uppercase text-[#0A1D37] dark:text-white font-['Work_Sans'] tracking-tight">Al Harthy Transporters</span>
+</div>
+<nav class="hidden md:flex items-center space-gap-gutter">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors duration-200 px-4" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors duration-200 px-4" href="#">Fleet</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 font-bold px-4" href="#">FAQ</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors duration-200 px-4" href="#">Compliance</a>
+</nav>
+<button class="bg-secondary-container text-white px-6 py-3 font-button rounded hover:bg-secondary transition-all active:scale-95">
+                Request Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- FAQ Hero & Search Section -->
+<section class="hero-gradient relative py-24 px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30" data-alt="A professional aerial view of a large-scale industrial logistics hub with rows of heavy-duty transport trucks perfectly aligned under bright daylight. The scene captures the essence of reliability and precision with a cool-toned, high-contrast aesthetic that aligns with a corporate industrial brand. Deep navy blue overlays create a professional atmosphere, highlighting the scale of the haulage operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgyto5JnpNGlACjRlUW3gxw-yDXoyvJ3Q3YJvyO0QbQ9HkA9j4ZaAwRmcWS8i5WMUdfTTA0ldWXwGag7Rad6uxrEhBgjnJbmL5EyJ34hDpS8Oph-kS9YCnEcmqm8TxNhA4JnU-4ClH8rW1kmTofrzvqz0ycjQc2HuFuQSxOSgfs_a2AZezNMLUhcEo-wkYt06VWh3SEE-DoxV2PLAdcuVCAqygNibuppQzmdkkqOS8UgMhf8tdAS7VRWxzh50Oo9cZRoCq_nYgzKQ"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+<span class="font-label-caps uppercase tracking-widest text-secondary-container mb-4 block">Knowledge Base</span>
+<h1 class="font-h1 text-h1 mb-8">How can we help you today?</h1>
+<div class="relative max-w-2xl mx-auto">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-white text-primary pl-12 pr-4 py-5 rounded-lg border-none focus:ring-2 focus:ring-secondary-container text-lg shadow-xl" placeholder="Search for questions about logistics, fleet, or safety..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Category Navigation -->
+<section class="bg-surface-container py-12 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<a class="bg-white p-8 border border-outline-variant hover:border-secondary-container transition-all text-center group" href="#logistics">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:text-secondary-container">package_2</span>
+<h3 class="font-h3 text-primary">Logistics</h3>
+</a>
+<a class="bg-white p-8 border border-outline-variant hover:border-secondary-container transition-all text-center group" href="#safety">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:text-secondary-container">shield_with_heart</span>
+<h3 class="font-h3 text-primary">Safety</h3>
+</a>
+<a class="bg-white p-8 border border-outline-variant hover:border-secondary-container transition-all text-center group" href="#billing">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:text-secondary-container">receipt_long</span>
+<h3 class="font-h3 text-primary">Billing</h3>
+</a>
+<a class="bg-white p-8 border border-outline-variant hover:border-secondary-container transition-all text-center group" href="#fleet">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:text-secondary-container">local_shipping</span>
+<h3 class="font-h3 text-primary">Fleet</h3>
+</a>
+</div>
+</div>
+</section>
+<!-- FAQ Content Grid -->
+<section class="py-section-padding px-8 max-w-5xl mx-auto space-y-stack-lg">
+<!-- Logistics Section -->
+<div class="scroll-mt-24" id="logistics">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h2 class="font-h2 text-h2 text-primary-container">Logistics &amp; Operations</h2>
+</div>
+<div class="space-y-4">
+<div class="border border-outline-variant bg-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">What regions do Al Harthy Transporters cover?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-slate-100 pt-4">
+                            We operate across the entire Middle East region, specializing in cross-border logistics between Oman, UAE, and Saudi Arabia. Our extensive network ensures seamless transitions at all major land ports.
+                        </div>
+</div>
+<div class="border border-outline-variant bg-white">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">Do you provide real-time tracking for shipments?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Safety Section -->
+<div class="scroll-mt-24" id="safety">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h2 class="font-h2 text-h2 text-primary-container">Safety &amp; Compliance</h2>
+</div>
+<div class="space-y-4">
+<div class="border border-outline-variant bg-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">What are your safety protocols for hazardous cargo?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-slate-100 pt-4">
+                            All drivers handling hazardous materials undergo rigorous specialized training. Our fleet is equipped with state-of-the-art safety sensors and containment systems, fully compliant with international ADR standards and local GCC regulations.
+                        </div>
+</div>
+<div class="border border-outline-variant bg-white">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">Are your drivers certified for heavy-duty haulage?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Billing Section -->
+<div class="scroll-mt-24" id="billing">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h2 class="font-h2 text-h2 text-primary-container">Billing &amp; Payments</h2>
+</div>
+<div class="space-y-4">
+<div class="border border-outline-variant bg-white">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">What payment terms do you offer for corporate clients?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border border-outline-variant bg-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">Can I manage my invoices online?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-slate-100 pt-4">
+                            Yes, through our Client Portal, you can access your billing history, download current invoices, and set up automated payment reminders. Contact our finance department for portal access credentials.
+                        </div>
+</div>
+</div>
+</div>
+<!-- Fleet Section -->
+<div class="scroll-mt-24" id="fleet">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-1 w-12 bg-secondary-container"></div>
+<h2 class="font-h2 text-h2 text-primary-container">Fleet Specifications</h2>
+</div>
+<div class="space-y-4">
+<div class="border border-outline-variant bg-white">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors">
+<span class="font-h3 text-lg">What types of trailers are available in your fleet?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary-container py-20 px-8 text-white">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h2 class="font-h2 text-h2 mb-4">Still have questions?</h2>
+<p class="text-on-primary-container text-body-lg">Our support team is available 24/7 to assist with your logistical needs and technical inquiries.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-white px-8 py-4 font-button hover:bg-secondary transition-all">
+                        Contact Support
+                    </button>
+<button class="border-2 border-white text-white px-8 py-4 font-button hover:bg-white hover:text-primary-container transition-all">
+                        Call Us Now
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A1D37] dark:bg-black text-white py-16 px-8 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-white text-2xl">local_shipping</span>
+<span class="text-xl font-bold font-['Work_Sans']">Al Harthy Transporters</span>
+</div>
+<p class="text-slate-400 text-sm font-body-md">Setting the standard in heavy-duty logistics and regional transportation across the GCC.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-orange-500 mb-6 uppercase tracking-wider">Information</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-all text-sm font-['Work_Sans'] uppercase" href="#">Sustainability</a></li>
+<li><a class="text-slate-400 hover:text-white transition-all text-sm font-['Work_Sans'] uppercase" href="#">Compliance</a></li>
+<li><a class="text-slate-400 hover:text-white transition-all text-sm font-['Work_Sans'] uppercase" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-orange-500 mb-6 uppercase tracking-wider">Resources</h4>
+<ul class="space-y-3">
+<li><a class="text-orange-500 font-bold text-sm font-['Work_Sans'] uppercase" href="#">FAQ</a></li>
+<li><a class="text-slate-400 hover:text-white transition-all text-sm font-['Work_Sans'] uppercase" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-orange-500 mb-6 uppercase tracking-wider">Contact</h4>
+<div class="space-y-4 text-slate-400 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Muscat, Oman</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span>support@alharthytrans.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm font-['Work_Sans'] uppercase tracking-wide">
+            © 2024 Al Harthy Transporters. All rights reserved.
+        </div>
+</footer>
+</body></html>
