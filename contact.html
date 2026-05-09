@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-variant": "#e0e3e5",
+                "surface-tint": "#4e5f7c",
+                "secondary-fixed": "#ffdbd1",
+                "primary-fixed": "#d6e3ff",
+                "surface-dim": "#d7dadc",
+                "tertiary-fixed-dim": "#abc8f4",
+                "surface-container-low": "#f1f4f6",
+                "inverse-surface": "#2d3133",
+                "on-secondary-fixed": "#3b0900",
+                "on-error": "#ffffff",
+                "secondary": "#b02f00",
+                "tertiary": "#00030b",
+                "surface-container": "#ebeef0",
+                "background": "#f7fafc",
+                "surface-bright": "#f7fafc",
+                "secondary-fixed-dim": "#ffb5a0",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f7fafc",
+                "on-background": "#181c1e",
+                "tertiary-fixed": "#d3e4ff",
+                "on-secondary-fixed-variant": "#862200",
+                "on-primary-fixed-variant": "#364763",
+                "surface-container-highest": "#e0e3e5",
+                "on-tertiary-fixed-variant": "#2a486d",
+                "on-tertiary-fixed": "#001c38",
+                "surface-container-high": "#e5e9eb",
+                "on-primary": "#ffffff",
+                "primary-container": "#0a1d37",
+                "on-tertiary-container": "#6a87af",
+                "on-surface-variant": "#44474d",
+                "on-primary-container": "#7586a5",
+                "tertiary-container": "#001e3b",
+                "inverse-primary": "#b6c7e9",
+                "error": "#ba1a1a",
+                "primary": "#00030a",
+                "secondary-container": "#ff5722",
+                "on-secondary": "#ffffff",
+                "primary-fixed-dim": "#b6c7e9",
+                "outline-variant": "#c5c6ce",
+                "on-primary-fixed": "#081c36",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#181c1e",
+                "on-secondary-container": "#541100",
+                "outline": "#75777e",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#eef1f3"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "stack-sm": "12px",
+                "container-max": "1280px",
+                "stack-lg": "48px",
+                "gutter": "24px",
+                "section-padding": "80px",
+                "base": "8px",
+                "stack-md": "24px"
+            },
+            "fontFamily": {
+                "label-caps": ["Inter"],
+                "h1": ["Work Sans"],
+                "body-lg": ["Inter"],
+                "h2": ["Work Sans"],
+                "body-md": ["Inter"],
+                "h3": ["Work Sans"],
+                "button": ["Inter"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-slate-900 dark:text-slate-50 scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="text-xl font-black text-[#0A1D37] dark:text-slate-100 uppercase tracking-tighter">
+                    Al Harthy Transporters
+                </div>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors px-2 py-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors px-2 py-1" href="#">Fleet</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors px-2 py-1" href="#">Quotes</a>
+<a class="text-orange-600 dark:text-orange-400 font-bold border-b-2 border-orange-600 px-2 py-1" href="#">Account</a>
+</nav>
+<button class="text-slate-900 dark:text-slate-50 scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-angle view of a modern logistics terminal at twilight. The scene is dominated by massive blue and silver transport trucks parked in perfect alignment, illuminated by cold industrial spotlights and warm orange safety lights. The atmosphere is professional and powerful, featuring deep navy blue shadows and sharp metallic highlights. The lighting emphasizes the scale and precision of the transportation operation, reflecting a clean, corporate industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtR-B8joz3NzR1WecstpagOBByROApBMBIeEP-UxnpMlIPdIzkMiY_u6JctqJBMeml5MMkeJ0f_qPymkVSjmxuIYOV44bZYZuIJzPfs3HAuZcAUf50X64tWOixvAQAAehzn3_ciomGaPaeBn61d_RKjB6s5-DGMJhQqXNEDyf1eMr1O5BqEwASjj0Sf75-HW9jMxJnjLkjwxAzxukcUVim4VthKkTZYH7_vTsAYJR2anOqizr8w9O9TrYy-CNoZD1hJr1_ebD084Q"/>
+<div class="absolute inset-0 bg-[#0A1D37]/60"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<h1 class="font-h1 text-h1 text-white mb-4">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-slate-200 max-w-2xl">
+                    Reliable logistics solutions tailored to your industrial needs. Reach out to our regional hubs for technical specifications and quotes.
+                </p>
+</div>
+</section>
+<!-- Contact Grid -->
+<section class="max-w-7xl mx-auto px-6 py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Info & Map -->
+<div class="lg:col-span-5 space-y-12">
+<div class="space-y-8">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-6">Contact Info</h2>
+<div class="space-y-6">
+<!-- HQ Oman -->
+<div class="flex gap-4 p-6 bg-white border border-slate-200 rounded-lg shadow-[0px_10px_30px_rgba(10,29,55,0.05)]">
+<span class="material-symbols-outlined text-secondary-container text-3xl">location_on</span>
+<div>
+<h3 class="font-h3 text-h3 text-[#0A1D37] mb-1">Oman HQ</h3>
+<p class="text-on-surface-variant">Al Marafah St, Muscat</p>
+<p class="font-semibold text-[#0A1D37] mt-2">Tel: +968 2450 0000</p>
+</div>
+</div>
+<!-- UAE Hub -->
+<div class="flex gap-4 p-6 bg-white border border-slate-200 rounded-lg shadow-[0px_10px_30px_rgba(10,29,55,0.05)]">
+<span class="material-symbols-outlined text-secondary-container text-3xl">local_shipping</span>
+<div>
+<h3 class="font-h3 text-h3 text-[#0A1D37] mb-1">UAE Logistics Hub</h3>
+<p class="text-on-surface-variant">Jebel Ali Free Zone, Dubai</p>
+<p class="font-semibold text-[#0A1D37] mt-2">Tel: +971 4 881 0000</p>
+</div>
+</div>
+<!-- Email -->
+<div class="flex gap-4 p-6 bg-white border border-slate-200 rounded-lg shadow-[0px_10px_30px_rgba(10,29,55,0.05)]">
+<span class="material-symbols-outlined text-secondary-container text-3xl">mail</span>
+<div>
+<h3 class="font-h3 text-h3 text-[#0A1D37] mb-1">Email Us</h3>
+<p class="text-on-surface-variant">General Inquiries</p>
+<p class="font-semibold text-[#0A1D37] mt-2">contact@alharthy.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Section -->
+<div class="rounded-lg overflow-hidden border border-slate-200 h-[300px] relative shadow-lg">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="A stylized, high-contrast digital map rendering showing the Arabian Peninsula with clean white lines and a deep navy blue ocean. Major logistics hubs in Muscat and Dubai are highlighted with glowing orange circular markers. The map aesthetic is technical and professional, using a minimalist color scheme of Slate Blue, White, and Bold Orange to represent international transport routes and regional office locations." data-location="Muscat, Oman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtR-B8joz3NzR1WecstpagOBByROApBMBIeEP-UxnpMlIPdIzkMiY_u6JctqJBMeml5MMkeJ0f_qPymkVSjmxuIYOV44bZYZuIJzPfs3HAuZcAUf50X64tWOixvAQAAehzn3_ciomGaPaeBn61d_RKjB6s5-DGMJhQqXNEDyf1eMr1O5BqEwASjj0Sf75-HW9jMxJnjLkjwxAzxukcUVim4VthKkTZYH7_vTsAYJR2anOqizr8w9O9TrYy-CNoZD1hJr1_ebD084Q"/>
+<div class="absolute inset-0 bg-[#0A1D37]/10 pointer-events-none"></div>
+<div class="absolute bottom-4 left-4 bg-white p-3 rounded shadow-md">
+<p class="font-label-caps text-label-caps text-[#0A1D37]">REGIONAL COVERAGE</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7 bg-white p-8 md:p-12 border border-slate-200 rounded-lg shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
+<h2 class="font-h2 text-h2 text-primary mb-8">Send a Message</h2>
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">FULL NAME</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">COMPANY NAME</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="Industrial Corp" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PHONE NUMBER</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="+968 0000 0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">SUBJECT</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="Logistics Inquiry" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">MESSAGE</label>
+<textarea class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-secondary-container focus:border-secondary-container p-4 font-body-md" placeholder="Detailed description of your haulage requirements..." rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto px-12 py-5 bg-secondary-container text-white font-button text-button rounded-lg uppercase tracking-widest hover:bg-secondary transition-all active:scale-95 shadow-lg shadow-secondary-container/20" type="submit">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Stats Block -->
+<section class="bg-[#0A1D37] py-20 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="space-y-2">
+<p class="font-h1 text-h1 text-secondary-container">250+</p>
+<p class="font-label-caps text-label-caps text-slate-400">HEAVY FLEET</p>
+</div>
+<div class="space-y-2">
+<p class="font-h1 text-h1 text-white">15</p>
+<p class="font-label-caps text-label-caps text-slate-400">REGIONAL HUBS</p>
+</div>
+<div class="space-y-2">
+<p class="font-h1 text-h1 text-secondary-container">24/7</p>
+<p class="font-label-caps text-label-caps text-slate-400">DISPATCH CONTROL</p>
+</div>
+<div class="space-y-2">
+<p class="font-h1 text-h1 text-white">100%</p>
+<p class="font-label-caps text-label-caps text-slate-400">SAFETY RECORD</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A1D37] dark:bg-slate-950 border-t border-slate-700">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-white font-black tracking-widest uppercase">Al Harthy Transporters</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-300 font-body-md text-sm hover:text-orange-400 transition-colors" href="#">Fleet Technical Specs</a>
+<a class="text-slate-300 font-body-md text-sm hover:text-orange-400 transition-colors" href="#">Safety Protocols</a>
+<a class="text-slate-300 font-body-md text-sm hover:text-orange-400 transition-colors" href="#">Service Areas</a>
+<a class="text-orange-400 font-bold underline font-body-md text-sm" href="#">Request Quote</a>
+</div>
+<p class="text-slate-300 font-body-md text-sm text-center md:text-right opacity-90">
+                © 2024 Al Harthy Transporters. Industrial Strength Logistics.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white dark:bg-slate-950 flex justify-around items-center px-4 py-3 border-t border-slate-200 dark:border-slate-800 shadow-[0px_-4px_20px_rgba(10,29,55,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Fleet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Quotes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 rounded-lg px-3 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Account</span>
+</a>
+</nav>
+</body></html>
