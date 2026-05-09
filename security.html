@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#44474d",
+                    "on-primary-container": "#7586a5",
+                    "tertiary-fixed": "#d3e4ff",
+                    "on-primary-fixed-variant": "#364763",
+                    "tertiary-fixed-dim": "#abc8f4",
+                    "surface-dim": "#d7dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-fixed": "#ffdbd1",
+                    "background": "#f7fafc",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-tertiary-container": "#6a87af",
+                    "on-surface": "#181c1e",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#001c38",
+                    "on-background": "#181c1e",
+                    "outline": "#75777e",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#081c36",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#b6c7e9",
+                    "surface-container-high": "#e5e9eb",
+                    "surface-bright": "#f7fafc",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#ff5722",
+                    "on-secondary-fixed-variant": "#862200",
+                    "on-secondary-container": "#541100",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "primary": "#00030a",
+                    "surface-variant": "#e0e3e5",
+                    "outline-variant": "#c5c6ce",
+                    "secondary": "#b02f00",
+                    "inverse-on-surface": "#eef1f3",
+                    "surface-tint": "#4e5f7c",
+                    "surface-container": "#ebeef0",
+                    "surface-container-low": "#f1f4f6",
+                    "on-secondary-fixed": "#3b0900",
+                    "primary-fixed": "#d6e3ff",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#0a1d37",
+                    "tertiary": "#00030b",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f7fafc",
+                    "on-tertiary-fixed-variant": "#2a486d",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#001e3b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "stack-sm": "12px",
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "h1": ["Work Sans"],
+                    "button": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Work Sans"],
+                    "h2": ["Work Sans"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 29, 55, 0.7), rgba(10, 29, 55, 0.85));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 md:px-16 h-20 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600" data-icon="shield">shield</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white font-h1 tracking-tight">Al Harthy Transporters</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors" href="#">Fleet Safety</a>
+<a class="text-orange-600 dark:text-orange-500 font-bold border-b-2 border-orange-600 py-1" href="#">Compliance</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors" href="#">Driver Training</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-600 transition-colors text-sm font-button px-6 py-2 border-2 border-primary rounded hover:bg-primary hover:text-white transition-all" href="#">Request Quote</a>
+</nav>
+</header>
+<!-- NavigationDrawer (Visible on sub-page context as per guidelines) -->
+<aside class="fixed left-0 top-20 h-full z-40 p-6 bg-slate-50 dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 w-64 hidden lg:block">
+<div class="mb-8">
+<h3 class="font-h3 text-xl font-bold text-slate-900 dark:text-white mb-4">Safety Standards</h3>
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform font-label-caps uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span> Fleet Safety
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 bg-slate-200 dark:bg-slate-800 text-orange-600 font-bold rounded-lg font-label-caps uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="verified">verified</span> Certifications
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform font-label-caps uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span> Driver Training
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform font-label-caps uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="emergency">emergency</span> Emergency Response
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform font-label-caps uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span> Compliance
+                    </a>
+</li>
+</ul>
+</div>
+</aside>
+<main class="lg:ml-64 mt-20">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center px-8 md:px-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A high-security logistics hub at dusk featuring rows of heavy-duty transport trucks with glowing headlights and high-visibility markings. The atmosphere is professional and industrial, with sharp architectural lines of a modern warehouse in the background under a deep navy sky. Cold blue ambient light contrasts with the warm amber security lighting, emphasizing a sense of high-tech surveillance and cargo protection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-kbtdMxtlodOrmg3MYOiMb5Nw0KtT6seFSse37K3uT_F3r7OPzW1flfI969AUTXci07biZbKtP4RRbh-oijEPvZl6awSLhaKQGxwSJKOXQIkq_4o-qCLJ5jJv3OPJHJtyDn_mI2LwVfe5Dto6vVoiCFUm9CYFEUQdG_UOjfIKxoqQoccdO3X58-YcJgXPNaOuZV6_mcDmlAIh3ElVSFg8SWPAKb-LAsQuX4H-BPbXn5DVd2fjPdHaSPcytRrysUVDF6Kyr4QYIU"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-3xl">
+<span class="inline-block bg-orange-600 text-white font-label-caps px-4 py-1 mb-6">SECURITY FIRST</span>
+<h1 class="font-h1 text-h1 text-white mb-6">Fortified Logistics: Your Cargo, Our Command.</h1>
+<p class="font-body-lg text-white/90 mb-8 max-w-xl">We integrate military-grade tracking systems with rigorous driver vetting to ensure your assets are protected from dispatch to delivery. Safety isn't just a policy; it's our core infrastructure.</p>
+<div class="flex gap-4">
+<button class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 font-button rounded transition-all">Verify Compliance</button>
+<button class="border-2 border-white text-white hover:bg-white hover:text-primary-container px-8 py-4 font-button rounded transition-all">Security Protocol PDF</button>
+</div>
+</div>
+</section>
+<!-- Security Protocols - Bento Grid Layout -->
+<section class="py-24 px-8 md:px-16 bg-white">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-4">Our Security Protocols</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl">Precision monitoring meets physical security. Our multi-layered approach eliminates blind spots in the supply chain.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- 24/7 Monitoring -->
+<div class="md:col-span-8 bg-primary-container p-10 rounded-xl relative overflow-hidden group">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-orange-500 text-4xl mb-6" data-icon="visibility">visibility</span>
+<h3 class="font-h3 text-h3 text-white mb-4">24/7 Command Center</h3>
+<p class="font-body-md text-on-primary-container max-w-md">Our centralized operations hub monitors every vehicle heartbeat in real-time, 365 days a year, with direct links to regional law enforcement.</p>
+</div>
+<div class="flex items-center gap-4 text-orange-500 font-button">
+<span>Learn about Surveillance</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<img class="absolute right-0 bottom-0 w-1/2 opacity-20 group-hover:opacity-40 transition-opacity grayscale" data-alt="A futuristic control room dashboard showing glowing data visualizations, world maps, and transit analytics on large screens. The lighting is low-key with cool blue and neon orange highlights, creating a high-tech and secure monitoring environment. The focus is on the precision and data-driven nature of modern logistical tracking systems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJJTEvsMti7J71z7C8Jzg-GUSuL1LhTFhoQ8ZEGbKFMBCuq2CSKWxJeMz8exf0cPUxsusFbVZ5ElLvDmWPFKVSR14SlggQtYmvxtFadj9cwaYXfeF_XE4xK_cEszxR3k6b426k9OJj7XMjQ5Cew0s0z3vgIkfBkpkpLvucpiI-JxWdtnedWe749SLXUr_dvPkoVu9pBVrtEbebleJLVj29Bc4I6mvG8obZ-y7nexUP49M3LX4IILtiaMacvZk9ZfYRFLMokwOnqU"/>
+</div>
+<!-- Real-time GPS -->
+<div class="md:col-span-4 bg-surface-container border border-outline-variant p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="gps_fixed">gps_fixed</span>
+<h3 class="font-h3 text-xl font-bold mb-2">Real-time GPS</h3>
+<p class="font-body-md text-on-surface-variant">Live geo-fencing and route optimization software that alerts our team the moment a vehicle deviates from its planned corridor.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/30">
+<span class="font-label-caps text-secondary text-[10px]">ACCURACY: 99.9%</span>
+</div>
+</div>
+<!-- Cargo Insurance -->
+<div class="md:col-span-4 bg-surface-container border border-outline-variant p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="verified_user">verified_user</span>
+<h3 class="font-h3 text-xl font-bold mb-2">Cargo Insurance</h3>
+<p class="font-body-md text-on-surface-variant">Comprehensive high-value transit insurance covering all regional territories, providing financial peace of mind for every shipment.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/30">
+<span class="font-label-caps text-secondary text-[10px]">FULLY INSURED</span>
+</div>
+</div>
+<!-- Specialized Escorts -->
+<div class="md:col-span-8 bg-slate-900 p-10 rounded-xl flex items-center justify-between group overflow-hidden">
+<div class="max-w-md">
+<h3 class="font-h3 text-h3 text-white mb-4">Specialized Escorts</h3>
+<p class="font-body-md text-slate-400">For high-risk or ultra-high-value cargo, we deploy dedicated tactical escort vehicles and trained security personnel to lead and trail the transport convoy.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-white text-8xl opacity-10 group-hover:scale-110 transition-transform" data-icon="local_police" style="font-variation-settings: 'FILL' 1;">local_police</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Block -->
+<section class="py-20 px-8 md:px-16 bg-primary-container text-white">
+<div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<div class="text-h1 font-h1 text-orange-500">100%</div>
+<div class="font-label-caps tracking-widest text-slate-400">GPS COVERAGE</div>
+</div>
+<div>
+<div class="text-h1 font-h1 text-orange-500">0</div>
+<div class="font-label-caps tracking-widest text-slate-400">CARGO LOSS RATIO</div>
+</div>
+<div>
+<div class="text-h1 font-h1 text-orange-500">24/7</div>
+<div class="font-label-caps tracking-widest text-slate-400">MONITORING</div>
+</div>
+<div>
+<div class="text-h1 font-h1 text-orange-500">ISO</div>
+<div class="font-label-caps tracking-widest text-slate-400">9001 COMPLIANT</div>
+</div>
+</div>
+</section>
+<!-- Regulatory Compliance Section -->
+<section class="py-24 px-8 md:px-16 bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-8">Global Compliance &amp; Regional Mastery</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Navigating the complex landscape of international logistics requires more than just trucks; it requires a deep understanding of maritime, land, and regional regulations.</p>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-white rounded shadow-sm border-l-4 border-orange-600">
+<span class="material-symbols-outlined text-orange-600" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<h4 class="font-h3 text-lg font-bold mb-1">ISO 9001:2015 Certified</h4>
+<p class="text-sm text-on-surface-variant">Internationally recognized quality management standards for logistics operations.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-white rounded shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="public" style="font-variation-settings: 'FILL' 1;">public</span>
+<div>
+<h4 class="font-h3 text-lg font-bold mb-1">Regional Permits &amp; Border Licensing</h4>
+<p class="text-sm text-on-surface-variant">Fully authorized for cross-border transit within all GCC and neighboring territories.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-white rounded shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="medical_services" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<div>
+<h4 class="font-h3 text-lg font-bold mb-1">Health &amp; Safety Compliance</h4>
+<p class="text-sm text-on-surface-variant">Strict adherence to OHSAS 18001 guidelines ensuring driver and cargo safety.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-primary aspect-square rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="A detailed close-up of an official security seal and holographic certification badge on a heavy-duty cargo container. The lighting highlights the metallic textures and the precision of the security components. The color palette is professional, focusing on silver, navy, and orange, reinforcing the brand's commitment to industrial strength and rigorous compliance standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF5ZV15bpBoQG-MgqxCJqrMMgXpvguQmGqKuT0diSRgaDPEFVVKNJ9Z_N8pdeu_ckq2ZHgOoPVwTaY9a13Lys3gUQEXVO_I9MIg1hyrLp-TUfWasH46QL8B4D7gKAZNZ2d4AqpXmq2EIfZisGUBy7FkJCkqfjRMe8GD7NVeD5UE1glPwBJ6p-X-KI87B-MP3uL9dzy0HUnAIuUwtIlm5AlP7lDRYP5WfwrjehVAa4qiQHl2Bw3cgpXPsQMhZW_orhwHInRzqww9A0"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-12">
+<span class="material-symbols-outlined text-white text-6xl mb-4" data-icon="gavel">gavel</span>
+<h3 class="text-white font-h1 text-3xl">Zero Non-Conformance</h3>
+<p class="text-white/80 font-body-md mt-4">Maintaining an audit-perfect record for over 15 years in the haulage industry.</p>
+</div>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-600 rounded-full z-0 opacity-20"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 border-8 border-primary rounded-full z-0 opacity-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Assurance Section -->
+<section class="py-24 px-8 md:px-16 bg-white">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-h2 text-h2 text-primary mb-16">Client Assurance Guarantee</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-lg transition-all border-b-4 border-b-orange-600">
+<span class="material-symbols-outlined text-orange-600 text-4xl mb-6" data-icon="lock">lock</span>
+<h4 class="font-h3 text-xl font-bold mb-4">Confidentiality Agreements</h4>
+<p class="font-body-md text-on-surface-variant">We treat every logistics manifest with the highest level of corporate discretion and data protection.</p>
+</div>
+<div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-lg transition-all border-b-4 border-b-orange-600">
+<span class="material-symbols-outlined text-orange-600 text-4xl mb-6" data-icon="support_agent">support_agent</span>
+<h4 class="font-h3 text-xl font-bold mb-4">Dedicated Liaison</h4>
+<p class="font-body-md text-on-surface-variant">Receive a single point of contact available 24/7 for security updates and transit status reporting.</p>
+</div>
+<div class="p-8 border border-slate-100 bg-slate-50 rounded-lg hover:shadow-lg transition-all border-b-4 border-b-orange-600">
+<span class="material-symbols-outlined text-orange-600 text-4xl mb-6" data-icon="assignment_turned_in">assignment_turned_in</span>
+<h4 class="font-h3 text-xl font-bold mb-4">Post-Transit Reporting</h4>
+<p class="font-body-md text-on-surface-variant">Full arrival logs, condition reports, and electronic Proof of Delivery (ePOD) generated instantly.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="py-24 px-8 md:px-16 bg-slate-900 relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-orange-600 skew-x-12 translate-x-32"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-2xl">
+<h2 class="font-h2 text-h2 text-white mb-6">Need a Secure Transport Strategy?</h2>
+<p class="font-body-lg text-slate-300">Contact our compliance department to discuss specialized security requirements for high-value or sensitive cargo.</p>
+</div>
+<div class="flex gap-4 shrink-0">
+<button class="bg-orange-600 text-white px-10 py-5 font-button rounded hover:bg-orange-700 transition-all uppercase tracking-widest text-sm">Consult an Expert</button>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="w-full py-12 px-8 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-8 bg-slate-900 dark:bg-black border-t border-slate-800">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-white font-h1">Al Harthy Transporters</span>
+<p class="mt-4 font-work-sans text-xs text-slate-400">© 2024 Al Harthy Transporters. Precision in Logistics.</p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4 font-label-caps">Quick Links</h5>
+<ul class="space-y-2">
+<li><a class="font-work-sans text-xs text-slate-400 hover:text-white transition-colors" href="#">Safety Policy</a></li>
+<li><a class="font-work-sans text-xs text-orange-500 underline" href="#">Privacy</a></li>
+<li><a class="font-work-sans text-xs text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4 font-label-caps">Compliance</h5>
+<ul class="space-y-2">
+<li><a class="font-work-sans text-xs text-slate-400 hover:text-white transition-colors" href="#">ISO Compliance</a></li>
+<li><a class="font-work-sans text-xs text-slate-400 hover:text-white transition-colors" href="#">Driver Certification</a></li>
+<li><a class="font-work-sans text-xs text-slate-400 hover:text-white transition-colors" href="#">Regional Permits</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4 font-label-caps">Contact</h5>
+<p class="font-work-sans text-xs text-slate-400">Security Operations Command<br/>Muscat Industrial Zone, Oman<br/>safety@alharthy.com</p>
+</div>
+</footer>
+</main>
+</body></html>
