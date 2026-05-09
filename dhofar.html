@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: Dhofar Wind Farm Phase II | AL HARTHY</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Work+Sans:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e5e9eb",
+                    "primary-fixed": "#d6e3ff",
+                    "on-primary-fixed": "#081c36",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f7fafc",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#001c38",
+                    "on-error": "#ffffff",
+                    "surface-container": "#ebeef0",
+                    "secondary-fixed": "#ffdbd1",
+                    "on-primary-fixed-variant": "#364763",
+                    "on-secondary-container": "#541100",
+                    "primary": "#00030a",
+                    "on-surface": "#181c1e",
+                    "background": "#f7fafc",
+                    "secondary": "#b02f00",
+                    "on-secondary-fixed": "#3b0900",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-tertiary-fixed-variant": "#2a486d",
+                    "on-primary-container": "#7586a5",
+                    "inverse-primary": "#b6c7e9",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-container": "#6a87af",
+                    "secondary-container": "#ff5722",
+                    "surface-tint": "#4e5f7c",
+                    "inverse-on-surface": "#eef1f3",
+                    "tertiary-fixed": "#d3e4ff",
+                    "tertiary-container": "#001e3b",
+                    "primary-container": "#0a1d37",
+                    "on-secondary-fixed-variant": "#862200",
+                    "surface": "#f7fafc",
+                    "surface-container-low": "#f1f4f6",
+                    "on-background": "#181c1e",
+                    "tertiary-fixed-dim": "#abc8f4",
+                    "on-surface-variant": "#44474d",
+                    "outline": "#75777e",
+                    "inverse-surface": "#2d3133",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "outline-variant": "#c5c6ce",
+                    "tertiary": "#00030b",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d7dadc",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "section-padding": "80px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Work Sans"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Work Sans"],
+                    "h1": ["Work Sans"],
+                    "button": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(10, 29, 55, 0.9) 0%, rgba(10, 29, 55, 0.4) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#0A1D37] dark:text-slate-100">menu</span>
+<span class="text-2xl font-black text-[#0A1D37] dark:text-white tracking-widest font-['Work_Sans'] uppercase">AL HARTHY</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 font-semibold font-['Work_Sans'] hover:text-orange-600 transition-colors" href="#">Fleet</a>
+<a class="text-slate-600 dark:text-slate-400 font-semibold font-['Work_Sans'] hover:text-orange-600 transition-colors" href="#">Services</a>
+<a class="text-orange-600 dark:text-orange-500 font-bold border-b-2 border-orange-600 pb-1 font-['Work_Sans']" href="#">Cases</a>
+<a class="text-slate-600 dark:text-slate-400 font-semibold font-['Work_Sans'] hover:text-orange-600 transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-secondary-container text-on-secondary px-6 py-2 font-button text-button rounded-lg active:scale-95 transition-transform">Request Quote</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[618px] w-full overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A massive 75-meter white wind turbine blade being transported by a specialized heavy-duty multi-axle trailer across a vast, dusty orange desert landscape in Oman. The setting is captured at dusk with a deep indigo and purple sky overhead, creating a silhouette of the mountain ridges in the distance. The lighting is high-contrast, emphasizing the industrial scale and precision of the haulage operation. The overall mood is one of epic engineering achievement and logistical power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiwJXQpjqumy6JcNVrIeGB_fKWTPqj4Qec4r0O6pSv2ZuYBYxf9kFhG6EX6lt2ifrzJxiW4bAQghOpfaLj3u0YYrezBYbFfuTFALLREK31ALrt8MXFDxLP_JoiosKrrFAaESdjXido29zuFlGnVsiKxFiiXTPoWc_AjtsLTMSYzC8cpq2q7WCr-G3g5yeCZwuYd1KssRJ6m9vaYUlUhnGH0NgPE2kDpbc9n6rRyqwaj8NxSYlQGWBhz3t9W_xS7KhEVOIz3S-CM8E"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="bg-secondary text-white px-3 py-1 font-label-caps text-label-caps mb-4 inline-block">Sustainable Energy</span>
+<h1 class="font-h1 text-h1 text-white mb-4 leading-tight">Dhofar Wind Farm Phase II</h1>
+<p class="font-body-lg text-body-lg text-slate-200 mb-8">Sustainable Energy Infrastructure Logistics: Navigating complex terrains to power Oman's future.</p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary px-8 py-4 font-button text-button rounded uppercase tracking-wider flex items-center gap-2">
+                        Download Technical Brochure <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Snapshot Bento Grid -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white p-8 border border-slate-100 flex flex-col justify-between">
+<span class="text-secondary font-label-caps text-label-caps mb-2 block">CLIENT</span>
+<h3 class="font-h3 text-h3 text-primary-container">Oman Power &amp; Water Procurement Co.</h3>
+</div>
+<div class="bg-white p-8 border border-slate-100 flex flex-col justify-between">
+<span class="text-secondary font-label-caps text-label-caps mb-2 block">LOCATION</span>
+<h3 class="font-h3 text-h3 text-primary-container">Dhofar Region, Oman</h3>
+</div>
+<div class="bg-white p-8 border border-slate-100 flex flex-col justify-between">
+<span class="text-secondary font-label-caps text-label-caps mb-2 block">DURATION</span>
+<h3 class="font-h3 text-h3 text-primary-container">9 Months</h3>
+</div>
+<div class="bg-white p-8 border border-slate-100 flex flex-col justify-between">
+<span class="text-secondary font-label-caps text-label-caps mb-2 block">UNITS</span>
+<h3 class="font-h3 text-h3 text-primary-container">40 Wind Turbines</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content: The Challenge & The Solution -->
+<section class="py-section-padding bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+<!-- The Challenge -->
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="h-1 w-12 bg-secondary"></div>
+<span class="font-label-caps text-label-caps text-secondary">THE CHALLENGE</span>
+</div>
+<h2 class="font-h2 text-h2 text-primary-container">Oversized Cargo in Extreme Terrain</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Transporting 75-meter turbine blades and 100-ton nacelles from Salalah Port to the mountain ridges of Dhofar presented unprecedented logistical hurdles. 
+                    </p>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary-container">
+<p class="font-body-md text-body-md text-primary-container leading-relaxed">
+                            The route required navigating narrow mountain passes with sharp switchbacks and constant exposure to high-wind corridors. Traditional haulage methods were insufficient for the extreme geometry of the mountain ascent.
+                        </p>
+</div>
+<img class="w-full h-80 object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-500 rounded" data-alt="A wide-angle landscape shot of the rugged Dhofar mountain ridges in Oman. The terrain is characterized by steep, winding roads and rocky limestone cliffs under a bright, harsh sun. A long, heavy-duty truck convoy is barely visible on a distant switchback, emphasizing the scale and difficulty of the terrain. The lighting is crisp, highlighting the textures of the mountainside and the precision needed for transport." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo88KSRWXWjomdgzKInXyCCAZsYENWhzzhi3_ShfVMl-goqykS3t-x3wUKIFtZk5TRR9seZVa0TR4_D-X3SmI-mjOXU-Js0hS8EESNjtasPGi6X4oQI5ji2B_D3d6R9VdHxXPq_kHPD5jn-AB2UNQMF4KPU24DzBvK4xdX2j23VU-xp6A-t7f-AIH5I1OhTWAzL6Jo25t9iBSqoMThprMqLm1HKXfWz7-L81DUxuSYA4e4KzbhMa-SoR9hLzXcuMD-2ABJL51HHZQ"/>
+</div>
+<!-- The Solution -->
+<div class="space-y-6 lg:mt-24">
+<div class="flex items-center gap-3">
+<div class="h-1 w-12 bg-secondary"></div>
+<span class="font-label-caps text-label-caps text-secondary">THE SOLUTION</span>
+</div>
+<h2 class="font-h2 text-h2 text-primary-container">Precision Engineering &amp; Specialized Equipment</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Al Harthy deployed state-of-the-art Goldhofer blade lifters, allowing blades to be tilted up to 60 degrees.
+                    </p>
+<ul class="space-y-4">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-h3 text-[18px] text-primary-container block">Goldhofer Technology</span>
+<p class="text-body-md text-on-surface-variant">Utilizing hydraulic lifting systems to clear obstacles and mountain overhangs.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-h3 text-[18px] text-primary-container block">Multi-Axle Modularity</span>
+<p class="text-body-md text-on-surface-variant">Modular trailers customized for nacelle weight distribution over unstable ground.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-h3 text-[18px] text-primary-container block">Night-Time Operations</span>
+<p class="text-body-md text-on-surface-variant">Strictly controlled transport windows to ensure maximum safety and minimum public disruption.</p>
+</div>
+</li>
+</ul>
+<img class="w-full h-80 object-cover rounded" data-alt="Close-up detail of a complex Goldhofer modular hydraulic lifting system attached to a heavy-duty transport trailer. The metallic surfaces of the machinery are clean and reflect professional maintenance, with vibrant orange safety accents contrasting against the primary navy blue of the equipment. The shot is industrial and technical, highlighting the precision engineering of the specialized transport tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlPkq8seFrYFYwES4RdY5gj52acZFHyqeUJNkIqVMrXl4LDm47T0EyF-t0EGdcOfGyVMwmAAjGGC2k9_jLIPMRRkj3665mYhrGSD_ha-ELI6nGOlGK5-4y8dKk0aEc7mV6xywG3vNj7yTAt-gQjr322jIy8Qv4O59rLMx0k7oboiVtgwZJna-386oFFO3-z7OcrmjZ-o24Xm5R2HtL8MLaifXoyQH2CTzxo2FExQ575d6ugThJcHl6Olp20FWNFOkeYqR8g_v2A0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Results/Metrics Section -->
+<section class="py-section-padding bg-primary-container text-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<span class="font-h1 text-[64px] text-secondary-container block">100%</span>
+<span class="font-label-caps text-label-caps opacity-70">Damage-Free Delivery</span>
+</div>
+<div class="space-y-2">
+<span class="font-h1 text-[64px] text-secondary-container block">320</span>
+<span class="font-label-caps text-label-caps opacity-70">Total Loads</span>
+</div>
+<div class="space-y-2">
+<span class="font-h1 text-[64px] text-secondary-container block">0</span>
+<span class="font-label-caps text-label-caps opacity-70">Lost Time Injuries (LTI)</span>
+</div>
+<div class="space-y-2">
+<span class="font-h1 text-[64px] text-secondary-container block">15%</span>
+<span class="font-label-caps text-label-caps opacity-70">Time Reduction</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-h3 text-h3 text-primary-container mb-8 italic leading-relaxed">
+                "Al Harthy's technical innovation in blade lifting technology was the key to unlocking this project's tight timeline. Their commitment to safety and precision in the Dhofar mountains was exceptional."
+            </blockquote>
+<div class="flex flex-col items-center">
+<div class="h-12 w-12 rounded-full bg-slate-300 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male project director in a corporate environment. He is wearing a sharp charcoal suit and has a confident, experienced expression. The lighting is professional studio quality with a soft blurred office background, suggesting a senior leadership role in the renewable energy sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvixgSmoUb5mHVgc0A0IxCG0OA70AiFfPgYWK_ReGqdtYrcxjJCLbIxUD2ox4cQEiP9cjg0VU8pi1NMezGTvtnUa-5kgJGOqZQ4wFUF8_x9wwbThD4saYmqQHRnnrBI5sle0ePhtT6QUAlcHn6O0lf4M8mmPRO4xaOoZbMitZx0TWQxkxG5ZoaP4x9v4oGdGKj-SVwH86glhbzd8WSbto8jisf4ju2lmtxHy3p3WnERdXjx3NPVgc8oGs_6qfDMahMOZP9HVbVhK0"/>
+</div>
+<p class="font-label-caps text-label-caps text-primary">Project Director</p>
+<p class="text-on-surface-variant text-sm">Renewable Energy Solutions</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-white border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary-container p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="relative z-10 max-w-xl">
+<h2 class="font-h2 text-h2 text-white mb-4">Ready to move the impossible?</h2>
+<p class="text-slate-300 font-body-md">Partner with Oman's most reliable logistics provider for your next large-scale infrastructure project.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-secondary-container text-on-secondary px-8 py-4 font-button text-button rounded uppercase hover:bg-secondary transition-colors">Start Your Energy Project</button>
+<button class="border-2 border-white text-white px-8 py-4 font-button text-button rounded uppercase hover:bg-white hover:text-primary-container transition-all">Contact Expert</button>
+</div>
+<!-- Industrial abstract pattern background for CTA -->
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] transform rotate-12">engineering</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0A1D37] dark:bg-black border-t border-slate-800">
+<div class="hidden md:flex flex-col md:flex-row justify-between items-center px-12 py-16 max-w-7xl mx-auto w-full">
+<div class="space-y-4">
+<span class="text-orange-500 font-black text-2xl font-['Work_Sans'] tracking-widest uppercase">AL HARTHY</span>
+<p class="text-slate-400 font-['Work_Sans'] text-sm font-medium">© 2024 Al Harthy Transporters. Professional Logistics &amp; Haulage.</p>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-3">
+<span class="text-white font-bold font-['Work_Sans'] text-sm mb-2">OPERATIONS</span>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white hover:translate-x-1 transition-all" href="#">Fleet Operations</a>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white hover:translate-x-1 transition-all" href="#">Safety Standards</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-white font-bold font-['Work_Sans'] text-sm mb-2">RESOURCES</span>
+<a class="text-orange-500 font-bold font-['Work_Sans'] text-sm" href="#">Case Studies</a>
+<a class="text-slate-400 font-['Work_Sans'] text-sm hover:text-white hover:translate-x-1 transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-16 bg-white dark:bg-slate-900 md:hidden border-t border-slate-200">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-slate-100 transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-['Work_Sans'] font-bold text-[10px] uppercase tracking-tight">Fleet</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-slate-100 transition-all">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-['Work_Sans'] font-bold text-[10px] uppercase tracking-tight">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 bg-slate-50 dark:bg-slate-800/50 rounded-md p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-['Work_Sans'] font-bold text-[10px] uppercase tracking-tight">Cases</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-slate-100 transition-all">
+<span class="material-symbols-outlined">distance</span>
+<span class="font-['Work_Sans'] font-bold text-[10px] uppercase tracking-tight">Contact</span>
+</div>
+</nav>
+</body></html>
