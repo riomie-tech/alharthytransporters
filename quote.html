@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -99,16 +98,21 @@
         }
     </script>
 <style>
-        .material-symbols-outlined {
+       .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .form-focus:focus {
+       .form-focus:focus {
             outline: none;
-            border-color: #ff5722 !important;
+            border-color: #ff5722!important;
             box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.1);
         }
     </style>
-</head>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
 <body class="bg-surface font-body-md text-on-surface">
 <!-- TopAppBar -->
 <header class="bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
@@ -118,21 +122,25 @@
 <h1 class="font-work-sans font-black uppercase tracking-tighter text-2xl text-slate-950 dark:text-white">Al Harthy Transporters</h1>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="#">Services</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="#">Fleet</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="#">Safety</a>
-<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1 font-work-sans font-bold uppercase tracking-tight" href="#">Request Quote</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="services.html">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight" href="safety.html">Safety</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1 font-work-sans font-bold uppercase tracking-tight" href="quote.html">Request Quote</a>
 </nav>
+<a href="contact.html">
 <button class="bg-secondary-container text-white px-6 py-3 font-button text-button rounded-lg hover:bg-secondary transition-all Active:opacity-80">
                 Contact Support
             </button>
+</a>
 </div>
 </header>
 <main>
 <!-- Hero Title Section -->
 <section class="relative h-[400px] flex items-center justify-start px-6 md:px-12 overflow-hidden bg-primary">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40 mix-blend-multiply filter desaturate-50" data-alt="A professional close-up of a high-end logistics fleet management interface showing detailed transportation data and route mapping. The image is filtered with a deep navy overlay to match the corporate branding of Al Harthy Transporters, creating a serious and industrial atmosphere. High-contrast white text overlays would look sharp against this background, emphasizing the technical precision of the company's hauling operations. The lighting is low-key, focusing on the digital glow of supply chain information." src="https://www.kyoga.co.ke/"/>
+<img class="w-full h-full object-cover opacity-40 mix-blend-multiply filter desaturate-50"
+     src="images/hero-background.jpg"
+     alt="Al Harthy Transporters heavy haulage operations"/>
 </div>
 <div class="relative z-10 max-w-3xl">
 <span class="font-label-caps text-secondary-fixed text-label-caps mb-4 block">GLOBAL LOGISTICS SOLUTIONS</span>
@@ -163,7 +171,7 @@
 </select>
 </div>
 <div class="space-y-2">
-<label class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Cargo Description</label>
+<label class="font-label-caps text-outline uppercase tracking-wider">Cargo Description</label>
 <input class="w-full h-12 bg-surface-container-lowest border border-slate-200 rounded-lg px-4 font-body-md form-focus transition-all" placeholder="e.g. Industrial Generators" type="text"/>
 </div>
 <div class="space-y-2">
@@ -171,7 +179,7 @@
 <input class="w-full h-12 bg-surface-container-lowest border border-slate-200 rounded-lg px-4 font-body-md form-focus transition-all" placeholder="0.00" type="number"/>
 </div>
 <div class="space-y-2">
-<label class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Volume (CBM)</label>
+<label class="font-label-caps text-outline uppercase tracking-wider">Volume (CBM)</label>
 <input class="w-full h-12 bg-surface-container-lowest border border-slate-200 rounded-lg px-4 font-body-md form-focus transition-all" placeholder="0.00" type="number"/>
 </div>
 </div>
@@ -297,32 +305,32 @@
 <h2 class="text-xl font-bold text-orange-500 font-work-sans">Al Harthy Transporters</h2>
 <p class="text-slate-400 font-medium text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="share">share</span>
-<span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="public">public</span>
-<span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="mail">mail</span>
+<a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="share">share</span></a>
+<a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="public">public</span></a>
+<a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-white/50 hover:text-orange-500 cursor-pointer" data-icon="mail">mail</span></a>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
 <div class="space-y-4">
 <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
 <nav class="flex flex-col gap-2">
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Services</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">About Us</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Safety</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="services.html">Services</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="about.html">About Us</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="safety.html">Safety</a>
 </nav>
 </div>
 <div class="space-y-4">
 <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
 <nav class="flex flex-col gap-2">
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Careers</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Partnerships</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="careers.html">Careers</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="partners.html">Partnerships</a>
 </nav>
 </div>
 <div class="space-y-4">
 <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
 <nav class="flex flex-col gap-2">
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Privacy</a>
-<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="#">Contact</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="privacy.html">Privacy</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium hover:underline underline-offset-4" href="contact.html">Contact</a>
 </nav>
 </div>
 </div>
