@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services - Al Harthy Transporters</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -99,16 +99,21 @@
       }
     </script>
 <style>
-        .material-symbols-outlined {
+     .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .hero-overlay {
+     .hero-overlay {
             background: linear-gradient(90deg, rgba(10, 29, 55, 0.9) 0%, rgba(10, 29, 55, 0.4) 100%);
         }
-        .service-card-shadow {
+     .service-card-shadow {
             box-shadow: 0px 10px 30px rgba(10, 29, 55, 0.08);
         }
     </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
 <body class="bg-background text-on-background font-body-md">
 <!-- TopAppBar Component -->
@@ -119,21 +124,26 @@
 <span class="text-2xl font-black text-slate-950 dark:text-white tracking-tighter uppercase font-work-sans">Al Harthy Transporters</span>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1 font-work-sans font-bold uppercase tracking-tight text-sm" href="#">Services</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="#">About Us</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="#">Safety</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="#">Careers</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="index.html">Home</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1 font-work-sans font-bold uppercase tracking-tight text-sm" href="service.html">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="safety.html">Safety</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="security.html">Security</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors font-work-sans font-bold uppercase tracking-tight text-sm" href="fleet.html">Fleet</a>
 </nav>
+<a href="quote.html">
 <button class="bg-secondary text-on-secondary px-6 py-3 font-button text-button uppercase tracking-wider hover:bg-secondary-container transition-all active:opacity-80">
                 Request Quote
             </button>
+</a>
 </div>
 </header>
 <main>
 <!-- Hero Section -->
 <section class="relative h-[60vh] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A wide-angle professional photograph of a modern heavy-duty haulage fleet parked in a clean, industrial logistics yard during the golden hour. The trucks are pristine and white, reflecting the warm sunlight. The scene conveys a sense of massive scale, reliability, and professional industrial strength, with a deep navy blue color grading to match the corporate identity." src="https://www.kyoga.co.ke/"/>
+<img class="w-full h-full object-cover"
+     src="images/service-hero.jpg"
+     alt="Al Harthy Transporters heavy haulage fleet in operation"/>
 <div class="hero-overlay absolute inset-0"></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
@@ -172,7 +182,7 @@
 <span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="construction">construction</span>
 <h3 class="font-h3 text-h3 text-primary mb-4">Heavy Lift &amp; Project Cargo</h3>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-8">Specialized transport for out-of-gauge and oversized equipment. We provide end-to-end engineering studies, route surveys, and heavy-lift execution for power plants, oil refineries, and infrastructure projects.</p>
-<a class="inline-flex items-center gap-2 font-button text-button text-secondary group-hover:gap-4 transition-all" href="#">
+<a class="inline-flex items-center gap-2 font-button text-button text-secondary group-hover:gap-4 transition-all" href="heavy-haulage.html">
                                 LEARN MORE <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
@@ -198,7 +208,7 @@
 <h3 class="font-h3 text-h3 text-primary mb-4">Oil &amp; Gas Logistics</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">Safety-first transportation of volatile liquids and specialized oilfield equipment under strict HSSE protocols.</p>
 </div>
-<a class="inline-flex items-center gap-2 font-button text-button text-secondary group-hover:gap-4 transition-all" href="#">
+<a class="inline-flex items-center gap-2 font-button text-button text-secondary group-hover:gap-4 transition-all" href="hazardous-cargo.html">
                             LEARN MORE <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
@@ -227,6 +237,82 @@
 </div>
 </div>
 </section>
+<!-- Service Process -->
+<section class="py-section-padding bg-primary-container text-white">
+<div class="container mx-auto px-8 md:px-16 flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<span class="font-label-caps text-orange-500 mb-4 block">OUR PROCESS</span>
+<h2 class="font-h2 text-h2 mb-8">How We Deliver</h2>
+<div class="space-y-6">
+<div class="flex gap-6 items-start">
+<span class="text-h3 font-h3 text-orange-500">01</span>
+<div>
+<h4 class="font-h3 text-xl mb-1 uppercase tracking-tight">Consultation & Planning</h4>
+<p class="text-on-primary-container">Site surveys, route analysis, and risk assessment to engineer the safest transport solution.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-h3 font-h3 text-orange-500">02</span>
+<div>
+<h4 class="font-h3 text-xl mb-1 uppercase tracking-tight">Permits & Compliance</h4>
+<p class="text-on-primary-container">Full documentation and regulatory approvals managed by our compliance team before mobilization.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-h3 font-h3 text-orange-500">03</span>
+<div>
+<h4 class="font-h3 text-xl mb-1 uppercase tracking-tight">Execution & Tracking</h4>
+<p class="text-on-primary-container">GPS-monitored transport with 24/7 control tower oversight and client reporting.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-h3 font-h3 text-orange-500">04</span>
+<div>
+<h4 class="font-h3 text-xl mb-1 uppercase tracking-tight">Safe Delivery</h4>
+<p class="text-on-primary-container">Offloading supervision and proof-of-delivery confirmation at destination site.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<img class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
+     src="images/service-operations.jpg"
+     alt="Al Harthy operations team managing logistics dispatch"/>
+<div class="absolute -bottom-8 -left-8 bg-secondary-container p-8 hidden lg:block">
+<p class="font-h2 text-white">25+</p>
+<p class="font-label-caps text-white">Years Experience</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Served -->
+<section class="py-section-padding bg-white">
+<div class="container mx-auto px-8 md:px-16 text-center">
+<h2 class="font-h2 text-h2 text-primary mb-12">Industries We Serve</h2>
+<div class="flex flex-wrap justify-center items-center gap-12">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-slate-400 mb-4" data-icon="oil_barrel">oil_barrel</span>
+<p class="font-label-caps">Oil & Gas</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-slate-400 mb-4" data-icon="construction">construction</span>
+<p class="font-label-caps">Construction</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-slate-400 mb-4" data-icon="bolt">bolt</span>
+<p class="font-label-caps">Energy</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-slate-400 mb-4" data-icon="factory">factory</span>
+<p class="font-label-caps">Manufacturing</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-slate-400 mb-4" data-icon="science">science</span>
+<p class="font-label-caps">Petrochemical</p>
+</div>
+</div>
+</div>
+</section>
 <!-- CTA / Quote Section -->
 <section class="bg-primary-container py-24 relative overflow-hidden">
 <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
@@ -235,12 +321,16 @@
 <p class="font-body-lg text-body-lg text-on-primary-container mb-0">Our logistics experts are standing by to provide a detailed technical assessment and competitive quote for your haulage needs.</p>
 </div>
 <div class="md:w-1/3 flex flex-col gap-4">
-<button class="bg-secondary text-on-secondary px-8 py-5 font-button text-button uppercase tracking-widest hover:bg-secondary-container transition-all shadow-xl">
+<a href="quote.html">
+<button class="bg-secondary text-on-secondary px-8 py-5 font-button text-button uppercase tracking-widest hover:bg-secondary-container transition-all shadow-xl w-full">
                         Request a Technical Quote
                     </button>
-<button class="border-2 border-on-primary-container text-white px-8 py-5 font-button text-button uppercase tracking-widest hover:bg-white/10 transition-all">
+</a>
+<a href="contact.html">
+<button class="border-2 border-on-primary-container text-white px-8 py-5 font-button text-button uppercase tracking-widest hover:bg-white/10 transition-all w-full">
                         Download Service Brochure
                     </button>
+</a>
 </div>
 </div>
 <!-- Decorative Background Element -->
@@ -263,24 +353,24 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-work-sans font-bold uppercase text-sm tracking-widest">Navigation</h4>
 <ul class="flex flex-col gap-3">
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Services</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">About Us</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Safety</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="service.html">Services</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="about.html">About Us</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="safety.html">Safety</a></li>
 </ul>
 </div>
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-work-sans font-bold uppercase text-sm tracking-widest">Company</h4>
 <ul class="flex flex-col gap-3">
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Careers</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Contact</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Partners</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="career.html">Careers</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="contact.html">Contact</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="partners.html">Partners</a></li>
 </ul>
 </div>
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-work-sans font-bold uppercase text-sm tracking-widest">Legal</h4>
 <ul class="flex flex-col gap-3">
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Privacy Policy</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors font-work-sans text-sm font-medium hover:underline underline-offset-4" href="terms.html">Terms of Service</a></li>
 </ul>
 </div>
 </div>
