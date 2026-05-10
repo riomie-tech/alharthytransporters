@@ -1,397 +1,680 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Gallery | Al Harthy Transporters</title>
+    <meta name="description" content="Al Harthy Transporters specialized fleet: Volvo, Scania, Mercedes Actros heavy haulage, flatbeds, tankers, and cold chain trucks for GCC logistics.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fleet Gallery | Al Harthy Transporters</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed-dim": "#abc8f4",
-                        "tertiary": "#00030b",
-                        "outline": "#75777e",
-                        "surface-container-low": "#f1f4f6",
-                        "error": "#ba1a1a",
-                        "on-tertiary-fixed": "#001c38",
-                        "on-secondary-fixed-variant": "#862200",
-                        "surface-container-high": "#e5e9eb",
-                        "on-tertiary-container": "#6a87af",
-                        "inverse-primary": "#b6c7e9",
-                        "surface-tint": "#4e5f7c",
-                        "primary": "#00030a",
-                        "on-surface": "#181c1e",
-                        "primary-fixed-dim": "#b6c7e9",
-                        "on-secondary-fixed": "#3b0900",
-                        "tertiary-container": "#001e3b",
-                        "surface": "#f7fafc",
-                        "secondary": "#b02f00",
-                        "on-secondary-container": "#541100",
-                        "on-primary-fixed": "#081c36",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-primary": "#ffffff",
-                        "background": "#f7fafc",
-                        "on-tertiary-fixed-variant": "#2a486d",
-                        "primary-fixed": "#d6e3ff",
-                        "inverse-on-surface": "#eef1f3",
-                        "secondary-fixed": "#ffdbd1",
-                        "on-background": "#181c1e",
-                        "primary-container": "#0a1d37",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#c5c6ce",
-                        "on-secondary": "#ffffff",
-                        "surface-variant": "#e0e3e5",
-                        "on-primary-container": "#7586a5",
-                        "surface-container": "#ebeef0",
-                        "surface-bright": "#f7fafc",
-                        "inverse-surface": "#2d3133",
-                        "on-error-container": "#93000a",
-                        "error-container": "#ffdad6",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed-dim": "#ffb5a0",
-                        "secondary-container": "#ff5722",
-                        "on-surface-variant": "#44474d",
-                        "on-primary-fixed-variant": "#364763",
-                        "tertiary-fixed": "#d3e4ff",
-                        "surface-dim": "#d7dadc"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "section-padding": "80px",
-                        "container-max": "1280px",
-                        "stack-sm": "12px",
-                        "stack-lg": "48px",
-                        "gutter": "24px",
-                        "base": "8px",
-                        "stack-md": "24px"
-                    },
-                    "fontFamily": {
-                        "h3": ["Work Sans"],
-                        "h1": ["Work Sans"],
-                        "label-caps": ["Inter"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "h2": ["Work Sans"],
-                        "button": ["Inter"]
-                    },
-                    "fontSize": {
-                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
-                        "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}]
-                    }
-                },
-            },
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #FFFFFF;
         }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .hero-gradient {
-            background: linear-gradient(rgba(10, 29, 55, 0.75), rgba(10, 29, 55, 0.85));
+
+        /* Header */
+        header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E0E3E5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: #0A2540;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #5A6473;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover, nav a.active {
+            color: #0052CC;
+        }
+
+        .btn {
+            background-color: #0052CC;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #003d99;
+        }
+
+        /* Hero */
+        .fleet-hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)), 
+                        url('/images/fleet-hero.jpg') center/cover;
+            color: #FFFFFF;
+            padding: 120px 0;
+            min-height: 530px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-badge {
+            color: #7AB8FF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .fleet-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .fleet-hero p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            max-width: 600px;
+            line-height: 1.7;
+            color: #B8C5D6;
+        }
+
+        /* Category Nav */
+        .category-nav {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E0E3E5;
+            position: sticky;
+            top: 80px;
+            z-index: 50;
+        }
+
+        .category-inner {
+            overflow-x: auto;
+        }
+
+        .category-list {
+            display: flex;
+            white-space: nowrap;
+            gap: 32px;
+            padding: 16px 0;
+        }
+
+        .category-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #5A6473;
+            cursor: pointer;
+            padding-bottom: 16px;
+            margin-bottom: -16px;
+            transition: color 0.2s ease;
+        }
+
+        .category-btn:hover {
+            color: #0A2540;
+        }
+
+        .category-btn.active {
+            color: #0052CC;
+            border-bottom: 2px solid #0052CC;
+        }
+
+        /* Fleet Grid */
+        .fleet-section {
+            padding: 100px 0;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .vehicle-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E3E5;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .vehicle-card:hover {
+            box-shadow: 0 10px 30px rgba(10, 29, 55, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .vehicle-image {
+            height: 256px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .vehicle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .vehicle-card:hover .vehicle-image img {
+            transform: scale(1.05);
+        }
+
+        .vehicle-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: #0A2540;
+            color: #FFFFFF;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .vehicle-content {
+            padding: 32px;
+        }
+
+        .vehicle-content h3 {
+            font-size: 1.5rem;
+            color: #0A2540;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .spec-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #F8F9FA;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #5A6473;
+        }
+
+        .spec-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0A2540;
+        }
+
+        .btn-spec {
+            width: 100%;
+            padding: 16px;
+            background-color: #F8F9FA;
+            color: #0A2540;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-spec:hover {
+            background-color: #E8F0FE;
+            color: #0052CC;
+        }
+
+        /* CTA */
+        .cta-section {
+            background-color: #0A2540;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bg-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0.1;
+            pointer-events: none;
+            font-size: 300px;
+            color: #FFFFFF;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-content h2 {
+            font-size: 2.25rem;
+            color: #FFFFFF;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .cta-content p {
+            font-size: 1.125rem;
+            color: #B8C5D6;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0A2540;
+            color: #B8C5D6;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1A3A5C;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-brand p {
+            font-size: 0.875rem;
+            color: #B8C5D6;
+        }
+
+        .footer-col h4 {
+            color: #0052CC;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col a {
+            color: #B8C5D6;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-col a.active {
+            color: #0052CC;
+            font-weight: 700;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: #B8C5D6;
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1A3A5C;
+            padding-top: 32px;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #7A8FA6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .fleet-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            nav {
+                display: none;
+            }
+
+            .fleet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .fleet-hero {
+                padding: 80px 0;
+                min-height: auto;
+            }
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background text-on-background font-body-md">
-<!-- TopAppBar -->
-<header class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-[100] flat no shadows">
-<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-slate-900 dark:text-slate-50 transition-all scale-95 active:opacity-80" data-icon="menu">menu</span>
-<h1 class="text-xl font-black text-[#0A1D37] dark:text-slate-100 uppercase tracking-tighter">Al Harthy Transporters</h1>
-</div>
-<nav class="hidden md:flex gap-8 items-center font-['Work_Sans']">
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors" href="index.html">Home</a>
-<a class="text-orange-600 dark:text-orange-400 font-bold border-b-2 border-orange-600 transition-all" href="fleet.html">Fleet</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors" href="quote.html">Quotes</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors" href="account.html">Account</a>
-</nav>
-<span class="material-symbols-outlined text-slate-900 dark:text-slate-50 transition-all scale-95 active:opacity-80" data-icon="search">search</span>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative h-[530px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Our Fleet" class="w-full h-full object-cover" data-alt="A wide-angle, low-perspective shot of a pristine fleet of modern, heavy-duty logistics trucks parked in a perfectly aligned row at a high-tech distribution center during the golden hour. The sunlight reflects off the polished chrome and deep navy blue paint of the cabins. The atmosphere is professional and industrious, conveying massive scale and organizational precision. The lighting is warm yet crisp, emphasizing the strength and reliability of the vehicles in a clean, modern industrial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGfo4PYvfPiUSFhOIXoG0lzAs0_wR4EmY7QvF3xmNaTzWAn8hsVXa5rn-9cB5vwOVoIJRY8R2eTkHUTrugb2d4DXXrn3zwnLxSWa-4tb8aHuYioFMmkSKUoo25TCZa1P97V2K1CcZ6SIgC4EWTHsjFh9QcXwokMg2ddh1rKQ33dxhFD5d_I3jAi-PqCQnUw_FO11VXmPgoG3kAN0ta0P0gf_zmMSdlubnu1t6w-0J_TREqMwuO1ebIntOLYFj0Jr9aklIfY3vhkQ4"/>
-<div class="absolute inset-0 hero-gradient"></div>
-</div>
-<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-<div class="max-w-2xl text-white">
-<span class="font-label-caps text-secondary-fixed text-label-caps mb-4 block">INDUSTRIAL STRENGTH LOGISTICS</span>
-<h1 class="font-h1 text-h1 mb-6">Our Fleet</h1>
-<p class="font-body-lg text-body-lg text-slate-300">
-                        engineered for the most demanding logistics challenges across the region. From heavy-duty haulage to temperature-controlled transit, our diverse equipment is maintained to the highest safety protocols, ensuring your cargo arrives with surgical precision.
-                    </p>
-</div>
-</div>
-</section>
-<!-- Category Navigation -->
-<nav class="bg-white border-b border-slate-200 sticky top-[72px] z-50">
-<div class="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar">
-<div class="flex whitespace-nowrap gap-8 py-4">
-<button class="font-h3 text-[16px] text-orange-600 border-b-2 border-orange-600 pb-4 -mb-4 transition-all">All Vehicles</button>
-<button class="font-h3 text-[16px] text-slate-500 hover:text-primary-container transition-colors">Heavy Haulage</button>
-<button class="font-h3 text-[16px] text-slate-500 hover:text-primary-container transition-colors">Flatbeds</button>
-<button class="font-h3 text-[16px] text-slate-500 hover:text-primary-container transition-colors">Tankers</button>
-<button class="font-h3 text-[16px] text-slate-500 hover:text-primary-container transition-colors">Cold Chain</button>
-<button class="font-h3 text-[16px] text-slate-500 hover:text-primary-container transition-colors">Equipment</button>
-</div>
-</div>
-</nav>
-<!-- Fleet Gallery -->
-<section class="section-padding px-6 max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Vehicle Card 1: Heavy Haulage -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="Volvo FH16" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A powerful Volvo FH16 heavy haulage truck with a vibrant blue and white livery, navigating a sweeping mountain highway under a clear, bright sky. The truck is hauling a massive industrial generator on a multi-axle trailer, demonstrating extreme payload capacity. The lighting is natural and high-contrast, highlighting the intricate mechanical details of the engine vents and cabin design. The overall mood is one of unstoppable power and professional haulage excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaA8-e8DXNsViBCRo0fQNNXoshLaI0Azlyj7V4wYegTOSt-UIO0TQUCyue35JcRymUnRkTtcH_b5qDFOhLml3i2a8bkROlT7aJt5ut2c7_y_AFTzLHPJAPvA36vPpVHTTT1avH1ScA3Se5yNtmC0AbIETUOlWc-OoTjfFh6r6pxMQ1jd4XytLVHUI5H_WxmXQqnT93AcBsSy8kIHfAUk0Xx12OzuJQrbRJ7I-ojAYfcVNROZOKjUqlwZ_MvW-xTBFYbAbf1g0E5wQ"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Heavy Haulage</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">Volvo FH16 Heavy Hauler</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">PAYLOAD CAPACITY</span>
-<span class="font-body-md font-bold text-primary-container">60 Tons</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">ENGINE POWER</span>
-<span class="font-body-md font-bold text-primary-container">750 HP</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">AXLE CONFIG</span>
-<span class="font-body-md font-bold text-primary-container">8x4 Tri-Drive</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-<!-- Vehicle Card 2: Flatbed -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="Scania R500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek Scania R500 flatbed transporter carrying stacked construction steel beams, driving through an industrial port area at midday. The truck has a deep navy finish with polished aluminum wheels that glisten in the bright, direct sunlight. The scene is crisp and highly detailed, emphasizing the cargo security and the robust build of the flatbed trailer. The color palette is dominated by professional slates, blues, and metallic accents, conveying a sense of logistical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_bbuwBkYdGfaG0GcRoC-oIwlhhF1F6Lo4vzH4bzfW-zpUAcBj9wsSqCxqxTkc9WCnWcfkIFl6sFUAJ1aRMH0oFNIMKymxKCmI_pdzohdI9eHJCC73QijTmrDSYuGexh8A7llJVBH_3CfGS9O65RALSXXDdtE45y93ww4jncJCInnmDCiLo8BAghWyuRKA0Q6e_OOJbRQCorYDzUiilfiJAvyfZrDQrB63udt640MAzs_3luYeJw1YvKhHQe3Dxyuul0kuD5J_IEQ"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Flatbed</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">Scania R500 Flatbed</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">PAYLOAD CAPACITY</span>
-<span class="font-body-md font-bold text-primary-container">32 Tons</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">BED LENGTH</span>
-<span class="font-body-md font-bold text-primary-container">13.6 Meters</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">TRANSMISSION</span>
-<span class="font-body-md font-bold text-primary-container">Opticruise</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-<!-- Vehicle Card 3: Tanker -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="Mercedes Actros" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A specialized Mercedes Actros liquid tanker truck parked at a modern chemical storage facility during dusk. The tanker body is high-grade stainless steel, reflecting the blue and purple hues of the twilight sky. Safety placards are clearly visible on the side, indicating strict compliance with safety protocols. The lighting is cinematic, with soft facility floodlights creating a clean, safe, and technologically advanced industrial atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdSpt7EuvCmoiNP8HovkS3BfjQBDIVkCg1-h-f1p9fC0GHH-Hloa1p5_k-iRDGHbgapkeik6ltkNIklKcIETe48GN5XFV_QKh009lSWP7dcUDiS_BXMc1Z-Hh6GIqN4egQ-T9olWcNv5XT1-ogkaY7gUvZ8Y40RQ_Z0nknCJ1NvhkJv0RGqNCdv_uJGxzRB2S4meMPmTFlE9xJX6ih8v4CqVYA_vLjhtdx2JbLCtwm7ZRl25nO9YtbTyp3Dj3JzlbGoXmRXtyWmX8"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Liquid Bulk</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">Mercedes Actros Tanker</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">VOLUME CAPACITY</span>
-<span class="font-body-md font-bold text-primary-container">38,000 Liters</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">CARGO TYPE</span>
-<span class="font-body-md font-bold text-primary-container">Hazardous/Fuel</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">SAFETY CLASS</span>
-<span class="font-body-md font-bold text-primary-container">ADR Certified</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-<!-- Vehicle Card 4: Cold Chain -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="MAN TGX Refrigerated" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern MAN TGX refrigerated truck with a Thermo King cooling unit, captured on a misty morning highway. The white trailer is perfectly clean, symbolizing the hygiene standards of cold chain logistics. The lighting is soft and diffused, creating a serene, reliable mood. The truck's cabin is a deep charcoal, providing a professional contrast against the bright white trailer. The image conveys temperature-controlled precision and reliability in long-haul food transport." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnG2Pkdu7bBawjFtIC18ANIgqM7uXbfE4TSM4s6OQk48Ql372BOK4VHF_TM_-7tYT4xUZrZaMzklhE1eSo_VnY__Jm51PpAa4y9AfqTlDE9h2DXz1kiIQ_zd0rqZJTQAChv5CkCGcUxTzWvhQxDUoycC_DRQ4xYfDNlfJ6oXWAanPl7_7bBXJSids5-1mpk1OIvq-PQWWoquc-bdDpc8VZ4mf-vU6YKRpZ4ySG_VQKT--GPDNThDJ0f42INbtoUoOD4OPOaDeXuAk"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Cold Chain</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">MAN TGX Refrigerated</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">TEMP RANGE</span>
-<span class="font-body-md font-bold text-primary-container">-25°C to +20°C</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">UNIT TYPE</span>
-<span class="font-body-md font-bold text-primary-container">Dual Discharge</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">TELEMATICS</span>
-<span class="font-body-md font-bold text-primary-container">Live Tracking</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-<!-- Vehicle Card 5: Tautliner -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="DAF XF" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-capacity DAF XF curtainsider truck parked in a large, modern logistics hub with busy loading bays in the background. The curtains are pulled tight, showcasing the clean, unbranded navy blue surfaces. The truck is perfectly clean, reflecting the bright fluorescent lights of the facility interior. The perspective is dynamic, showcasing the sheer length and storage volume of the vehicle. The overall atmosphere is one of organized efficiency and high-volume freight capacity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeTC5f9PTJFIn2lf_N-6iSSNfY6k5TT86qWnrnqhYr6CjpA8HETSsSFbxzYKhRSsF1Uzna01AJjeD_acThZToGHQ2HCLhyx87WHEVUT5Ana6qdYl6ige8vglSpcq0ffUhsk6D3h41N-dM5vlSFTYCxwwon9lYWB2iPaeeDCLKzLsocI644wbuY0Cy_HX7LQkWhmCocUSzed5eTDpCspu9M4V-JQETEzycwBwdiosGTNITzbFAdGoTz7gs4bbcKS2LFANgHgYQV0TY"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">General Freight</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">DAF XF Curtainsider</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">PALLET COUNT</span>
-<span class="font-body-md font-bold text-primary-container">26 Standard</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">DOOR TYPE</span>
-<span class="font-body-md font-bold text-primary-container">Rear Barn Doors</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">SECURITY</span>
-<span class="font-body-md font-bold text-primary-container">Reinforced Curtains</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-<!-- Vehicle Card 6: Specialist Equipment -->
-<article class="group bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-[0px_10px_30px_rgba(10,29,55,0.08)]">
-<div class="h-64 overflow-hidden relative">
-<img alt="Low Loader" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A heavy-duty low loader trailer carrying a large yellow crawler excavator through a desert industrial landscape. The heat shimmer is visible on the horizon, but the truck and its specialized load are in sharp, clear focus. The equipment is secured with heavy-duty chains and binders, demonstrating rigorous safety standards. The lighting is harsh and bright, typical of an arid worksite, emphasizing the rugged capability and industrial strength of the logistics operation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY5MSIfa_2LVVS16nQhFkwzixksakzkR2ELF__IG3Nu35Y_N-HWEbVkIQ8Eas6e1Dw7T-yseQzGIbODsprdaaOtJjR6lPATxmSeey3ptOgcmhtMOw9oMO3EucjAK02XVmJbagnW4VPZeLGAoToN0aSAG8iqakxsGo1kGUttCYn_S5ZvWwQQEDWIP581M8DV1F6DmPP6gtrtFXO0DZJt5gMeF8ZU8Mu0t5cOT9cRilhyLJvFn358dYk9P0qlsnF-4cRLOQ73D7art4"/>
-<div class="absolute top-4 left-4 bg-primary-container text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Specialist</div>
-</div>
-<div class="p-stack-md">
-<h3 class="font-h3 text-h3 mb-2">Heavy Low Loader</h3>
-<div class="space-y-2 mb-6">
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">MAX LOAD</span>
-<span class="font-body-md font-bold text-primary-container">80 Tons</span>
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-50">
-<span class="font-label-caps text-slate-500">LOAD HEIGHT</span>
-<span class="font-body-md font-bold text-primary-container">0.5 Meters</span>
-</div>
-<div class="flex justify-between items-center py-2">
-<span class="font-label-caps text-slate-500">EXTENDABLE</span>
-<span class="font-body-md font-bold text-primary-container">Up to 22 Meters</span>
-</div>
-</div>
-<button class="w-full py-4 bg-slate-50 text-primary-container font-button uppercase tracking-widest hover:bg-orange-50 hover:text-orange-600 transition-all">Technical Specs</button>
-</div>
-</article>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="section-padding bg-primary-container relative overflow-hidden">
-<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
-<span class="material-symbols-outlined text-[300px]" data-icon="local_shipping">local_shipping</span>
-</div>
-<div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-<h2 class="font-h2 text-h2 text-white mb-6">Ready to Mobilize?</h2>
-<p class="font-body-lg text-body-lg text-slate-300 max-w-2xl mx-auto mb-10">
-                    Our technical team is ready to advise on the best fleet configuration for your specific logistical needs. Contact us for a precise project quote.
-                </p>
-<button class="px-12 py-5 bg-secondary text-white font-button uppercase tracking-widest text-[16px] rounded-lg shadow-xl transition-all hover:bg-secondary-container active:scale-95">Request Quote</button>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#0A1D37] dark:bg-slate-950 text-white border-t border-slate-700">
-<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
-<div class="flex flex-col items-center md:items-start gap-4">
-<h2 class="text-white font-black tracking-widest">AL HARTHY TRANSPORTERS</h2>
-<p class="text-slate-300 font-['Work_Sans'] text-sm">© 2024 Al Harthy Transporters. Industrial Strength Logistics.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-6">
-<a class="text-slate-300 font-['Work_Sans'] text-sm hover:text-orange-400 transition-colors" href="fleet.html">Fleet Technical Specs</a>
-<a class="text-slate-300 font-['Work_Sans'] text-sm hover:text-orange-400 transition-colors" href="safety.html">Safety Protocols</a>
-<a class="text-slate-300 font-['Work_Sans'] text-sm hover:text-orange-400 transition-colors" href="service.html">Service Areas</a>
-<a class="text-orange-400 font-bold underline font-['Work_Sans'] text-sm" href="quote.html">Request Quote</a>
-</div>
-</div>
-</footer>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-[0px_-4px_20px_rgba(10,29,55,0.05)]">
-<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
-</a>
-<a class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 rounded-lg px-3 py-1" href="#">
-<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
-<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Fleet</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
-<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Quotes</span>
-</a>
-<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="font-['Work_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Account</span>
-</a>
-</nav>
-<!-- NavigationDrawer (Vehicle Categories) - Hidden by default, typically triggered by menu -->
-<aside class="fixed right-0 top-0 h-full z-[110] flex flex-col w-80 bg-white dark:bg-slate-950 shadow-2xl border-l divide-y divide-slate-100 dark:divide-slate-800 transition-transform translate-x-full" id="nav-drawer">
-<div class="px-6 py-8">
-<div class="flex justify-between items-center mb-8">
-<h2 class="text-lg font-black text-[#0A1D37] uppercase">Vehicle Categories</h2>
-<button class="material-symbols-outlined" onclick="document.getElementById('nav-drawer').classList.add('translate-x-full')">close</button>
-</div>
-<nav class="flex flex-col gap-2">
-<a class="flex items-center gap-4 text-orange-600 border-r-4 border-orange-600 bg-slate-100 dark:bg-slate-900 px-4 py-3 font-semibold" href="#">
-<span class="material-symbols-outlined" data-icon="construction">construction</span>
-<span>Heavy Haulage</span>
-</a>
-<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
-<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
-<span>Flatbeds</span>
-</a>
-<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
-<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
-<span>Tankers</span>
-</a>
-<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
-<span class="material-symbols-outlined" data-icon="ac_unit">ac_unit</span>
-<span>Cold Chain</span>
-</a>
-<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-900" href="#">
-<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
-<span>Equipment</span>
-</a>
-</nav>
-</div>
-</aside>
-</body></html>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">Al Harthy Transporters</a>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="trailers.html" class="active">Fleet</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="dhofar.html">Cases</a>
+                    <a href="contact.html" class="btn">Request Quote</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fleet-hero">
+            <div class="container">
+                <div style="max-width: 600px;">
+                    <span class="hero-badge">Industrial Strength Logistics</span>
+                    <h1>Our Fleet</h1>
+                    <p>Engineered for the most demanding logistics challenges across the region. From heavy-duty haulage to temperature-controlled transit, our diverse equipment is maintained to the highest safety protocols, ensuring your cargo arrives with surgical precision.</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="category-nav">
+            <div class="container">
+                <div class="category-inner">
+                    <div class="category-list">
+                        <button class="category-btn active">All Vehicles</button>
+                        <button class="category-btn">Heavy Haulage</button>
+                        <button class="category-btn">Flatbeds</button>
+                        <button class="category-btn">Tankers</button>
+                        <button class="category-btn">Cold Chain</button>
+                        <button class="category-btn">Equipment</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="fleet-section">
+            <div class="container">
+                <div class="fleet-grid">
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="Volvo FH16 Heavy Hauler">
+                            <div class="vehicle-tag">Heavy Haulage</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>Volvo FH16 Heavy Hauler</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Payload Capacity</span>
+                                    <span class="spec-value">60 Tons</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Engine Power</span>
+                                    <span class="spec-value">750 HP</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Axle Config</span>
+                                    <span class="spec-value">8x4 Tri-Drive</span>
+                                </div>
+                            </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="Scania R500 Flatbed">
+                            <div class="vehicle-tag">Flatbed</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>Scania R500 Flatbed</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Payload Capacity</span>
+                                    <span class="spec-value">32 Tons</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Bed Length</span>
+                                    <span class="spec-value">13.6 Meters</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Transmission</span>
+                                    <span class="spec-value">Opticruise</span>
+                                </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="Mercedes Actros Tanker">
+                            <div class="vehicle-tag">Liquid Bulk</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>Mercedes Actros Tanker</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Volume Capacity</span>
+                                    <span class="spec-value">38,000 Liters</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cargo Type</span>
+                                    <span class="spec-value">Hazardous/Fuel</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Safety Class</span>
+                                    <span class="spec-value">ADR Certified</span>
+                                </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="MAN TGX Refrigerated">
+                            <div class="vehicle-tag">Cold Chain</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>MAN TGX Refrigerated</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Temp Range</span>
+                                    <span class="spec-value">-25°C to +20°C</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Unit Type</span>
+                                    <span class="spec-value">Dual Discharge</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Telematics</span>
+                                    <span class="spec-value">Live Tracking</span>
+                                </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="DAF XF Curtainsider">
+                            <div class="vehicle-tag">General Freight</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>DAF XF Curtainsider</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Pallet Count</span>
+                                    <span class="spec-value">26 Standard</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Door Type</span>
+                                    <span class="spec-value">Rear Barn Doors</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Security</span>
+                                    <span class="spec-value">Reinforced Curtains</span>
+                                </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="/images/fleet-hero.jpg" alt="Heavy Low Loader">
+                            <div class="vehicle-tag">Specialist</div>
+                        </div>
+                        <div class="vehicle-content">
+                            <h3>Heavy Low Loader</h3>
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-label">Max Load</span>
+                                    <span class="spec-value">80 Tons</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Load Height</span>
+                                    <span class="spec-value">0.5 Meters</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Extendable</span>
+                                    <span class="spec-value">Up to 22 Meters</span>
+                                </div>
+                            </div>
+                            <button class="btn-spec">Technical Specs</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Mobilize?</h2>
+                    <p>Our technical team is ready to advise on the best fleet configuration for your specific logistical needs. Contact us for a precise project quote.</p>
+                    <a href="contact.html" class="btn" style="background-color: #0052CC; padding: 16px 48px; font-size: 1rem;">Request Quote</a>
+                </div>
+            <div class="cta-bg-icon">🚛</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo">Al Harthy Transporters</span>
+                    <p>Setting the standard in heavy-duty logistics and regional transportation across the GCC.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">Sustainability</a></li>
+                        <li><a href="safety.html">Compliance</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/></svg>
+                        <span>Muscat, Oman</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
+                        <span>support@alharthytrans.com</span>
+                    </div>
+                </div>
+            <div class="footer-bottom">
+                © 2026 Al Harthy Transporters. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
