@@ -3,253 +3,481 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Real project photography of our heavy haulage fleet: 8x4 prime movers, low loaders, modular trailers, cranes, tankers. GCC operations.">
-  <title>Equipment Fleet | Heavy Haulage Specialists</title>
+  <meta name="description" content="Al Harthy Transporters heavy haulage fleet. Scania V8, Volvo FH16, MAN TGX prime movers and Goldhofer, Nooteboom multi-axle trailers.">
+  <title>Equipment & Fleet | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy: #0A2540;
-      --orange: #F59E0B;
-      --gray: #64748B;
-      --light: #F8FAFC;
-      --white: #FFFFFF;
-      --border: #E2E8F0;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--light);
-      color: var(--navy);
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
     }
-    
+
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 20px;
     }
-    
-    .page-header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 5rem 0 3rem;
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/equipment-hero.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
       text-align: center;
     }
-    
-    .page-header h1 {
-      font-size: clamp(2.25rem, 5vw, 3.5rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-    
-    .page-header p {
-      font-size: 1.125rem;
-      color: #CBD5E1;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-    
-    .fleet-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      padding: 4rem 0 5rem;
-    }
-    
-    .fleet-card {
-      background: var(--white);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 1px 3px rgba(10, 37, 64, 0.1), 0 1px 2px rgba(10, 37, 64, 0.06);
-      transition: all 0.3s ease;
-    }
-    
-    .fleet-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(10, 37, 64, 0.1), 0 10px 10px -5px rgba(10, 37, 64, 0.04);
-    }
-    
-    .fleet-card img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .fleet-content {
-      padding: 1.5rem;
-    }
-    
-    .fleet-tag {
+
+    .hero-badge {
       display: inline-block;
-      background: var(--orange);
-      color: var(--navy);
+      color: #F59E0B;
       font-size: 0.75rem;
       font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 20px;
     }
-    
-    .fleet-content h3 {
-      font-size: 1.375rem;
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Fleet Section */
+    .fleet-section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--navy);
-    }
-    
-    .fleet-content p {
-      color: var(--gray);
-      margin-bottom: 1.25rem;
-      font-size: 0.9375rem;
-    }
-    
-    .fleet-specs {
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 12px;
     }
-    
-    .spec {
-      background: var(--light);
-      border: 1px solid var(--border);
-      color: var(--navy);
-      font-size: 0.8125rem;
+
+    .section-label-line {
+      height: 3px;
+      width: 48px;
+      background-color: #F59E0B;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 48px;
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+
+    .fleet-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .fleet-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-color: #0052CC;
+    }
+
+    .card-image {
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .fleet-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 32px;
+    }
+
+    .card-tag {
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card-body h3 {
+      font-size: 1.5rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .card-body p {
+      color: #5A6473;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .spec-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .spec-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .spec-label {
+      color: #5A6473;
       font-weight: 600;
-      padding: 0.375rem 0.75rem;
-      border-radius: 6px;
+      min-width: 100px;
     }
-    
+
+    .spec-value {
+      color: #0A2540;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
     @media (max-width: 768px) {
-      .page-header {
-        padding: 3rem 0 2rem;
-      }
-      .fleet-grid {
-        grid-template-columns: 1fr;
-        padding: 2.5rem 0 3rem;
-        gap: 1.5rem;
-      }
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .fleet-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 80px 0; }
+      .fleet-section { padding: 80px 0; }
     }
   </style>
+  <link rel="preload" as="image" href="/images/equipment-hero.jpg">
 </head>
 <body>
-  <header class="page-header">
+
+  <header>
     <div class="container">
-      <h1>Equipment Fleet</h1>
-      <p>100% real project photography from GCC jobsites. No stock. No AI. Just our actual assets in operation.</p>
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html" class="active">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn">Request Quote</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <div class="fleet-grid">
-      
-      <article class="fleet-card">
-        <img src="/images/equipment-hero.jpg" alt="Scania V8 8x4 heavy haulage prime mover at sunset on UAE highway" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Prime Mover</span>
-          <h3>8x4 Scania V8 Tractor</h3>
-          <p>770HP flagship units rated to 250T GCW. Retarder brakes and hub reduction for mountain routes.</p>
-          <div class="fleet-specs">
-            <span class="spec">770 HP</span>
-            <span class="spec">250T GCW</span>
-            <span class="spec">8x4 Drive</span>
-          </div>
-        </div>
-      </article>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">80+ Assets</span>
+        <h1>Heavy Haulage Fleet</h1>
+        <p>Euro 6 compliant prime movers and multi-axle modular trailers engineered for loads up to 500 tons across the GCC.</p>
+      </div>
+    </section>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-lowloader.jpg" alt="Scania prime mover with 5-axle extendable low loader transporting crawler crane" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Low Loader</span>
-          <h3>5-Axle Extendable Lowbed</h3>
-          <p>Hydraulic gooseneck, 80T payload. Extends to 18m for transformers, turbines, and tracked equipment.</p>
-          <div class="fleet-specs">
-            <span class="spec">80T Payload</span>
-            <span class="spec">18m Deck</span>
-            <span class="spec">Hydraulic GN</span>
-          </div>
+    <section class="fleet-section">
+      <div class="container">
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Prime Movers</span>
         </div>
-      </article>
+        <h2 class="section-title">8x4 Tractors</h2>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-modular.jpg" alt="Scania tractor with 12-line hydraulic modular trailer at industrial site" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Modular</span>
-          <h3>Hydraulic Modular Trailer</h3>
-          <p>12-line platform with electronic steering. SPMT capability for 300T+ indivisible project cargo.</p>
-          <div class="fleet-specs">
-            <span class="spec">300T+</span>
-            <span class="spec">12 Lines</span>
-            <span class="spec">Self-Steer</span>
-          </div>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/scania-v8-sunset.jpg" alt="Scania V8 8x4 heavy haulage prime mover at sunset on UAE highway" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Scania</div>
+              <h3>V8 8x4 Heavy Haulage</h3>
+              <p>770hp V8 with 12-speed Opticruise. Approved for 250-ton GCW. AdBlue SCR for zero-emission zones.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Power:</span> <span class="spec-value">770 HP</span></li>
+                <li><span class="spec-label">GCW:</span> <span class="spec-value">250 Tons</span></li>
+                <li><span class="spec-label">Emission:</span> <span class="spec-value">Euro 6</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/volvo-fh16.jpg" alt="Volvo FH16 8x4 heavy haulage tractor" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Volvo</div>
+              <h3>FH16 750 8x4</h3>
+              <p>750hp D16K with I-Shift Dual Clutch. 325-ton GCW capability. Active safety package standard.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Power:</span> <span class="spec-value">750 HP</span></li>
+                <li><span class="spec-label">GCW:</span> <span class="spec-value">325 Tons</span></li>
+                <li><span class="spec-label">Emission:</span> <span class="spec-value">Euro 6</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/man-tgx.jpg" alt="MAN TGX 8x4 heavy haulage tractor" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">MAN</div>
+              <h3>TGX 41.640 8x4</h3>
+              <p>640hp D38 with TipMatic gearbox. 250-ton GCW. Heavy-duty chassis for modular combinations.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Power:</span> <span class="spec-value">640 HP</span></li>
+                <li><span class="spec-label">GCW:</span> <span class="spec-value">250 Tons</span></li>
+                <li><span class="spec-label">Emission:</span> <span class="spec-value">Euro 6</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/scania-lowloader.jpg" alt="Scania prime mover with 5-axle extendable low loader" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Combination</div>
+              <h3>Scania + Low Loader</h3>
+              <p>8x4 V8 with 5-axle extendable low loader. 120-ton payload. Hydraulic gooseneck for rapid loading.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Payload:</span> <span class="spec-value">120 Tons</span></li>
+                <li><span class="spec-label">Deck:</span> <span class="spec-value">Extendable 15-21m</span></li>
+                <li><span class="spec-label">Axles:</span> <span class="spec-value">5 Steerable</span></li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-tanker.jpg" alt="Mercedes Actros ADR certified fuel tanker at terminal during golden hour" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Tanker</span>
-          <h3>ADR Fuel Tanker</h3>
-          <p>38,000L stainless steel. ADR certified for dangerous goods. Bottom loading with vapor recovery.</p>
-          <div class="fleet-specs">
-            <span class="spec">38,000L</span>
-            <span class="spec">ADR Certified</span>
-            <span class="spec">SS316L</span>
-          </div>
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Modular Trailers</span>
         </div>
-      </article>
+        <h2 class="section-title">Goldhofer & Nooteboom</h2>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-crane.jpg" alt="200-ton all-terrain mobile crane with boom extended lifting at sunset" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Crane</span>
-          <h3>200T All-Terrain Crane</h3>
-          <p>5-axle AT crane with 80m boom. Heavy lift, tandem picks, and project cargo offloading.</p>
-          <div class="fleet-specs">
-            <span class="spec">200T Lift</span>
-            <span class="spec">80m Boom</span>
-            <span class="spec">5-Axle AT</span>
-          </div>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/goldhofer-trailer.jpg" alt="Goldhofer THP/SL 12-axle modular heavy haulage trailer" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Goldhofer</div>
+              <h3>THP/SL Modular</h3>
+              <p>12-axle hydraulic platform with electronic steering. 500-ton payload. ±60° steering angle.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Payload:</span> <span class="spec-value">500 Tons</span></li>
+                <li><span class="spec-label">Axles:</span> <span class="spec-value">Up to 24</span></li>
+                <li><span class="spec-label">Steering:</span> <span class="spec-value">Electronic All-Wheel</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/nooteboom-lowloader.jpg" alt="Nooteboom extendable low loader trailer" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Nooteboom</div>
+              <h3>MCO-PX Extendable</h3>
+              <p>Pendulum axle technology. 130-ton payload. Extends from 13.5m to 21m for long loads.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Payload:</span> <span class="spec-value">130 Tons</span></li>
+                <li><span class="spec-label">Length:</span> <span class="spec-value">13.5 - 21m</span></li>
+                <li><span class="spec-label">Axles:</span> <span class="spec-value">3-7 Pendulum</span></li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-flatbed.jpg" alt="Extendable flatbed trailer loaded with steel beams at dusk industrial yard" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Flatbed</span>
-          <h3>Extendable Flatbed Trailer</h3>
-          <p>Telescopic deck to 20m. Twist locks and heavy-duty lashing for steel, pipes, and structures.</p>
-          <div class="fleet-specs">
-            <span class="spec">20m Deck</span>
-            <span class="spec">40T Payload</span>
-            <span class="spec">Telescopic</span>
-          </div>
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Support Fleet</span>
         </div>
-      </article>
+        <h2 class="section-title">Escort & Safety</h2>
 
-      <article class="fleet-card">
-        <img src="/images/equipment-escort.jpg" alt="Scania convoy with amber beacons and pilot vehicles on GCC highway at sunset" loading="lazy">
-        <div class="fleet-content">
-          <span class="fleet-tag">Escort</span>
-          <h3>Pilot Cars & Convoy Escort</h3>
-          <p>Certified pilot vehicles with amber beacons, height poles, and ROP/GCC police liaison for OOG moves.</p>
-          <div class="fleet-specs">
-            <span class="spec">ROP Approved</span>
-            <span class="spec">Amber Beacons</span>
-            <span class="spec">Route Survey</span>
-          </div>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="card-image">
+              <img src="/images/escort-vehicles.jpg" alt="Heavy haulage pilot escort vehicles with amber beacons" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Escort</div>
+              <h3>Pilot & Police Liaison</h3>
+              <p>Certified escort vehicles with amber beacons, height poles, and comms. ROP-approved for GCC routes.</p>
+              <ul class="spec-list">
+                <li><span class="spec-label">Fleet:</span> <span class="spec-value">12 Vehicles</span></li>
+                <li><span class="spec-label">Certification:</span> <span class="spec-value">ROP Approved</span></li>
+                <li><span class="spec-label">Coverage:</span> <span class="spec-value">Oman, UAE, KSA</span></li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </article>
-
-    </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
+        </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
