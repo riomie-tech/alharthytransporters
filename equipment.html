@@ -4,81 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipment | Dhofar Heavy Haulage</title>
-  <link rel="stylesheet" href="css/equipment.css">
+  <style>
+    :root{--brand-navy:#0A2540;--brand-overlay:rgba(10,37,64,.4)}
+    *{box-sizing:border-box;margin:0}
+    body{background:#000;font-family:system-ui,-apple-system,sans-serif}
+    .equipment-grid{display:grid;grid-template-columns:1fr}
+    .brand-hero{position:relative;overflow:hidden;background:var(--brand-navy);min-height:60vh}
+    .brand-hero img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.05) saturate(.85) hue-rotate(195deg) brightness(.95)}
+    .brand-hero::after{content:'';position:absolute;inset:0;background:var(--brand-overlay);mix-blend-mode:multiply;pointer-events:none}
+    .hero-content{position:absolute;bottom:8%;left:5%;right:5%;z-index:2;color:#fff;text-shadow:0 2px 16px rgba(10,37,64,.9)}
+    .hero-content h2{font-size:clamp(1.5rem,4vw,2.5rem);margin-bottom:.25rem;font-weight:700;line-height:1.1}
+    .hero-content p{font-size:clamp(.875rem,2vw,1rem);opacity:.9}
+    @media(min-width:768px){.equipment-grid{grid-template-columns:repeat(2,1fr)}.brand-hero{min-height:50vh}}
+    @media(min-width:1200px){.equipment-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:767px){.brand-hero{aspect-ratio:4/5;min-height:unset}}
+  </style>
 </head>
 <body>
   <main class="equipment-grid">
     
     <section class="brand-hero">
-      <img src="assets/equipment/scania-v8-hero.jpg" alt="Scania V8 8x4 Prime Mover">
-      <div class="hero-content">
-        <h2>Scania V8 8x4</h2>
-        <p>730HP Prime Movers</p>
-      </div>
+      <img src="assets/equipment/scania-v8-hero.jpg" alt="Scania V8 8x4 Prime Mover" loading="lazy">
+      <div class="hero-content"><h2>Scania V8 8x4</h2><p>730HP Prime Movers</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/volvo-fh16-hero.jpg" alt="Volvo FH16 750">
-      <div class="hero-content">
-        <h2>Volvo FH16</h2>
-        <p>750HP Heavy Haulage</p>
-      </div>
+      <img src="assets/equipment/volvo-fh16-hero.jpg" alt="Volvo FH16 750" loading="lazy">
+      <div class="hero-content"><h2>Volvo FH16</h2><p>750HP Heavy Haulage</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/man-tgx-hero.jpg" alt="MAN TGX 8x4">
-      <div class="hero-content">
-        <h2>MAN TGX</h2>
-        <p>640HP Fleet</p>
-      </div>
+      <img src="assets/equipment/man-tgx-hero.jpg" alt="MAN TGX 8x4" loading="lazy">
+      <div class="hero-content"><h2>MAN TGX</h2><p>640HP Fleet</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/scania-lowloader-hero.jpg" alt="Scania with Lowloader">
-      <div class="hero-content">
-        <h2>Lowloader Units</h2>
-        <p>100T+ Capacity</p>
-      </div>
+      <img src="assets/equipment/scania-lowloader-hero.jpg" alt="Scania with Lowloader" loading="lazy">
+      <div class="hero-content"><h2>Lowloader Units</h2><p>100T+ Capacity</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/goldhofer-trailer-hero.jpg" alt="Goldhofer Modular Trailer">
-      <div class="hero-content">
-        <h2>Goldhofer</h2>
-        <p>Modular Hydraulic Trailers</p>
-      </div>
+      <img src="assets/equipment/goldhofer-trailer-hero.jpg" alt="Goldhofer Modular Trailer" loading="lazy">
+      <div class="hero-content"><h2>Goldhofer</h2><p>Modular Hydraulic Trailers</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/nooteboom-lowloader-hero.jpg" alt="Nooteboom Lowloader">
-      <div class="hero-content">
-        <h2>Nooteboom</h2>
-        <p>Extendable Lowloaders</p>
-      </div>
+      <img src="assets/equipment/nooteboom-lowloader-hero.jpg" alt="Nooteboom Lowloader" loading="lazy">
+      <div class="hero-content"><h2>Nooteboom</h2><p>Extendable Lowloaders</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/equipment-crane-hero.jpg" alt="Heavy Lift Crane">
-      <div class="hero-content">
-        <h2>Heavy Lift</h2>
-        <p>Mobile Crane Operations</p>
-      </div>
+      <img src="assets/equipment/equipment-crane-hero.jpg" alt="Heavy Lift Crane" loading="lazy">
+      <div class="hero-content"><h2>Heavy Lift</h2><p>Mobile Crane Operations</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/equipment-hero.jpg" alt="Equipment Overview">
-      <div class="hero-content">
-        <h2>Fleet Overview</h2>
-        <p>Complete Capabilities</p>
-      </div>
+      <img src="assets/equipment/equipment-hero.jpg" alt="Equipment Overview" loading="lazy">
+      <div class="hero-content"><h2>Fleet Overview</h2><p>Complete Capabilities</p></div>
     </section>
 
     <section class="brand-hero">
-      <img src="assets/equipment/escort-vehicles-hero.jpg" alt="Escort Vehicle Fleet">
-      <div class="hero-content">
-        <h2>Escort Fleet</h2>
-        <p>Certified Pilot Vehicles</p>
-      </div>
+      <img src="assets/equipment/escort-vehicles-hero.jpg" alt="Escort Vehicle Fleet" loading="lazy">
+      <div class="hero-content"><h2>Escort Fleet</h2><p>Certified Pilot Vehicles</p></div>
     </section>
 
   </main>
