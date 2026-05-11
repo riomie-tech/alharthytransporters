@@ -1,140 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Heavy Haulage Company</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0A2540',
-                        secondary: '#F59E0B'
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Al Harthy Transporters heavy haulage projects. Oil & gas, renewables, and manufacturing logistics across Oman and the GCC.">
+  <title>Projects | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
+
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/project-hero-desert-haul.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Projects */
+    .projects-section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label-line {
+      height: 3px;
+      width: 48px;
+      background-color: #F59E0B;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 48px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .project-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-color: #0052CC;
+    }
+
+    .card-image {
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 32px;
+    }
+
+    .card-tag {
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card-body h3 {
+      font-size: 1.375rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .card-body p {
+      color: #5A6473;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .card-link {
+      color: #0A2540;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 2px solid #F59E0B;
+      padding-bottom: 4px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card-link:hover { border-color: #0A2540; }
+
+    /* CTA */
+    .cta {
+      padding: 100px 0;
+      background-color: #0A2540;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.25rem;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .cta p {
+      font-size: 1.125rem;
+      color: #B8C5D6;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 80px 0; }
+      .projects-section { padding: 80px 0; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/project-hero-desert-haul.jpg">
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-primary text-white sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold">HeavyHaul Co.</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="/index.html" class="hover:text-secondary transition">Home</a>
-                    <a href="/project.html" class="text-secondary font-semibold">Projects</a>
-                    <a href="/news.html" class="hover:text-secondary transition">News</a>
-                    <a href="/fleet.html" class="hover:text-secondary transition">Fleet</a>
-                </div>
-            </div>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn">Request Quote</a>
         </nav>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-black">
-        <img src="/images/project-hero-desert-haul.jpg" alt="Heavy haulage desert operation"
-             class="w-full h-full object-cover opacity-70">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
-        <div class="absolute inset-0 flex items-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
-                    Engineering the <span class="text-secondary">Impossible</span>
-                </h1>
-                <p class="text-xl text-gray-200 max-w-2xl">
-                    From remote deserts to coastal highways, we move the world's largest infrastructure.
-                </p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">Case Studies</span>
+        <h1>Engineering the Impossible</h1>
+        <p>From remote deserts to coastal highways, we move the world's largest infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="container">
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Proven Track Record</span>
+        </div>
+        <h2 class="section-title">Heavy Haulage Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="card-image">
+              <img src="/images/oil-gas-desert-rig.jpg" alt="Khazzan Gas Field Expansion" loading="lazy">
             </div>
-        </div>
-    </section>
-
-    <!-- Project Cards -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Oil & Gas - Khazzan - UPDATED TO MATCH CASE STUDY -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="/images/oil-gas-desert-rig.jpg" alt="Khazzan Gas Field Expansion"
-                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-secondary font-semibold text-sm mb-2">OIL & GAS</div>
-                        <h3 class="text-2xl font-bold text-primary mb-3">Khazzan Gas Field Expansion</h3>
-                        <p class="text-gray-600 mb-4">
-                            800-ton turbine units transported 400km across Omani desert using 48-axle Goldhofer configuration. Zero incidents.
-                        </p>
-                        <a href="/case-studies/khazzan.html" class="text-primary font-semibold hover:text-secondary transition">
-                            View Case Study →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Renewables - Dhofar - UPDATED TO MATCH CASE STUDY -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="/images/wind-turbine-blade.jpg" alt="Dhofar Wind Farm Phase II blade transport"
-                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-secondary font-semibold text-sm mb-2">RENEWABLES</div>
-                        <h3 class="text-2xl font-bold text-primary mb-3">Dhofar Wind Farm Phase II</h3>
-                        <p class="text-gray-600 mb-4">
-                            75m blade logistics for 40 turbines through Dhofar mountains. 9-month delivery using Goldhofer lifters with zero LTI.
-                        </p>
-                        <a href="/case-studies/dhofar.html" class="text-primary font-semibold hover:text-secondary transition">
-                            View Case Study →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Manufacturing & Supply Chain -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <div class="h-64 overflow-hidden">
-                        <img src="/images/manufacturing-hub.jpg" alt="Manufacturing logistics hub"
-                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-secondary font-semibold text-sm mb-2">MANUFACTURING</div>
-                        <h3 class="text-2xl font-bold text-primary mb-3">24/7 Supply Chain</h3>
-                        <p class="text-gray-600 mb-4">
-                            Systematic port-to-factory logistics with real-time tracking, staging yards, and just-in-time delivery.
-                        </p>
-                        <a href="/contact.html?project=manufacturing" class="text-primary font-semibold hover:text-secondary transition">
-                            Request Details →
-                        </a>
-                    </div>
-                </div>
-
+            <div class="card-body">
+              <div class="card-tag">Oil & Gas</div>
+              <h3>Khazzan Gas Field Expansion</h3>
+              <p>800-ton turbine units transported 400km across Omani desert using 48-axle Goldhofer configuration. Zero incidents.</p>
+              <a href="/case-studies/khazzan.html" class="card-link">View Case Study</a>
             </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image">
+              <img src="/images/wind-turbine-blade.jpg" alt="Dhofar Wind Farm Phase II blade transport" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Renewables</div>
+              <h3>Dhofar Wind Farm Phase II</h3>
+              <p>75m blade logistics for 40 turbines through Dhofar mountains. 9-month delivery using Goldhofer lifters with zero LTI.</p>
+              <a href="/case-studies/dhofar.html" class="card-link">View Case Study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image">
+              <img src="/images/manufacturing-hub.jpg" alt="Manufacturing logistics hub" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-tag">Manufacturing</div>
+              <h3>24/7 Supply Chain</h3>
+              <p>Systematic port-to-factory logistics with real-time tracking, staging yards, and just-in-time delivery.</p>
+              <a href="/contact.html?project=manufacturing" class="card-link">Request Details</a>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="bg-primary py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-white mb-4">
-                Got a <span class="text-secondary">Complex Move</span>?
-            </h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Our engineering team handles route surveys, permits, and execution for loads up to 500 tons.
-            </p>
-            <a href="/contact.html" class="inline-block bg-secondary text-primary font-bold px-8 py-4 rounded-lg hover:bg-white transition">
-                Start Your Project
-            </a>
-        </div>
+    <section class="cta">
+      <div class="container">
+        <h2>Got a Complex Move?</h2>
+        <p>Our engineering team handles route surveys, permits, and execution for loads up to 500 tons.</p>
+        <a href="contact.html" class="btn">Start Your Project</a>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="text-2xl font-bold text-white mb-4">HeavyHaul Co.</div>
-            <p>© 2026 HeavyHaul Co. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
         </div>
-    </footer>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
