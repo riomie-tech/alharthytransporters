@@ -1,480 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Al Harthy Transporters</title>
-    <meta name="description" content="25+ years of heavy-duty logistics excellence. Learn about Al Harthy Transporters' mission, safety standards, and East African operations.">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Al Harthy Transporters: 20+ years heavy haulage specialists in UAE, KSA, Oman. Scania V8 fleet, OOG cargo, ADR certified.">
+  <title>About Us | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #FFFFFF;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
 
-        /* Header */
-        header {
-            background-color: #FFFFFF;
-            border-bottom: 1px solid #E0E3E5;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        .logo {
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: #0A2540;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
 
-        nav {
-            display: flex;
-            gap: 36px;
-            align-items: center;
-        }
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
 
-        nav a {
-            color: #5A6473;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
 
-        nav a:hover, nav a.active {
-            color: #0052CC;
-        }
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
 
-        .btn {
-            background-color: #0052CC;
-            color: #FFFFFF;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s ease;
-            border: none;
-            cursor: pointer;
-        }
+    nav a:hover, nav a.active { color: #0052CC; }
 
-        .btn:hover {
-            background-color: #003d99;
-        }
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
 
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
-                        url('about-hero.jpg') center/cover;
-            color: #FFFFFF;
-            padding: 100px 0;
-            text-align: center;
-        }
+    .btn:hover { background-color: #003d99; }
 
-        .page-hero h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/about-hero.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
 
-        .page-hero p {
-            font-size: 1.125rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
 
-        .hero-badge {
-            display: inline-block;
-            color: #7AB8FF;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
 
-        /* Content Sections */
-        .content-section {
-            padding: 100px 0;
-        }
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
 
-        .content-section.alt {
-            background-color: #F8F9FA;
-        }
+    /* Stats */
+    .stats {
+      padding: 80px 0;
+      background-color: #0A2540;
+      color: #FFFFFF;
+    }
 
-        .section-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
 
-        .section-top {
-            margin-bottom: 60px;
-        }
+    .stat-value {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #F59E0B;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-        .section-label {
-            color: #0052CC;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #B8C5D6;
+    }
 
-        .section-title {
-            font-size: 2.25rem;
-            color: #0A2540;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 24px;
-        }
+    /* Content */
+    .content-section { padding: 100px 0; }
+    .content-section.alt { background-color: #F8F9FA; }
 
-        .section-text p {
-            color: #5A6473;
-            margin-bottom: 20px;
-            font-size: 1.0625rem;
-            line-height: 1.7;
-        }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
 
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            margin-top: 60px;
-        }
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
 
-        .value-card {
-            border: 1px solid #E0E3E5;
-            border-radius: 8px;
-            padding: 32px;
-            background-color: #FFFFFF;
-            transition: all 0.25s ease;
-        }
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
 
-        .value-card:hover {
-            border-color: #0052CC;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-        }
+    .section-text p {
+      color: #5A6473;
+      margin-bottom: 20px;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
 
-        .value-card h3 {
-            font-size: 1.25rem;
-            color: #0A2540;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
 
-        .value-card p {
-            color: #5A6473;
-            line-height: 1.6;
-        }
+    .value-card {
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      padding: 32px;
+      background-color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
 
-        .value-icon {
-            width: 48px;
-            height: 48px;
-            background-color: rgba(0, 82, 204, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+    .value-card:hover {
+      border-color: #0052CC;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
 
-        /* Stats */
-        .stats {
-            padding: 80px 0;
-            background-color: #0A2540;
-            color: #FFFFFF;
-        }
+    .value-card h3 {
+      font-size: 1.25rem;
+      color: #0A2540;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
+    .value-card p {
+      color: #5A6473;
+      line-height: 1.6;
+    }
 
-        .stat-value {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #7AB8FF;
-            display: block;
-            margin-bottom: 8px;
-        }
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(0, 82, 204, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-        .stat-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #B8C5D6;
-        }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+      color: #0052CC;
+    }
 
-        /* CTA */
-        .cta {
-            padding: 100px 0;
-            text-align: center;
-        }
+    /* CTA */
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+    }
 
-        .cta h2 {
-            font-size: 2.25rem;
-            color: #0A2540;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
+    .cta h2 {
+      font-size: 2.25rem;
+      color: #0A2540;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
 
-        .cta p {
-            font-size: 1.125rem;
-            color: #5A6473;
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .cta p {
+      font-size: 1.125rem;
+      color: #5A6473;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        /* Footer */
-        footer {
-            background-color: #0A2540;
-            color: #B8C5D6;
-            padding: 60px 0 30px;
-        }
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
 
-        .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
 
-        .footer-brand {
-            max-width: 320px;
-        }
+    .footer-brand { max-width: 320px; }
 
-        .footer-brand .logo {
-            color: #0052CC;
-            margin-bottom: 16px;
-            display: block;
-        }
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
 
-        .footer-links {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-        .footer-links a {
-            color: #B8C5D6;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
 
-        .footer-links a:hover {
-            color: #FFFFFF;
-        }
+    .footer-links a:hover { color: #FFFFFF; }
 
-        .footer-bottom {
-            border-top: 1px solid #1A3A5C;
-            padding-top: 30px;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #7A8FA6;
-        }
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            .page-hero h1 {
-                font-size: 2.25rem;
-            }
-            
-            nav {
-                display: none;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .section-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .page-hero {
-                padding: 80px 0;
-            }
-        }
-    </style>
+    /* Mobile */
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-grid { grid-template-columns: 1fr; gap: 40px; }
+      .page-hero { padding: 80px 0; }
+      .content-section { padding: 80px 0; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/about-hero.jpg">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="/" class="logo">Al Harthy Transporters</a>
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="service.html">Services</a>
-                    <a href="trailers.html">Fleet</a>
-                    <a href="safety.html">Safety</a>
-                    <a href="about.html" class="active">About</a>
-                    <a href="contact.html" class="btn">Request Quote</a>
-                </nav>
-            </div>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html" class="active">About</a>
+          <a href="contact.html" class="btn">Request Quote</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">Since 2004</span>
+        <h1>Precision in Motion</h1>
+        <p>20+ years moving the impossible. From 8x4 Scania V8s to 12-line modular trailers, we deliver OOG cargo across the GCC with zero-compromise safety.</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div>
+            <span class="stat-value">50+</span>
+            <span class="stat-label">Prime Movers</span>
+          </div>
+          <div>
+            <span class="stat-value">300T</span>
+            <span class="stat-label">Max Lift Capacity</span>
+          </div>
+          <div>
+            <span class="stat-value">99.8%</span>
+            <span class="stat-label">On-Time Delivery</span>
+          </div>
+          <div>
+            <span class="stat-value">3</span>
+            <span class="stat-label">GCC Countries</span>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <span class="hero-badge">Our Legacy of Reliability</span>
-                <h1>Driving the Future of Industrial Logistics</h1>
-                <p>Founded on the principles of industrial strength and logistical precision, Al Harthy Transporters has emerged as a cornerstone of the regional supply chain. We don't just move cargo; we deliver the lifeblood of industries with unwavering commitment and technical excellence.</p>
+    <section class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-text">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">20 Years of Moving Industry Forward</h2>
+            <p>Al Harthy Transporters started with one truck and a promise: deliver every load with surgical precision, no matter the terrain.</p>
+            <p>Today we operate 50+ prime movers, 200T mobile cranes, and SPMT systems across UAE, KSA, and Oman. Our clients include ADNOC, Aramco, and major EPC contractors.</p>
+            <p>What hasn't changed is our promise: on-time delivery, zero-compromise safety, and treating every driver like family.</p>
+          </div>
+          <div>
+            <div class="values-grid">
+              <div class="value-card">
+                <h3>Mission</h3>
+                <p>Deliver industrial cargo safely and efficiently across the GCC through specialized equipment and certified expertise.</p>
+              </div>
+              <div class="value-card">
+                <h3>Vision</h3>
+                <p>To be the region's most trusted heavy-logistics partner, setting benchmarks in safety, reliability, and operational precision.</p>
+              </div>
             </div>
-        </section>
-
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div>
-                        <span class="stat-value">250+</span>
-                        <span class="stat-label">Heavy-Duty Fleet</span>
-                    </div>
-                    <div>
-                        <span class="stat-value">15M</span>
-                        <span class="stat-label">Miles Annually</span>
-                    </div>
-                    <div>
-                        <span class="stat-value">99.8%</span>
-                        <span class="stat-label">On-Time Delivery</span>
-                    </div>
-                    <div>
-                        <span class="stat-value">12</span>
-                        <span class="stat-label">Strategic Hubs</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="container">
-                <div class="section-grid">
-                    <div class="section-text">
-                        <span class="section-label">Our Story</span>
-                        <h2 class="section-title">25 Years of Moving Industry Forward</h2>
-                        <p>Al Harthy Transporters began with a single truck and a commitment to reliability. Today we operate 500+ specialized units across 12 strategic hubs in Kenya, Tanzania, Uganda, and beyond.</p>
-                        <p>We specialize in heavy-haul, abnormal loads, and ADR-certified hazardous cargo. Our clients include leading firms in mining, oil & gas, energy, and infrastructure.</p>
-                        <p>What hasn’t changed is our promise: on-time delivery, zero-compromise safety, and transparent operations backed by real-time tracking.</p>
-                    </div>
-                    <div>
-                        <div class="values-grid">
-                            <div class="value-card">
-                                <h3>Mission</h3>
-                                <p>Deliver industrial cargo safely and efficiently across East Africa through specialized equipment and certified expertise.</p>
-                            </div>
-                            <div class="value-card">
-                                <h3>Vision</h3>
-                                <p>To be the region’s most trusted heavy-logistics partner, setting benchmarks in safety, reliability, and operational precision.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section alt">
-            <div class="container">
-                <div class="section-top">
-                    <span class="section-label">The Pillars of Our Success</span>
-                    <h2 class="section-title">Core Values</h2>
-                </div>
-
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg width="24" height="24" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <h3>Safety First</h3>
-                        <p>We maintain a zero-compromise approach to safety, ensuring every driver, vehicle, and cargo load meets rigorous international safety standards before deployment.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg width="24" height="24" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 0 013 0v1m0 0V11m0-5.5a1.5 0 013 0v3m0 0V11"></path></svg>
-                        </div>
-                        <h3>Operational Integrity</h3>
-                        <p>Transparency and honesty are at our core. We build lasting partnerships through reliable communication and ethical business practices in every transaction.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg width="24" height="24" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M10.5 6h9.75M10.5 6a1.5 0 11-3 0m3 0a1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"></path></svg>
-                        </div>
-                        <h3>Technical Precision</h3>
-                        <p>From sophisticated GPS tracking to predictive maintenance algorithms, we leverage data and engineering to optimize every single route and delivery time.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="container">
-                <h2>Partner With East Africa’s Heavy-Logistics Experts</h2>
-                <p>Speak to our team about your next project. We’ll engineer the safest, most efficient route for your cargo.</p>
-                <a href="contact.html" class="btn">Contact Our Team</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="logo">Al Harthy Transporters</span>
-                    <p>Industrial logistics and heavy transport solutions across East Africa since 1999.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="service.html">Services</a>
-                    <a href="trailers.html">Fleet</a>
-                    <a href="safety.html">Safety</a>
-                    <a href="about.html">About</a>
-                    <a href="career.html">Careers</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            <div class="footer-bottom">
-                © 2026 Al Harthy Transporters. All rights reserved.
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <div style="margin-bottom: 60px; text-align: center;">
+          <span class="section-label">The Pillars of Our Success</span>
+          <h2 class="section-title">Core Values</h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <span class="material-symbols-outlined">verified_user</span>
+            </div>
+            <h3>Safety First</h3>
+            <p>Zero-compromise safety protocols. ADR certified fleet. Daily inspections. Your cargo and our crew come home safe.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <h3>On-Time Delivery</h3>
+            <p>Route surveys, police escorts, GPS tracking. We plan for sandstorms, borders, and breakdowns so you don't have to.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <span class="material-symbols-outlined">handshake</span>
+            </div>
+            <h3>Trust & Transparency</h3>
+            <p>Real-time updates. Real photos. Real people. No hidden costs. We treat your project like it's our own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Move Your Project?</h2>
+        <p>From 1-ton transformers to 300-ton turbines, we have the equipment and expertise.</p>
+        <a href="equipment.html" class="btn">View Our Fleet</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
+        </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
