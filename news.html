@@ -3,244 +3,482 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News & Insights | Al Harthy Heavy Haulage</title>
   <meta name="description" content="Heavy haulage intelligence from GCC ports. Operations, safety milestones, fleet upgrades, and logistics trends from Al Harthy Heavy Haulage.">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0A2540',
-            secondary: '#F59E0B'
-          },
-          fontFamily: {
-            'work': ['Work Sans', 'sans-serif'],
-            'inter': ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
+  <title>News & Insights | Al Harthy Heavy Haulage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-.line-clamp-3 {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
+
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/hero-lowloader-port.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Content */
+    .content-section { padding: 100px 0; }
+
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label-line {
+      height: 3px;
+      width: 48px;
+      background-color: #F59E0B;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 48px;
+    }
+
+    /* Featured */
+    .featured-article {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 80px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .featured-image {
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-tag {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .featured-content h2 {
+      font-size: 2rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .featured-content p {
+      color: #5A6473;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .read-link {
+      color: #0A2540;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 2px solid #F59E0B;
+      padding-bottom: 4px;
+      width: fit-content;
+      transition: border-color 0.2s ease;
+    }
+
+    .read-link:hover { border-color: #0A2540; }
+
+    /* Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .news-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .news-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-color: #0052CC;
+    }
+
+    .card-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .news-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-tag {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card-body h3 {
+      font-size: 1.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .card-body p {
+      color: #5A6473;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-  body {
-      min-height: 100dvh;
-  }
-  </style>
-</head>
-<body class="bg-gray-50 font-inter text-slate-800">
 
-  <!-- Header -->
-  <header class="bg-primary text-white sticky top-0 z-50">
-      <div class="container mx-auto px-6 md:px-12">
-          <div class="flex justify-between items-center h-20">
-              <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
-                  <span class="font-work font-black uppercase tracking-tighter text-2xl">Al Harthy Transporters</span>
-              </div>
-              <nav class="hidden md:flex items-center gap-8">
-                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="services.html">Services</a>
-                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
-                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="location.html">Locations</a>
-                  <a href="quote.html">
-                      <button class="bg-secondary text-primary px-6 py-2 font-semibold text-sm uppercase tracking-wider hover:bg-amber-500 transition-all rounded-lg">
-                          Request Quote
-                      </button>
-                  </a>
-              </nav>
-          </div>
+    .card-body .read-link {
+      margin-top: auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      .news-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .news-grid { grid-template-columns: 1fr; }
+      .featured-content { padding: 40px; }
+      .page-hero { padding: 80px 0; }
+      .content-section { padding: 80px 0; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/hero-lowloader-port.jpg">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn">Request Quote</a>
+        </nav>
       </div>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative h-[600px] w-full overflow-hidden bg-primary">
-    <img class="absolute inset-0 w-full h-full object-cover opacity-40"
-         src="/images/hero-lowloader-port.jpg"
-         alt="DAF XF low loader at commercial port during storm dusk with mirror wet concrete reflections"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
-    <div class="relative z-10 h-full flex flex-col justify-end p-8 md:p-12 lg:p-16 max-w-7xl mx-auto">
-      <span class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">NEWS & INSIGHTS</span>
-      <h1 class="font-work font-bold text-5xl text-white mb-4 max-w-3xl leading-tight">Heavy Haulage Intelligence from GCC Ports</h1>
-      <p class="text-lg text-slate-200 max-w-2xl">Operations, safety milestones, fleet upgrades, and logistics trends from Al Harthy Heavy Haulage.</p>
-    </div>
-  </section>
-
-  <!-- Content -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-
-    <!-- Featured -->
-    <article class="bg-white border border-slate-200 mb-16 md:mb-24 group rounded-xl overflow-hidden shadow-lg">
-      <div class="grid md:grid-cols-2 gap-0">
-        <div class="h-80 md:h-auto overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-               src="/images/news-featured-tanker.jpg"
-               alt="Scania Euro 6 V8 tanker truck at industrial refinery during blue hour"/>
-        </div>
-        <div class="p-6 md:p-12 flex flex-col justify-center">
-          <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">FEATURED</span>
-          <h2 class="font-work font-bold text-4xl text-primary mb-4 leading-tight">Al Harthy Expands Euro 6 Fleet for Oman’s Zero-Emission Zones</h2>
-          <p class="text-lg text-slate-600 mb-6">Six new Scania V8 tankers with AdBlue SCR technology deployed at Sohar and Duqm ports. Full ADR compliance for hazardous cargo moves.</p>
-          <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit hover:border-primary transition-colors"
-             href="/news/euro-6-expansion.html">READ FULL STORY</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Grid -->
-    <section>
-      <h2 class="font-work font-bold text-4xl text-primary mb-8 md:mb-12">Latest Updates</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-        <!-- Card 1: Efficiency -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
-          <div class="h-48 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 src="/images/news-card-efficiency.jpg"
-                 alt="Digital logistics dashboard on tablet with truck keys on wet concrete"
-                 loading="lazy"/>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">OPERATIONS</span>
-            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">New TMS Cuts Dispatch Time 35%</h3>
-            <p class="text-slate-600 mb-4 line-clamp-3">Digital transformation complete: real-time tracking, automated POD, and driver app rollout across all 80+ assets.</p>
-            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="/news/tms-rollout.html">READ MORE</a>
-          </div>
-        </div>
-
-        <!-- Card 2: Safety -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
-          <div class="h-48 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 src="/images/news-card-safety.jpg"
-                 alt="Driver in hi-vis PPE walking past DAF XF truck at port during blue hour"
-                 loading="lazy"/>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">SAFETY</span>
-            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">500,000 KM Zero-Incident Milestone</h3>
-            <p class="text-slate-600 mb-4 line-clamp-3">Heavy haul division celebrates 18 months without LTI. New simulator training program launching Q3 2026.</p>
-            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="/news/safety-milestone.html">READ MORE</a>
-          </div>
-        </div>
-
-        <!-- Card 3: Sustainability -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
-          <div class="h-48 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 src="/images/news-card-green.jpg"
-                 alt="Scania Euro 6 tanker at AdBlue pump during blue hour with wet concrete reflections"
-                 loading="lazy"/>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">SUSTAINABILITY</span>
-            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">Euro 6 Fleet Cuts Emissions 30%</h3>
-            <p class="text-slate-600 mb-4 line-clamp-3">Al Harthy’s new Scania tankers meet strictest EU standards for Oman’s zero-emission zones. AdBlue + SCR tech deployed at Sohar & Duqm.</p>
-            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="/news/euro-6-emissions.html">READ MORE</a>
-          </div>
-        </div>
-
-        <!-- Card 4: Trends -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
-          <div class="h-48 overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 src="/images/news-card-trends.jpg"
-                 alt="Aerial drone view of container yard and gantry cranes at GCC port during blue hour"
-                 loading="lazy"/>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">TRENDS</span>
-            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">Sohar Expansion Drives 40% Haulage Demand</h3>
-            <p class="text-slate-600 mb-4 line-clamp-3">New container berths at Sohar & Duqm ports are fueling record demand for oversized project cargo moves in 2026.</p>
-            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="/news/sohar-expansion.html">READ MORE</a>
-          </div>
-        </div>
-
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">News & Insights</span>
+        <h1>Heavy Haulage Intelligence from GCC Ports</h1>
+        <p>Operations, safety milestones, fleet upgrades, and logistics trends from Al Harthy Heavy Haulage.</p>
       </div>
     </section>
 
+    <section class="content-section">
+      <div class="container">
+        <article class="featured-article">
+          <div class="featured-grid">
+            <div class="featured-image">
+              <img src="/images/news-featured-tanker.jpg" alt="Scania Euro 6 V8 tanker truck at industrial refinery during blue hour">
+            </div>
+            <div class="featured-content">
+              <span class="featured-tag">Featured</span>
+              <h2>Al Harthy Expands Euro 6 Fleet for Oman’s Zero-Emission Zones</h2>
+              <p>Six new Scania V8 tankers with AdBlue SCR technology deployed at Sohar and Duqm ports. Full ADR compliance for hazardous cargo moves.</p>
+              <a href="/news/euro-6-expansion.html" class="read-link">Read Full Story</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Latest Updates</span>
+        </div>
+        <h2 class="section-title">Newsroom</h2>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="card-image">
+              <img src="/images/news-card-efficiency.jpg" alt="Digital logistics dashboard on tablet with truck keys on wet concrete" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Operations</span>
+              <h3>New TMS Cuts Dispatch Time 35%</h3>
+              <p>Digital transformation complete: real-time tracking, automated POD, and driver app rollout across all 80+ assets.</p>
+              <a href="/news/tms-rollout.html" class="read-link">Read More</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="card-image">
+              <img src="/images/news-card-safety.jpg" alt="Driver in hi-vis PPE walking past DAF XF truck at port during blue hour" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Safety</span>
+              <h3>500,000 KM Zero-Incident Milestone</h3>
+              <p>Heavy haul division celebrates 18 months without LTI. New simulator training program launching Q3 2026.</p>
+              <a href="/news/safety-milestone.html" class="read-link">Read More</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="card-image">
+              <img src="/images/news-card-green.jpg" alt="Scania Euro 6 tanker at AdBlue pump during blue hour with wet concrete reflections" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Sustainability</span>
+              <h3>Euro 6 Fleet Cuts Emissions 30%</h3>
+              <p>Al Harthy’s new Scania tankers meet strictest EU standards for Oman’s zero-emission zones. AdBlue + SCR tech deployed at Sohar & Duqm.</p>
+              <a href="/news/euro-6-emissions.html" class="read-link">Read More</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="card-image">
+              <img src="/images/news-card-trends.jpg" alt="Aerial drone view of container yard and gantry cranes at GCC port during blue hour" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Trends</span>
+              <h3>Sohar Expansion Drives 40% Haulage Demand</h3>
+              <p>New container berths at Sohar & Duqm ports are fueling record demand for oversized project cargo moves in 2026.</p>
+              <a href="/news/sohar-expansion.html" class="read-link">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
-          <div class="space-y-6 max-w-sm">
-              <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-secondary">local_shipping</span>
-                  <span class="font-work font-black uppercase tracking-wider text-secondary">Al Harthy Transporters</span>
-              </div>
-              <p class="text-slate-400 text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
-              <div class="flex gap-4">
-                  <a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">share</span></a>
-                  <a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">public</span></a>
-                  <a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">mail</span></a>
-              </div>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-              <div class="space-y-4">
-                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
-                  <nav class="flex flex-col gap-2">
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="services.html">Services</a>
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="about.html">About Us</a>
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="safety.html">Safety</a>
-                  </nav>
-              </div>
-              <div class="space-y-4">
-                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
-                  <nav class="flex flex-col gap-2">
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="careers.html">Careers</a>
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="partners.html">Partnerships</a>
-                  </nav>
-              </div>
-              <div class="space-y-4">
-                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
-                  <nav class="flex flex-col gap-2">
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="privacy.html">Privacy</a>
-                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="contact.html">Contact</a>
-                  </nav>
-              </div>
-          </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
+        </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
-      <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-slate-500 text-sm">© 2026 Al Harthy Transporters. All rights reserved.</p>
-          <div class="flex items-center gap-6">
-              <span class="text-slate-500 text-xs">OMAN HQ</span>
-              <span class="text-slate-500 text-xs">UAE LOGISTICS HUB</span>
-          </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
       </div>
+    </div>
   </footer>
 
-  <!-- BottomNavBar (Mobile Only) -->
-  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white border-t border-slate-200 shadow-lg">
-      <a href="fleet.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-          <span class="material-symbols-outlined">local_shipping</span>
-          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Fleet</span>
-      </a>
-      <a href="services.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-          <span class="material-symbols-outlined">precision_manufacturing</span>
-          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Services</span>
-      </a>
-      <a href="location.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-          <span class="material-symbols-outlined">map</span>
-          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Locations</span>
-      </a>
-      <a href="quote.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-          <span class="material-symbols-outlined">request_quote</span>
-          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Quote</span>
-      </a>
-  </nav>
 </body>
 </html>
