@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://riomie-tech.github.io/alharthytransporters/sitemap.xml
