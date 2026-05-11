@@ -1,324 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Al Harthy Transporters</title>
-    <meta name="description" content="Frequently asked questions about Al Harthy Transporters heavy haulage, project cargo, permits, insurance, and GCC logistics operations.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Al Harthy Transporters heavy haulage, project cargo, permits, insurance, and GCC logistics operations.">
+  <title>FAQ | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#0A2540',
-                secondary: '#F59E0B'
-              },
-              fontFamily: {
-                'work': ['Work Sans', 'sans-serif'],
-                'inter': ['Inter', 'sans-serif']
-              }
-            }
-          }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
-    <style>
     body {
-        min-height: 100dvh;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
     }
-    details > summary {
-        list-style: none;
+
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    details > summary::-webkit-details-marker {
-        display: none;
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    </style>
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/faq-hero.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 0;
+    }
+
+    .faq-intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      color: #5A6473;
+      font-size: 1.0625rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .faq-grid {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      background-color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+
+    .faq-item:hover {
+      border-color: #0052CC;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-question {
+      padding: 24px 32px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .faq-question h3 {
+      font-size: 1.125rem;
+      color: #0A2540;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: #0052CC;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 32px 24px 32px;
+      color: #5A6473;
+      line-height: 1.7;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-answer p {
+      margin-bottom: 16px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 100px 0;
+      background-color: #F8F9FA;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.25rem;
+      color: #0A2540;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .cta p {
+      font-size: 1.125rem;
+      color: #5A6473;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .page-hero { padding: 80px 0; }
+      .faq-section { padding: 80px 0; }
+      .faq-question { padding: 20px 24px; }
+      .faq-answer { padding: 0 24px 20px 24px; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/faq-hero.jpg">
 </head>
-<body class="bg-gray-50 font-inter text-slate-800">
+<body>
 
-    <!-- Header -->
-    <header class="bg-primary text-white sticky top-0 z-50">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
-                    <span class="font-work font-black uppercase tracking-tighter text-2xl">Al Harthy Transporters</span>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="services.html">Services</a>
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="location.html">Locations</a>
-                    <a href="quote.html">
-                        <button class="bg-secondary text-primary px-6 py-2 font-semibold text-sm uppercase tracking-wider hover:bg-amber-500 transition-all rounded-lg">
-                            Request Quote
-                        </button>
-                    </a>
-                </nav>
-            </div>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn">Request Quote</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">Support</span>
+        <h1>Frequently Asked Questions</h1>
+        <p>Get answers about heavy haulage, OOG permits, crane hire, ADR transport, and project logistics across the GCC.</p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-intro">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-title">How We Move The Impossible</h2>
+          <p class="section-subtitle">Can't find what you need? Contact our operations team for project-specific answers.</p>
         </div>
-    </header>
 
-    <main>
-        <!-- Hero -->
-        <section class="bg-gradient-to-br from-primary via-primary to-slate-900 py-20 md:py-28">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
-                <span class="text-xs font-bold tracking-widest uppercase text-secondary mb-3 inline-block">Knowledge Base</span>
-                <h1 class="font-work font-bold text-5xl text-white mb-6 max-w-3xl mx-auto leading-tight">How can we help you today?</h1>
-                <div class="max-w-2xl mx-auto relative">
-                    <span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-                    <input type="text" placeholder="Search for questions about logistics, fleet, or safety..." 
-                           class="w-full bg-white text-primary py-5 pl-14 pr-5 rounded-xl text-lg shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary">
-                </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is considered oversized or OOG cargo?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
             </div>
-        </section>
-
-        <!-- Categories -->
-        <section class="bg-white py-12">
-            <div class="max-w-7xl mx-auto px-6 md:px-12">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <a href="#logistics" class="bg-gray-50 border border-slate-200 p-8 text-center rounded-xl hover:border-secondary hover:-translate-y-1 transition-all group">
-                        <span class="material-symbols-outlined text-primary group-hover:text-secondary text-4xl mb-4 block">inventory_2</span>
-                        <h3 class="font-work font-semibold text-lg text-primary">Logistics</h3>
-                    </a>
-                    <a href="#safety" class="bg-gray-50 border border-slate-200 p-8 text-center rounded-xl hover:border-secondary hover:-translate-y-1 transition-all group">
-                        <span class="material-symbols-outlined text-primary group-hover:text-secondary text-4xl mb-4 block">verified_user</span>
-                        <h3 class="font-work font-semibold text-lg text-primary">Safety</h3>
-                    </a>
-                    <a href="#billing" class="bg-gray-50 border border-slate-200 p-8 text-center rounded-xl hover:border-secondary hover:-translate-y-1 transition-all group">
-                        <span class="material-symbols-outlined text-primary group-hover:text-secondary text-4xl mb-4 block">receipt_long</span>
-                        <h3 class="font-work font-semibold text-lg text-primary">Billing</h3>
-                    </a>
-                    <a href="#fleet" class="bg-gray-50 border border-slate-200 p-8 text-center rounded-xl hover:border-secondary hover:-translate-y-1 transition-all group">
-                        <span class="material-symbols-outlined text-primary group-hover:text-secondary text-4xl mb-4 block">local_shipping</span>
-                        <h3 class="font-work font-semibold text-lg text-primary">Fleet</h3>
-                    </a>
-                </div>
+            <div class="faq-answer">
+              <p>OOG means Out of Gauge. Any load exceeding 3.5m width, 4.2m height, or 20m length typically requires special permits. We handle transformers, turbine blades, vessels, and industrial machinery up to 300 tons.</p>
+              <p>We manage all GCC permits, route surveys, and police escorts in-house.</p>
             </div>
-        </section>
+          </div>
 
-        <!-- FAQ Content -->
-        <section class="py-16 md:py-24">
-            <div class="max-w-4xl mx-auto px-6 md:px-12">
-                
-                <!-- Category: Operations -->
-                <div class="mb-16 scroll-mt-24" id="logistics">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-1 w-12 bg-secondary"></div>
-                        <h2 class="font-work font-bold text-3xl text-primary">Logistics & Operations</h2>
-                    </div>
-                    <div class="space-y-4">
-                        
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What regions do Al Harthy Transporters cover?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">We operate across the entire Middle East region, specializing in cross-border logistics between Oman, UAE, and Saudi Arabia. Our extensive network ensures seamless transitions at all major land ports with 48-hour mobilization to any major GCC industrial site.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">Do you provide real-time tracking for shipments?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Yes, all shipments are equipped with GPS tracking. Clients receive access to our portal for 24/7 real-time location updates, ETA calculations, and delivery confirmations. Live telematics included on all cold chain and hazardous cargo.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What is your maximum payload capacity?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Our heavy low loader fleet handles up to 80 tons standard, with project-specific configurations reaching 120+ tons using hydraulic modular trailers. For oversized cargo, we engineer custom solutions with escort vehicles and route surveys.</p>
-                        </details>
-
-                    </div>
-                </div>
-
-                <!-- Category: Safety & Compliance -->
-                <div class="mb-16 scroll-mt-24" id="safety">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-1 w-12 bg-secondary"></div>
-                        <h2 class="font-work font-bold text-3xl text-primary">Safety & Compliance</h2>
-                    </div>
-                    <div class="space-y-4">
-                        
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What are your safety protocols for hazardous cargo?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">All drivers handling hazardous materials undergo rigorous specialized training. Our fleet is equipped with state-of-the-art safety sensors and containment systems, fully compliant with international ADR standards and local GCC regulations.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">Are your drivers certified for heavy-duty haulage?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Every driver holds GCC heavy vehicle licenses plus specialized certifications for abnormal loads, ADR hazardous materials, and defensive driving. Continuous training is mandatory quarterly.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">Who handles oversized permits and route surveys?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">We manage all permits end-to-end. Our team conducts route surveys, obtains Ministry of Transport approvals, coordinates police escorts, and handles customs clearance. Average permit lead time is 5-7 working days for Oman/UAE routes.</p>
-                        </details>
-
-                    </div>
-                </div>
-
-                <!-- Category: Billing & Payments -->
-                <div class="mb-16 scroll-mt-24" id="billing">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-1 w-12 bg-secondary"></div>
-                        <h2 class="font-work font-bold text-3xl text-primary">Billing & Payments</h2>
-                    </div>
-                    <div class="space-y-4">
-                        
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What payment terms do you offer for corporate clients?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">We offer Net 30 terms for approved corporate accounts. New clients may begin with 50% advance payment until credit is established. Wire transfer and approved corporate cards accepted.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">Can I manage my invoices online?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Yes, through our Client Portal, you can access your billing history, download current invoices, and set up automated payment reminders. Contact our finance department for portal access credentials.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What insurance coverage do you provide?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">All loads are covered by comprehensive cargo insurance up to $5M USD per shipment. We also carry public liability, environmental damage, and third-party insurance. Certificates of insurance provided with every quote.</p>
-                        </details>
-
-                    </div>
-                </div>
-
-                <!-- Category: Fleet Specifications -->
-                <div class="mb-16 scroll-mt-24" id="fleet">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-1 w-12 bg-secondary"></div>
-                        <h2 class="font-work font-bold text-3xl text-primary">Fleet Specifications</h2>
-                    </div>
-                    <div class="space-y-4">
-                        
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">What types of trailers are available in your fleet?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Our fleet includes 40ft flatbeds, extendable low-loaders up to 22m, tri-axle fuel tankers, water tankers, refrigerated units, and hydraulic modular trailers for loads exceeding 100 tons. See our Fleet page for full specs.</p>
-                        </details>
-
-                        <details class="bg-white border border-slate-200 rounded-xl p-6 group shadow-sm hover:shadow-md transition-all">
-                            <summary class="flex justify-between items-center cursor-pointer">
-                                <h3 class="font-work font-semibold text-lg text-primary pr-4">Do you offer 24/7 emergency transport?</h3>
-                                <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
-                            </summary>
-                            <p class="mt-4 text-slate-600 leading-relaxed pt-4 border-t border-slate-100">Yes. Our operations center runs 24/7 for critical shipments. Emergency mobilization within 6 hours for Oman/UAE, 12 hours for other GCC countries. Dedicated hotline available to contracted clients.</p>
-                        </details>
-
-                    </div>
-                </div>
-
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Which GCC countries do you operate in?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
             </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="bg-primary py-20">
-            <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
-                <h2 class="font-work font-bold text-4xl text-white mb-6">Still have questions?</h2>
-                <p class="text-lg text-slate-300 mb-10">Our support team is available 24/7 to assist with your logistical needs and technical inquiries.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="quote.html" class="inline-block bg-secondary text-primary px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-amber-500 transition-all rounded-lg">Request Quote</a>
-                    <a href="contact.html" class="inline-block bg-transparent border-2 border-secondary text-secondary px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-secondary hover:text-primary transition-all rounded-lg">Contact Us</a>
-                </div>
+            <div class="faq-answer">
+              <p>UAE, KSA, and Oman. We have local offices and registered fleets in each country for faster permit approvals and customs clearance.</p>
+              <p>Cross-border moves include full documentation, convoy coordination, and border liaison support.</p>
             </div>
-        </section>
-    </main>
+          </div>
 
-    <!-- Footer -->
-    <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
-            <div class="space-y-6 max-w-sm">
-                <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-secondary">local_shipping</span>
-                    <span class="font-work font-black uppercase tracking-wider text-secondary">Al Harthy Transporters</span>
-                </div>
-                <p class="text-slate-400 text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
-                <div class="flex gap-4">
-                    <a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">share</span></a>
-                    <a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">public</span></a>
-                    <a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">mail</span></a>
-                </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="services.html">Services</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="about.html">About Us</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="safety.html">Safety</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="careers.html">Careers</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="partners.html">Partnerships</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="privacy.html">Privacy</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="contact.html">Contact</a>
-                    </nav>
-                </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you provide crane hire and lifting services?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
             </div>
+            <div class="faq-answer">
+              <p>Yes. We operate mobile cranes from 50T to 200T capacity, SPMT systems, and Goldhofer blade lifters. All operators are certified and equipment is ADR compliant.</p>
+              <p>We provide lifting plans, risk assessments, and site supervision as standard.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How long does permit approval take?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </div>
+            <div class="faq-answer">
+              <p>Standard OOG permits: 3-7 working days. Complex routes with bridge calculations or night-time restrictions: 10-14 days.</p>
+              <p>We start the permit process immediately after contract award to avoid project delays.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Are you ADR certified for hazardous cargo?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes. Our fleet and drivers hold full ADR certification for Class 2, 3, 4, 5, 6, 8, and 9 dangerous goods. We provide UN packaging, placarding, and emergency response plans.</p>
+              <p>Safety documentation and MSDS review is completed before every ADR move.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I track my shipment in real time?</h3>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </div>
+            <div class="faq-answer">
+              <p>All prime movers have GPS tracking with 5-minute updates. You receive a secure link for live location, ETA, and milestone alerts.</p>
+              <p>For critical projects, we provide daily photo updates and convoy lead contact details.</p>
+            </div>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 text-sm">© 2026 Al Harthy Transporters. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <span class="text-slate-500 text-xs">OMAN HQ</span>
-                <span class="text-slate-500 text-xs">UAE LOGISTICS HUB</span>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- BottomNavBar (Mobile Only) -->
-    <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white border-t border-slate-200 shadow-lg">
-        <a href="fleet.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">local_shipping</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Fleet</span>
-        </a>
-        <a href="services.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">precision_manufacturing</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Services</span>
-        </a>
-        <a href="location.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">map</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Locations</span>
-        </a>
-        <a href="quote.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">request_quote</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Quote</span>
-        </a>
-    </nav>
+    <section class="cta">
+      <div class="container">
+        <h2>Still Have Questions?</h2>
+        <p>Our project engineers respond within 2 hours during business days. Send us your drawings and we will provide a free logistics assessment.</p>
+        <a href="contact.html" class="btn">Contact Operations Team</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
+        </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
