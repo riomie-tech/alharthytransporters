@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Al Harthy Transporters specialized fleet: Volvo, Scania, Mercedes Actros heavy haulage, flatbeds, tankers, and cold chain trucks for GCC logistics.">
-  <title>Fleet Gallery | Al Harthy Transporters</title>
+  <meta name="description" content="Al Harthy Transporters specialized fleet: Volvo FH16, Scania R500, Mercedes Actros tanker, MAN TGX, DAF XF, and heavy low loaders for GCC logistics.">
+  <title>Fleet | Al Harthy Transporters</title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <style>
@@ -25,7 +25,6 @@
       padding: 0 20px;
     }
 
-    /* Header */
     header {
       background-color: #FFFFFF;
       border-bottom: 1px solid #E0E3E5;
@@ -83,7 +82,6 @@
 
     .btn:hover { background-color: #003d99; }
 
-    /* Hero */
     .page-hero {
       background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
                   url('/images/fleet-hero.jpg') center/cover;
@@ -118,10 +116,7 @@
       line-height: 1.7;
     }
 
-    /* Fleet Grid */
-    .fleet-section {
-      padding: 100px 0;
-    }
+    .fleet-section { padding: 100px 0; }
 
     .section-intro {
       text-align: center;
@@ -164,10 +159,13 @@
       transform: translateY(-4px);
     }
 
+    .fleet-image-wrap { position: relative; }
+
     .fleet-image {
       width: 100%;
       height: 240px;
       object-fit: cover;
+      display: block;
     }
 
     .fleet-tag {
@@ -184,13 +182,7 @@
       border-radius: 4px;
     }
 
-    .fleet-image-wrap {
-      position: relative;
-    }
-
-    .fleet-content {
-      padding: 32px;
-    }
+    .fleet-content { padding: 32px; }
 
     .fleet-content h3 {
       font-size: 1.5rem;
@@ -248,7 +240,6 @@
       border-color: #0052CC;
     }
 
-    /* CTA */
     .cta {
       padding: 100px 0;
       background-color: #0A2540;
@@ -281,7 +272,6 @@
       margin-right: auto;
     }
 
-    /* Footer */
     footer {
       background-color: #0A2540;
       color: #B8C5D6;
@@ -327,7 +317,6 @@
       color: #7A8FA6;
     }
 
-    /* Mobile */
     @media (max-width: 1024px) {
       .fleet-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -350,7 +339,8 @@
         <a href="/" class="logo">Al Harthy Transporters</a>
         <nav>
           <a href="/">Home</a>
-          <a href="equipment.html" class="active">Fleet</a>
+          <a href="fleet.html" class="active">Fleet</a>
+          <a href="equipment.html">Equipment</a>
           <a href="career.html">Careers</a>
           <a href="about.html">About</a>
           <a href="contact.html" class="btn">Request Quote</a>
@@ -535,11 +525,13 @@
           <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
         </div>
         <div class="footer-links">
-          <a href="equipment.html">Fleet</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="equipment.html">Equipment</a>
           <a href="career.html">Careers</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
+      </div>
       <div class="footer-bottom">
         © 2026 Al Harthy Transporters. All rights reserved.
       </div>
