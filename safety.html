@@ -82,9 +82,16 @@ h1, h2, h3 {
   </div>
 </header>
 
-<!-- Hero Section - Solid Navy -->
-<section class="bg-primary py-20 md:py-32 mt-20">
-  <div class="max-w-[1200px] mx-auto px-5 text-center">
+<!-- Hero Section - With Image -->
+<section class="relative min-h-[500px] md:min-h-[707px] flex items-center overflow-hidden bg-primary mt-20">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover" 
+         src="images/safety-hero.jpg" 
+         alt=""
+         onerror="this.style.display='none'"/>
+    <div class="absolute inset-0 bg-primary/70"></div>
+  </div>
+  <div class="relative z-10 max-w-[1200px] mx-auto px-5 text-center w-full">
     <div class="max-w-3xl mx-auto">
       <span class="inline-block bg-secondary text-on-secondary px-4 py-2 font-label-caps uppercase mb-6 rounded-md">COMMITMENT TO EXCELLENCE</span>
       <h1 class="font-h1 text-h1 text-white mb-6 uppercase">Safety is Our<br/>Primary Cargo</h1>
@@ -167,8 +174,9 @@ h1, h2, h3 {
     </div>
     <div class="md:w-1/2 relative">
       <img class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500" 
-           src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2069&auto=format&fit=crop" 
-           alt="Al Harthy technician conducting safety inspection"/>
+           src="images/safety-inspection.jpg" 
+           alt="Al Harthy technician conducting safety inspection"
+           onerror="this.style.display='none'"/>
       <div class="absolute -bottom-8 -left-8 bg-secondary-container p-8 hidden lg:block rounded-lg">
         <p class="font-h2 text-white">100%</p>
         <p class="font-label-caps text-white">Compliance Rate</p>
