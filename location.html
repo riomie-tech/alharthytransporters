@@ -1,338 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Service Areas & Locations | Al Harthy Transporters</title>
-    <meta name="description" content="Al Harthy Transporters strategic GCC network. Heavy haulage hubs in Oman, UAE, and Saudi Arabia with 24/7 cross-border logistics expertise.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Al Harthy Transporters for heavy haulage quotes across Oman, UAE, and Saudi Arabia. 24/7 logistics support and route planning.">
+  <title>Contact Us | Request a Quote | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
 
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#0A2540',
-                secondary: '#F59E0B'
-              },
-              fontFamily: {
-                'work': ['Work Sans', 'sans-serif'],
-                'inter': ['Inter', 'sans-serif']
-              }
-            }
-          }
-        }
-    </script>
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
 
-    <style>
-     .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-     .map-gradient {
-            background: linear-gradient(135deg, #F8F9FA 0%, #d6e3ff 100%);
-        }
-     .industrial-overlay {
-            background: linear-gradient(to right, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0.4) 100%);
-        }
-        body {
-            min-height: 100dvh;
-        }
-    </style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/contact-hero.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 100px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .section-label {
+      color: #0052CC;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label-line {
+      height: 3px;
+      width: 48px;
+      background-color: #F59E0B;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .contact-intro {
+      color: #5A6473;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      color: #0A2540;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1px solid #E0E3E5;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #333333;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0052CC;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    /* Contact Details */
+    .contact-details {
+      background-color: #F8F9FA;
+      border-radius: 8px;
+      padding: 48px;
+    }
+
+    .details-block {
+      margin-bottom: 40px;
+    }
+
+    .details-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .details-block h3 {
+      font-size: 1.25rem;
+      color: #0A2540;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .detail-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: start;
+    }
+
+    .detail-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #0052CC;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .detail-text {
+      flex: 1;
+    }
+
+    .detail-label {
+      color: #5A6473;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      color: #0A2540;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .detail-value a {
+      color: #0A2540;
+      text-decoration: none;
+    }
+
+    .detail-value a:hover {
+      color: #0052CC;
+    }
+
+    /* Emergency */
+    .emergency-box {
+      background-color: #0A2540;
+      color: #FFFFFF;
+      padding: 32px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .emergency-box h4 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #F59E0B;
+    }
+
+    .emergency-box p {
+      color: #B8C5D6;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .emergency-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+      .form-row { grid-template-columns: 1fr; }
+      .page-hero { padding: 80px 0; }
+      .contact-section { padding: 80px 0; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/contact-hero.jpg">
 </head>
-<body class="bg-gray-50 font-inter text-slate-800">
+<body>
 
-    <!-- Header -->
-    <header class="bg-primary text-white sticky top-0 z-50">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
-                    <span class="font-work font-black uppercase tracking-tighter text-2xl">Al Harthy Transporters</span>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="services.html">Services</a>
-                    <a class="text-secondary font-work font-bold uppercase tracking-tight border-b-2 border-secondary pb-1" href="location.html">Locations</a>
-                    <a href="quote.html">
-                        <button class="bg-secondary text-primary px-6 py-2 font-semibold text-sm uppercase tracking-wider hover:bg-amber-500 transition-all rounded-lg">
-                            Request Quote
-                        </button>
-                    </a>
-                </nav>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn active">Request Quote</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">24/7 Operations</span>
+        <h1>Request a Quote</h1>
+        <p>Our logistics planners are ready to engineer your next heavy haul. Get a transparent quote and custom route assessment within 4 hours.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <div class="section-label">
+              <div class="section-label-line"></div>
+              <span>Get Started</span>
             </div>
+            <h2 class="section-title">Tell Us About Your Cargo</h2>
+            <p class="contact-intro">The more detail you provide, the more accurate your quote. Our team handles permits, route surveys, and escorts for GCC-wide moves.</p>
+
+            <form class="contact-form" action="/submit-quote" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <input type="text" id="company" name="company" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="origin">Origin</label>
+                  <input type="text" id="origin" name="origin" placeholder="City, Country" required>
+                </div>
+                <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input type="text" id="destination" name="destination" placeholder="City, Country" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cargo">Cargo Details</label>
+                <textarea id="cargo" name="cargo" placeholder="Weight, dimensions, type of cargo, timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn">Submit Quote Request</button>
+            </form>
+          </div>
+
+          <div>
+            <div class="contact-details">
+              <div class="details-block">
+                <h3>Muscat Headquarters</h3>
+                <div class="detail-item">
+                  <div class="detail-icon"></div>
+                  <div class="detail-text">
+                    <div class="detail-label">Address</div>
+                    <div class="detail-value">Oman Industrial Zone, Plot 442<br>Sultanate of Oman</div>
+                  </div>
+                <div class="detail-item">
+                  <div class="detail-icon"></div>
+                  <div class="detail-text">
+                    <div class="detail-label">Phone</div>
+                    <div class="detail-value"><a href="tel:+96824440000">+968 2444 0000</a></div>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-icon"></div>
+                  <div class="detail-text">
+                    <div class="detail-label">Email</div>
+                    <div class="detail-value"><a href="mailto:quotes@alharthytrans.om">quotes@alharthytrans.om</a></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-block">
+                <h3>Business Hours</h3>
+                <div class="detail-item">
+                  <div class="detail-icon"></div>
+                  <div class="detail-text">
+                    <div class="detail-label">Operations</div>
+                    <div class="detail-value">24/7/365</div>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-icon"></div>
+                  <div class="detail-text">
+                    <div class="detail-label">Office</div>
+                    <div class="detail-value">Sun - Thu: 8:00 - 18:00 GST</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="emergency-box">
+                <h4>Emergency Dispatch</h4>
+                <p>For urgent breakdown or route issues</p>
+                <div class="emergency-number">+968 9900 1122</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative h-[500px] flex items-center overflow-hidden bg-primary">
-            <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover opacity-40"
-                     src="/images/locations-hero.jpg"
-                     alt="Modern logistics terminal in the Arabian desert at dusk with heavy-duty trucks"/>
-            </div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-3xl">
-                    <h1 class="font-work font-bold text-5xl text-white mb-6 leading-tight">Our Operational Reach</h1>
-                    <p class="text-lg text-slate-200 mb-8 leading-relaxed">
-                        Establishing regional dominance across the GCC through precision logistics and a robust network that connects Oman, UAE, and Saudi Arabia with unmatched reliability.
-                    </p>
-                    <div class="flex gap-4">
-                        <div class="h-1 w-20 bg-secondary self-center"></div>
-                        <span class="font-bold text-xs text-white uppercase tracking-widest">Across the Arabian Peninsula</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Coverage Map Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="font-work font-bold text-4xl text-primary mb-4">Strategic GCC Network</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">
-                        Our core transit corridors are designed for speed and safety, ensuring your cargo moves seamlessly through the region's most vital economic zones.
-                    </p>
-                </div>
-                <div class="relative aspect-video max-w-5xl mx-auto rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden p-8 map-gradient">
-                    <div class="relative w-full h-full flex items-center justify-center">
-                        <img class="w-full h-full object-contain mix-blend-multiply opacity-40"
-                             src="/images/gcc-map.svg"
-                             alt="Technical map of Arabian Peninsula showing Oman, UAE, Saudi Arabia transit corridors"/>
-                        <!-- Transit Corridor Annotations -->
-                        <div class="absolute top-1/4 left-1/4 flex items-center gap-2">
-                            <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-                            <span class="bg-primary text-white text-xs px-2 py-1 rounded font-bold uppercase tracking-tighter">Saudi Hub</span>
-                        </div>
-                        <div class="absolute top-1/2 left-1/2 flex items-center gap-2">
-                            <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-                            <span class="bg-primary text-white text-xs px-2 py-1 rounded font-bold uppercase tracking-tighter">Dubai JAFZA</span>
-                        </div>
-                        <div class="absolute bottom-1/3 right-1/4 flex items-center gap-2">
-                            <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-                            <span class="bg-primary text-white text-xs px-2 py-1 rounded font-bold uppercase tracking-tighter">Muscat HQ</span>
-                        </div>
-                        <!-- Dashed Corridor Lines -->
-                        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100">
-                            <path d="M25,25 L50,50 L75,66" fill="none" stroke="#F59E0B" stroke-dasharray="2,2" stroke-width="0.5"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Regional Hubs -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                    <div>
-                        <span class="font-bold text-xs text-secondary uppercase tracking-widest">Strategic Points</span>
-                        <h2 class="font-work font-bold text-4xl text-primary mt-2">Our Key Logistics Hubs</h2>
-                    </div>
-                    <p class="text-slate-600 max-w-md">
-                        Manned by logistics professionals 24/7, our hubs serve as the backbone for regional distribution and fleet maintenance.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Muscat HQ -->
-                    <div class="bg-white p-8 border border-slate-200 hover:border-secondary transition-all shadow-sm rounded-xl">
-                        <div class="mb-6 flex justify-between items-start">
-                            <span class="material-symbols-outlined text-4xl text-primary">corporate_fare</span>
-                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Headquarters</span>
-                        </div>
-                        <h3 class="font-work font-semibold text-2xl text-primary mb-2">Muscat HQ</h3>
-                        <p class="text-slate-600 mb-6 text-sm">Oman Industrial Zone, Plot 442. Sultanate of Oman.</p>
-                        <div class="space-y-3 border-t border-slate-100 pt-6">
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">call</span>
-                                +968 2444 0000
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">mail</span>
-                                hq@alharthytrans.om
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Dubai Hub -->
-                    <div class="bg-white p-8 border border-slate-200 hover:border-secondary transition-all shadow-sm rounded-xl">
-                        <div class="mb-6 flex justify-between items-start">
-                            <span class="material-symbols-outlined text-4xl text-primary">hub</span>
-                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Regional Link</span>
-                        </div>
-                        <h3 class="font-work font-semibold text-2xl text-primary mb-2">Dubai Hub</h3>
-                        <p class="text-slate-600 mb-6 text-sm">Jebel Ali Free Zone (JAFZA), South Block B, Dubai, UAE.</p>
-                        <div class="space-y-3 border-t border-slate-100 pt-6">
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">call</span>
-                                +971 4 888 1234
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">mail</span>
-                                dubai@alharthytrans.com
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Sohar Logistics Center -->
-                    <div class="bg-white p-8 border border-slate-200 hover:border-secondary transition-all shadow-sm rounded-xl">
-                        <div class="mb-6 flex justify-between items-start">
-                            <span class="material-symbols-outlined text-4xl text-primary">precision_manufacturing</span>
-                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 uppercase tracking-widest text-slate-500">Port Operations</span>
-                        </div>
-                        <h3 class="font-work font-semibold text-2xl text-primary mb-2">Sohar Logistics Center</h3>
-                        <p class="text-slate-600 mb-6 text-sm">Near Sohar Port, Industrial Area Phase 3, Sohar, Oman.</p>
-                        <div class="space-y-3 border-t border-slate-100 pt-6">
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">call</span>
-                                +968 2666 1111
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-primary font-medium">
-                                <span class="material-symbols-outlined text-sm">mail</span>
-                                sohar@alharthytrans.om
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cross-Border Expertise Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 class="font-work font-bold text-4xl text-primary mb-8">Specialized Cross-Border Logistics</h2>
-                        <div class="space-y-8">
-                            <div class="flex gap-6">
-                                <div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center text-secondary rounded-lg">
-                                    <span class="material-symbols-outlined">assignment_turned_in</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-work font-semibold text-lg mb-2 text-primary">Seamless Customs Clearance</h4>
-                                    <p class="text-slate-600">Expert handling of documentation and clearance at all GCC borders to prevent costly transit delays.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-6">
-                                <div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center text-secondary rounded-lg">
-                                    <span class="material-symbols-outlined">approval_delegation</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-work font-semibold text-lg mb-2 text-primary">Regional Transit Permits</h4>
-                                    <p class="text-slate-600">Comprehensive permit management for specialized, oversized, or hazardous cargo across multiple jurisdictions.</p>
-                                </div>
-                            <div class="flex gap-6">
-                                <div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center text-secondary rounded-lg">
-                                    <span class="material-symbols-outlined">layers</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-work font-semibold text-lg mb-2 text-primary">Multimodal Integration</h4>
-                                    <p class="text-slate-600">Connecting sea, road, and air logistics for a truly integrated supply chain solution across the Middle East.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img class="w-full aspect-square object-cover rounded-sm shadow-xl"
-                             src="/images/cross-border-operations.jpg"
-                             alt="Industrial shipping containers being loaded onto transporter truck at port"/>
-                        <div class="absolute -bottom-6 -left-6 bg-primary text-white p-8 max-w-xs hidden md:block">
-                            <p class="font-work font-bold text-4xl mb-2">15+</p>
-                            <p class="font-bold text-xs text-slate-300 uppercase tracking-widest">Years of GCC Transit Expertise</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="py-24 bg-primary relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
-                <svg class="w-full h-full text-white fill-current" viewBox="0 0 100 100">
-                    <path d="M0,100 L100,100 L100,0 Z"></path>
-                </svg>
-            </div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <h2 class="font-work font-bold text-4xl text-white mb-6">Need a Regional Route?</h2>
-                <p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto">
-                    Contact our logistics planners today for a custom route assessment and transparent quote.
-                </p>
-                <a href="quote.html">
-                    <button class="bg-secondary text-primary px-12 py-5 font-bold text-sm uppercase tracking-widest hover:bg-amber-500 transition-all transform active:scale-95 shadow-lg rounded-lg">
-                        Request a Quote
-                    </button>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
-            <div class="space-y-6 max-w-sm">
-                <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-secondary">local_shipping</span>
-                    <span class="font-work font-black uppercase tracking-wider text-secondary">Al Harthy Transporters</span>
-                </div>
-                <p class="text-slate-400 text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
-                <div class="flex gap-4">
-                    <a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">share</span></a>
-                    <a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">public</span></a>
-                    <a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">mail</span></a>
-                </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="services.html">Services</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="about.html">About Us</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="safety.html">Safety</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="careers.html">Careers</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="partners.html">Partnerships</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="privacy.html">Privacy</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm" href="contact.html">Contact</a>
-                    </nav>
-                </div>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 text-sm">© 2026 Al Harthy Transporters. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <span class="text-slate-500 text-xs">OMAN HQ</span>
-                <span class="text-slate-500 text-xs">UAE LOGISTICS HUB</span>
-            </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </footer>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-    <!-- BottomNavBar (Mobile Only) -->
-    <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white border-t border-slate-200 shadow-lg">
-        <a href="fleet.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">local_shipping</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Fleet</span>
-        </a>
-        <a href="services.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">precision_manufacturing</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Services</span>
-        </a>
-        <a href="location.html" class="flex flex-col items-center justify-center text-secondary py-2">
-            <span class="material-symbols-outlined">map</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Locations</span>
-        </a>
-        <a href="quote.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
-            <span class="material-symbols-outlined">request_quote</span>
-            <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Quote</span>
-        </a>
-    </nav>
 </body>
 </html>
