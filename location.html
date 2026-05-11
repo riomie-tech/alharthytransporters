@@ -3,371 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Al Harthy Transporters for heavy haulage quotes across Oman, UAE, and Saudi Arabia. 24/7 logistics support and route planning.">
-  <title>Contact Us | Request a Quote | Al Harthy Transporters</title>
+  <meta name="description" content="Al Harthy Transporters GCC locations. Muscat HQ, Dubai & Dammam offices with 24/7 dispatch for heavy haulage.">
+  <title>Our Locations | Al Harthy Transporters</title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: #333333;
-      background-color: #FFFFFF;
-    }
-
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333333; background-color: #FFFFFF; }
     h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
-    header {
-      background-color: #FFFFFF;
-      border-bottom: 1px solid #E0E3E5;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-    }
-
-    .logo {
-      font-size: 1.375rem;
-      font-weight: 800;
-      color: #0A2540;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: -0.5px;
-    }
-
-    nav {
-      display: flex;
-      gap: 36px;
-      align-items: center;
-    }
-
-    nav a {
-      color: #5A6473;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: color 0.2s ease;
-    }
-
+    header { background-color: #FFFFFF; border-bottom: 1px solid #E0E3E5; position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+    .logo { font-size: 1.375rem; font-weight: 800; color: #0A2540; text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
+    nav { display: flex; gap: 36px; align-items: center; }
+    nav a { color: #5A6473; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
     nav a:hover, nav a.active { color: #0052CC; }
-
-    .btn {
-      background-color: #0052CC;
-      color: #FFFFFF;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: background-color 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-
+    .btn { background-color: #0052CC; color: #FFFFFF; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: background-color 0.2s ease; display: inline-block; }
     .btn:hover { background-color: #003d99; }
 
     /* Hero */
     .page-hero {
       background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
-                  url('/images/contact-hero.jpg') center/cover;
-      color: #FFFFFF;
-      padding: 100px 0;
-      text-align: center;
+                  url('/images/location-hero.jpg') center/cover;
+      color: #FFFFFF; padding: 100px 0; text-align: center;
     }
+    .hero-badge { display: inline-block; color: #7AB8FF; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .page-hero h1 { font-size: 2.75rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; letter-spacing: -1px; }
+    .page-hero p { font-size: 1.125rem; opacity: 0.95; max-width: 700px; margin: 0 auto; line-height: 1.7; color: #B8C5D6; }
 
-    .hero-badge {
-      display: inline-block;
-      color: #F59E0B;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
+    /* Locations */
+    .locations-section { padding: 100px 0; }
+    .section-label { color: #0052CC; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .section-label-line { height: 3px; width: 48px; background-color: #0052CC; }
+    .section-title { font-size: 2.25rem; color: #0A2540; font-weight: 700; line-height: 1.3; margin-bottom: 48px; }
+    .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 
-    .page-hero h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-      line-height: 1.2;
-      letter-spacing: -1px;
-    }
-
-    .page-hero p {
-      font-size: 1.125rem;
-      opacity: 0.95;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      padding: 100px 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .section-label {
-      color: #0052CC;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .section-label-line {
-      height: 3px;
-      width: 48px;
-      background-color: #F59E0B;
-    }
-
-    .section-title {
-      font-size: 2.25rem;
-      color: #0A2540;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 24px;
-    }
-
-    .contact-intro {
-      color: #5A6473;
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    /* Form */
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .form-group label {
-      color: #0A2540;
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      padding: 14px 16px;
-      border: 1px solid #E0E3E5;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      color: #333333;
-      transition: border-color 0.2s ease;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #0052CC;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 140px;
-    }
-
-    /* Contact Details */
-    .contact-details {
-      background-color: #F8F9FA;
-      border-radius: 8px;
-      padding: 48px;
-    }
-
-    .details-block {
-      margin-bottom: 40px;
-    }
-
-    .details-block:last-child {
-      margin-bottom: 0;
-    }
-
-    .details-block h3 {
-      font-size: 1.25rem;
-      color: #0A2540;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .detail-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 20px;
-      align-items: start;
-    }
-
-    .detail-icon {
-      width: 24px;
-      height: 24px;
-      background-color: #0052CC;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
-
-    .detail-text {
-      flex: 1;
-    }
-
-    .detail-label {
-      color: #5A6473;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-    }
-
-    .detail-value {
-      color: #0A2540;
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    .detail-value a {
-      color: #0A2540;
-      text-decoration: none;
-    }
-
-    .detail-value a:hover {
-      color: #0052CC;
-    }
+    .location-card { background-color: #FFFFFF; border: 1px solid #E0E3E5; border-radius: 8px; overflow: hidden; transition: all 0.3s ease; }
+    .location-card:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); border-color: #0052CC; }
+    .location-card.active { border: 2px solid #0052CC; }
+    .location-card.active h3 { color: #0052CC; }
+    .location-card h3 { font-size: 1.375rem; color: #0A2540; font-weight: 700; padding: 32px 32px 16px; }
+    .map-embed { width: 100%; height: 280px; border: 0; display: block; }
+    .location-details { padding: 24px 32px 32px; }
+    .detail-item { display: flex; gap: 16px; margin-bottom: 16px; align-items: start; }
+    .detail-item:last-child { margin-bottom: 0; }
+    .detail-icon { width: 20px; height: 20px; background-color: #0052CC; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .detail-text { flex: 1; }
+    .detail-label { color: #5A6473; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .detail-value { color: #0A2540; font-size: 0.95rem; font-weight: 600; line-height: 1.5; }
+    .detail-value a { color: #0A2540; text-decoration: none; transition: color 0.2s ease; }
+    .detail-value a:hover { color: #0052CC; }
 
     /* Emergency */
-    .emergency-box {
-      background-color: #0A2540;
-      color: #FFFFFF;
-      padding: 32px;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .emergency-box h4 {
-      font-size: 1.125rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #F59E0B;
-    }
-
-    .emergency-box p {
-      color: #B8C5D6;
-      font-size: 0.9rem;
-      margin-bottom: 16px;
-    }
-
-    .emergency-number {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #FFFFFF;
-    }
+    .emergency-section { padding: 80px 0; background-color: #F8F9FA; }
+    .emergency-box { background-color: #0A2540; color: #FFFFFF; padding: 48px; border-radius: 8px; text-align: center; max-width: 600px; margin: 0 auto; }
+    .emergency-box h4 { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: #7AB8FF; }
+    .emergency-box p { color: #B8C5D6; font-size: 1rem; margin-bottom: 24px; }
+    .emergency-number { font-size: 2rem; font-weight: 800; color: #FFFFFF; }
 
     /* Footer */
-    footer {
-      background-color: #0A2540;
-      color: #B8C5D6;
-      padding: 60px 0 30px;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
+    footer { background-color: #0A2540; color: #B8C5D6; padding: 60px 0 30px; }
+    .footer-grid { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 40px; }
     .footer-brand { max-width: 320px; }
-
-    .footer-brand .logo {
-      color: #F59E0B;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #B8C5D6;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s ease;
-    }
-
+    .footer-brand .logo { color: #0052CC; margin-bottom: 16px; display: block; }
+    .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+    .footer-links a { color: #B8C5D6; text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
     .footer-links a:hover { color: #FFFFFF; }
-
-    .footer-bottom {
-      border-top: 1px solid #1A3A5C;
-      padding-top: 30px;
-      text-align: center;
-      font-size: 0.875rem;
-      color: #7A8FA6;
-    }
+    .footer-bottom { border-top: 1px solid #1A3A5C; padding-top: 30px; text-align: center; font-size: 0.875rem; color: #7A8FA6; }
 
     /* Mobile */
+    @media (max-width: 1024px) { .locations-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) {
       .page-hero h1 { font-size: 2.25rem; }
       nav { display: none; }
-      .contact-grid { grid-template-columns: 1fr; gap: 60px; }
-      .form-row { grid-template-columns: 1fr; }
-      .page-hero { padding: 80px 0; }
-      .contact-section { padding: 80px 0; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .page-hero, .locations-section { padding: 80px 0; }
     }
   </style>
-  <link rel="preload" as="image" href="/images/contact-hero.jpg">
 </head>
 <body>
 
@@ -377,10 +90,11 @@
         <a href="/" class="logo">Al Harthy Transporters</a>
         <nav>
           <a href="/">Home</a>
-          <a href="equipment.html">Fleet</a>
-          <a href="career.html">Careers</a>
-          <a href="about.html">About</a>
-          <a href="contact.html" class="btn active">Request Quote</a>
+          <a href="service.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="news.html">News</a>
+          <a href="location.html" class="active">Locations</a>
+          <a href="contact.html" class="btn">Request Quote</a>
         </nav>
       </div>
     </div>
@@ -389,117 +103,129 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <span class="hero-badge">24/7 Operations</span>
-        <h1>Request a Quote</h1>
-        <p>Our logistics planners are ready to engineer your next heavy haul. Get a transparent quote and custom route assessment within 4 hours.</p>
+        <span class="hero-badge">GCC Network</span>
+        <h1>Our Strategic Hubs</h1>
+        <p>Muscat HQ plus operational offices in Dubai and Dammam. 24/7 dispatch coverage across Oman, UAE, and Saudi Arabia.</p>
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="locations-section">
       <div class="container">
-        <div class="contact-grid">
-          <div>
-            <div class="section-label">
-              <div class="section-label-line"></div>
-              <span>Get Started</span>
-            </div>
-            <h2 class="section-title">Tell Us About Your Cargo</h2>
-            <p class="contact-intro">The more detail you provide, the more accurate your quote. Our team handles permits, route surveys, and escorts for GCC-wide moves.</p>
+        <div class="section-label">
+          <div class="section-label-line"></div>
+          <span>Where We Operate</span>
+        </div>
+        <h2 class="section-title">Key Logistics Centers</h2>
 
-            <form class="contact-form" action="/submit-quote" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" name="name" required>
+        <div class="locations-grid">
+          <!-- Muscat HQ -->
+          <div class="location-card active">
+            <h3>Muscat HQ — Oman</h3>
+            <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116894.238384107!2d58.237!3d23.585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8e017c1e0b1b1b%3A0x4e0b8b8b8b8b!2sMuscat%2C%20Oman!5e0!3m2!1sen!2som!4v1700000000000" loading="lazy"></iframe>
+            <div class="location-details">
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Address</div>
+                  <div class="detail-value">Oman Industrial Zone, Plot 442<br>Sultanate of Oman</div>
                 </div>
-                <div class="form-group">
-                  <label for="company">Company</label>
-                  <input type="text" id="company" name="company" required>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Phone</div>
+                  <div class="detail-value"><a href="tel:+96824440000">+968 2444 0000</a></div>
                 </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Email</div>
+                  <div class="detail-value"><a href="mailto:oman@alharthytrans.om">oman@alharthytrans.om</a></div>
                 </div>
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" required>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Hours</div>
+                  <div class="detail-value">Sun - Thu: 8:00 - 18:00 GST<br>Operations: 24/7</div>
                 </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="origin">Origin</label>
-                  <input type="text" id="origin" name="origin" placeholder="City, Country" required>
-                </div>
-                <div class="form-group">
-                  <label for="destination">Destination</label>
-                  <input type="text" id="destination" name="destination" placeholder="City, Country" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="cargo">Cargo Details</label>
-                <textarea id="cargo" name="cargo" placeholder="Weight, dimensions, type of cargo, timeline..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn">Submit Quote Request</button>
-            </form>
-          </div>
-
-          <div>
-            <div class="contact-details">
-              <div class="details-block">
-                <h3>Muscat Headquarters</h3>
-                <div class="detail-item">
-                  <div class="detail-icon"></div>
-                  <div class="detail-text">
-                    <div class="detail-label">Address</div>
-                    <div class="detail-value">Oman Industrial Zone, Plot 442<br>Sultanate of Oman</div>
-                  </div>
-                <div class="detail-item">
-                  <div class="detail-icon"></div>
-                  <div class="detail-text">
-                    <div class="detail-label">Phone</div>
-                    <div class="detail-value"><a href="tel:+96824440000">+968 2444 0000</a></div>
-                  </div>
-                </div>
-                <div class="detail-item">
-                  <div class="detail-icon"></div>
-                  <div class="detail-text">
-                    <div class="detail-label">Email</div>
-                    <div class="detail-value"><a href="mailto:quotes@alharthytrans.om">quotes@alharthytrans.om</a></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="details-block">
-                <h3>Business Hours</h3>
-                <div class="detail-item">
-                  <div class="detail-icon"></div>
-                  <div class="detail-text">
-                    <div class="detail-label">Operations</div>
-                    <div class="detail-value">24/7/365</div>
-                  </div>
-                </div>
-                <div class="detail-item">
-                  <div class="detail-icon"></div>
-                  <div class="detail-text">
-                    <div class="detail-label">Office</div>
-                    <div class="detail-value">Sun - Thu: 8:00 - 18:00 GST</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="emergency-box">
-                <h4>Emergency Dispatch</h4>
-                <p>For urgent breakdown or route issues</p>
-                <div class="emergency-number">+968 9900 1122</div>
               </div>
             </div>
           </div>
+
+          <!-- Dubai -->
+          <div class="location-card">
+            <h3>Dubai Office — UAE</h3>
+            <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.682814!2d54.8!3d25.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4344c1e8b8b8%3A0x4e0b8b8b8b8b!2sJebel%20Ali%20Free%20Zone!5e0!3m2!1sen!2sae!4v1700000000000" loading="lazy"></iframe>
+            <div class="location-details">
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Address</div>
+                  <div class="detail-value">Jebel Ali Free Zone, Gate 4<br>Dubai, UAE</div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Phone</div>
+                  <div class="detail-value"><a href="tel:+97148880000">+971 4 888 0000</a></div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Email</div>
+                  <div class="detail-value"><a href="mailto:uae@alharthytrans.om">uae@alharthytrans.om</a></div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Hours</div>
+                  <div class="detail-value">Sun - Thu: 8:00 - 18:00 GST<br>Operations: 24/7</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dammam -->
+          <div class="location-card">
+            <h3>Dammam Office — Saudi Arabia</h3>
+            <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114297.5!2d49.9!3d26.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49f4b4b4b4b4%3A0x4e0b8b8b!2sKing%20Abdulaziz%20Port%20Dammam!5e0!3m2!1sen!2ssa!4v1700000000000" loading="lazy"></iframe>
+            <div class="location-details">
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Address</div>
+                  <div class="detail-value">King Abdulaziz Port Area<br>Dammam, KSA</div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Phone</div>
+                  <div class="detail-value"><a href="tel:+966138000000">+966 13 800 0000</a></div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Email</div>
+                  <div class="detail-value"><a href="mailto:ksa@alharthytrans.om">ksa@alharthytrans.om</a></div>
+                </div>
+              <div class="detail-item">
+                <div class="detail-icon"></div>
+                <div class="detail-text">
+                  <div class="detail-label">Hours</div>
+                  <div class="detail-value">Sun - Thu: 8:00 - 18:00 AST<br>Operations: 24/7</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="emergency-section">
+      <div class="container">
+        <div class="emergency-box">
+          <h4>24/7 Emergency Dispatch</h4>
+          <p>For urgent breakdown, route issues, or incident response across the GCC</p>
+          <div class="emergency-number">+968 9900 1122</div>
         </div>
       </div>
     </section>
@@ -513,12 +239,13 @@
           <p>Industrial logistics and heavy transport solutions across the GCC since 2004.</p>
         </div>
         <div class="footer-links">
-          <a href="equipment.html">Fleet</a>
-          <a href="career.html">Careers</a>
+          <a href="service.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="safety.html">Safety</a>
           <a href="about.html">About</a>
+          <a href="career.html">Careers</a>
           <a href="contact.html">Contact</a>
         </div>
-      </div>
       <div class="footer-bottom">
         © 2026 Al Harthy Transporters. All rights reserved.
       </div>
