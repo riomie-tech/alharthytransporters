@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News & Insights | Al Harthy Heavy Haulage</title>
+  <meta name="description" content="Heavy haulage intelligence from GCC ports. Operations, safety milestones, fleet upgrades, and logistics trends from Al Harthy Heavy Haulage.">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -11,32 +13,64 @@
         extend: {
           colors: {
             primary: '#0A2540',
-            secondary: '#F59E0B',
+            secondary: '#F59E0B'
+          },
+          fontFamily: {
+            'work': ['Work Sans', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif']
           }
         }
       }
     }
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
   <style>
-  .line-clamp-3 {
+.line-clamp-3 {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+  body {
+      min-height: 100dvh;
+  }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 antialiased">
+<body class="bg-gray-50 font-inter text-slate-800">
+
+  <!-- Header -->
+  <header class="bg-primary text-white sticky top-0 z-50">
+      <div class="container mx-auto px-6 md:px-12">
+          <div class="flex justify-between items-center h-20">
+              <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
+                  <span class="font-work font-black uppercase tracking-tighter text-2xl">Al Harthy Transporters</span>
+              </div>
+              <nav class="hidden md:flex items-center gap-8">
+                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="services.html">Services</a>
+                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
+                  <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="location.html">Locations</a>
+                  <a href="quote.html">
+                      <button class="bg-secondary text-primary px-6 py-2 font-semibold text-sm uppercase tracking-wider hover:bg-amber-500 transition-all rounded-lg">
+                          Request Quote
+                      </button>
+                  </a>
+              </nav>
+          </div>
+      </div>
+  </header>
 
   <!-- Hero -->
-  <section class="relative h-screen min-h-[600px] w-full overflow-hidden">
-    <img class="absolute inset-0 w-full h-full object-cover"
+  <section class="relative h-[600px] w-full overflow-hidden bg-primary">
+    <img class="absolute inset-0 w-full h-full object-cover opacity-40"
          src="/images/hero-lowloader-port.jpg"
          alt="DAF XF low loader at commercial port during storm dusk with mirror wet concrete reflections"/>
     <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
     <div class="relative z-10 h-full flex flex-col justify-end p-8 md:p-12 lg:p-16 max-w-7xl mx-auto">
-      <span class="text-xs font-semibold tracking-widest uppercase text-secondary mb-3">NEWS & INSIGHTS</span>
-      <h1 class="text-5xl font-bold text-white mb-4 max-w-3xl leading-tight">Heavy Haulage Intelligence from GCC Ports</h1>
+      <span class="text-xs font-bold tracking-widest uppercase text-secondary mb-3">NEWS & INSIGHTS</span>
+      <h1 class="font-work font-bold text-5xl text-white mb-4 max-w-3xl leading-tight">Heavy Haulage Intelligence from GCC Ports</h1>
       <p class="text-lg text-slate-200 max-w-2xl">Operations, safety milestones, fleet upgrades, and logistics trends from Al Harthy Heavy Haulage.</p>
     </div>
   </section>
@@ -45,7 +79,7 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
     <!-- Featured -->
-    <article class="bg-white border border-slate-200 mb-16 md:mb-24 group">
+    <article class="bg-white border border-slate-200 mb-16 md:mb-24 group rounded-xl overflow-hidden shadow-lg">
       <div class="grid md:grid-cols-2 gap-0">
         <div class="h-80 md:h-auto overflow-hidden">
           <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -53,85 +87,85 @@
                alt="Scania Euro 6 V8 tanker truck at industrial refinery during blue hour"/>
         </div>
         <div class="p-6 md:p-12 flex flex-col justify-center">
-          <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-3">FEATURED</span>
-          <h2 class="text-4xl font-bold text-primary mb-4 leading-tight">Al Harthy Expands Euro 6 Fleet for Oman’s Zero-Emission Zones</h2>
+          <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-3">FEATURED</span>
+          <h2 class="font-work font-bold text-4xl text-primary mb-4 leading-tight">Al Harthy Expands Euro 6 Fleet for Oman’s Zero-Emission Zones</h2>
           <p class="text-lg text-slate-600 mb-6">Six new Scania V8 tankers with AdBlue SCR technology deployed at Sohar and Duqm ports. Full ADR compliance for hazardous cargo moves.</p>
-          <a class="text-sm font-semibold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit hover:border-primary transition-colors"
-             href="#!">READ FULL STORY</a>
+          <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit hover:border-primary transition-colors"
+             href="/news/euro-6-expansion.html">READ FULL STORY</a>
         </div>
       </div>
     </article>
 
     <!-- Grid -->
     <section>
-      <h2 class="text-4xl font-bold text-primary mb-8 md:mb-12">Latest Updates</h2>
+      <h2 class="font-work font-bold text-4xl text-primary mb-8 md:mb-12">Latest Updates</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
         <!-- Card 1: Efficiency -->
-        <div class="bg-white border border-slate-200 p-6 flex flex-col group">
-          <div class="h-48 overflow-hidden mb-6">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
+          <div class="h-48 overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                  src="/images/news-card-efficiency.jpg"
                  alt="Digital logistics dashboard on tablet with truck keys on wet concrete"
                  loading="lazy"/>
           </div>
-          <div class="px-4 pb-4 flex-1 flex flex-col">
-            <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">OPERATIONS</span>
-            <h3 class="text-2xl font-semibold text-primary mb-3 leading-snug">New TMS Cuts Dispatch Time 35%</h3>
+          <div class="p-6 flex-1 flex flex-col">
+            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">OPERATIONS</span>
+            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">New TMS Cuts Dispatch Time 35%</h3>
             <p class="text-slate-600 mb-4 line-clamp-3">Digital transformation complete: real-time tracking, automated POD, and driver app rollout across all 80+ assets.</p>
-            <a class="text-sm font-semibold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="#!">READ MORE</a>
+            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
+               href="/news/tms-rollout.html">READ MORE</a>
           </div>
         </div>
 
         <!-- Card 2: Safety -->
-        <div class="bg-white border border-slate-200 p-6 flex flex-col group">
-          <div class="h-48 overflow-hidden mb-6">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
+          <div class="h-48 overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                  src="/images/news-card-safety.jpg"
                  alt="Driver in hi-vis PPE walking past DAF XF truck at port during blue hour"
                  loading="lazy"/>
           </div>
-          <div class="px-4 pb-4 flex-1 flex flex-col">
-            <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">SAFETY</span>
-            <h3 class="text-2xl font-semibold text-primary mb-3 leading-snug">500,000 KM Zero-Incident Milestone</h3>
+          <div class="p-6 flex-1 flex flex-col">
+            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">SAFETY</span>
+            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">500,000 KM Zero-Incident Milestone</h3>
             <p class="text-slate-600 mb-4 line-clamp-3">Heavy haul division celebrates 18 months without LTI. New simulator training program launching Q3 2026.</p>
-            <a class="text-sm font-semibold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="#!">READ MORE</a>
+            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
+               href="/news/safety-milestone.html">READ MORE</a>
           </div>
         </div>
 
         <!-- Card 3: Sustainability -->
-        <div class="bg-white border border-slate-200 p-6 flex flex-col group">
-          <div class="h-48 overflow-hidden mb-6">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
+          <div class="h-48 overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                  src="/images/news-card-green.jpg"
                  alt="Scania Euro 6 tanker at AdBlue pump during blue hour with wet concrete reflections"
                  loading="lazy"/>
           </div>
-          <div class="px-4 pb-4 flex-1 flex flex-col">
-            <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">SUSTAINABILITY</span>
-            <h3 class="text-2xl font-semibold text-primary mb-3 leading-snug">Euro 6 Fleet Cuts Emissions 30%</h3>
+          <div class="p-6 flex-1 flex flex-col">
+            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">SUSTAINABILITY</span>
+            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">Euro 6 Fleet Cuts Emissions 30%</h3>
             <p class="text-slate-600 mb-4 line-clamp-3">Al Harthy’s new Scania tankers meet strictest EU standards for Oman’s zero-emission zones. AdBlue + SCR tech deployed at Sohar & Duqm.</p>
-            <a class="text-sm font-semibold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="#!">READ MORE</a>
+            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
+               href="/news/euro-6-emissions.html">READ MORE</a>
           </div>
         </div>
 
         <!-- Card 4: Trends -->
-        <div class="bg-white border border-slate-200 p-6 flex flex-col group">
-          <div class="h-48 overflow-hidden mb-6">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col group shadow-lg">
+          <div class="h-48 overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                  src="/images/news-card-trends.jpg"
                  alt="Aerial drone view of container yard and gantry cranes at GCC port during blue hour"
                  loading="lazy"/>
           </div>
-          <div class="px-4 pb-4 flex-1 flex flex-col">
-            <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">TRENDS</span>
-            <h3 class="text-2xl font-semibold text-primary mb-3 leading-snug">Sohar Expansion Drives 40% Haulage Demand</h3>
+          <div class="p-6 flex-1 flex flex-col">
+            <span class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-2">TRENDS</span>
+            <h3 class="font-work font-semibold text-2xl text-primary mb-3 leading-snug">Sohar Expansion Drives 40% Haulage Demand</h3>
             <p class="text-slate-600 mb-4 line-clamp-3">New container berths at Sohar & Duqm ports are fueling record demand for oversized project cargo moves in 2026.</p>
-            <a class="text-sm font-semibold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
-               href="#!">READ MORE</a>
+            <a class="text-sm font-bold uppercase tracking-wider text-primary border-b-2 border-secondary pb-0.5 inline-block w-fit mt-auto hover:border-primary transition-colors"
+               href="/news/sohar-expansion.html">READ MORE</a>
           </div>
         </div>
 
@@ -140,5 +174,73 @@
 
   </main>
 
+  <!-- Footer -->
+  <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
+          <div class="space-y-6 max-w-sm">
+              <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary">local_shipping</span>
+                  <span class="font-work font-black uppercase tracking-wider text-secondary">Al Harthy Transporters</span>
+              </div>
+              <p class="text-slate-400 text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
+              <div class="flex gap-4">
+                  <a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">share</span></a>
+                  <a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">public</span></a>
+                  <a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">mail</span></a>
+              </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+              <div class="space-y-4">
+                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
+                  <nav class="flex flex-col gap-2">
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="services.html">Services</a>
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="about.html">About Us</a>
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="safety.html">Safety</a>
+                  </nav>
+              </div>
+              <div class="space-y-4">
+                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
+                  <nav class="flex flex-col gap-2">
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="careers.html">Careers</a>
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="partners.html">Partnerships</a>
+                  </nav>
+              </div>
+              <div class="space-y-4">
+                  <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
+                  <nav class="flex flex-col gap-2">
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="privacy.html">Privacy</a>
+                      <a class="text-slate-400 hover:text-white transition-colors text-sm" href="contact.html">Contact</a>
+                  </nav>
+              </div>
+          </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-slate-500 text-sm">© 2026 Al Harthy Transporters. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+              <span class="text-slate-500 text-xs">OMAN HQ</span>
+              <span class="text-slate-500 text-xs">UAE LOGISTICS HUB</span>
+          </div>
+      </div>
+  </footer>
+
+  <!-- BottomNavBar (Mobile Only) -->
+  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white border-t border-slate-200 shadow-lg">
+      <a href="fleet.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
+          <span class="material-symbols-outlined">local_shipping</span>
+          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Fleet</span>
+      </a>
+      <a href="services.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
+          <span class="material-symbols-outlined">precision_manufacturing</span>
+          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Services</span>
+      </a>
+      <a href="location.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
+          <span class="material-symbols-outlined">map</span>
+          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Locations</span>
+      </a>
+      <a href="quote.html" class="flex flex-col items-center justify-center text-slate-500 py-2">
+          <span class="material-symbols-outlined">request_quote</span>
+          <span class="font-work text-xs font-semibold uppercase tracking-tighter mt-1">Quote</span>
+      </a>
+  </nav>
 </body>
 </html>
