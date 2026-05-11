@@ -1,89 +1,50 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Careers | Al Harthy Transporters</title>
 <meta name="description" content="Join Al Harthy Transporters. Drive 8x4 Scania V8s across UAE, KSA, and Oman. Heavy haulage, crane, and ADR driver vacancies.">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-                "primary": "#0A2540",
-                "primary-container": "#0a1d37",
-                "on-primary": "#ffffff",
-                "on-primary-container": "#B8C5D6",
-                "secondary": "#0052CC",
-                "secondary-container": "#003d99",
-                "on-secondary": "#ffffff",
-                "background": "#FFFFFF",
-                "surface": "#FFFFFF",
-                "on-surface": "#333333",
-                "on-surface-variant": "#5A6473",
-                "outline": "#E0E3E5",
-                "outline-variant": "#E0E3E5"
-            },
-            fontFamily: {
-                "heading": ["Work Sans"],
-                "body": ["Inter"]
-            },
-            fontSize: {
-                "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "700"}],
-                "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}]
-            },
-            spacing: {
-                "section-padding": "100px",
-                "gutter": "24px"
-            }
-          }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#0A2540",
+          "secondary": "#0052CC",
+          "on-surface": "#333333",
+          "on-surface-variant": "#5A6473",
+          "outline": "#E0E3E5"
+        },
+        fontFamily: {
+          "heading": ["Work Sans"],
+          "body": ["Inter"]
         }
       }
-    </script>
+    }
+  }
+</script>
 <style>
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-.hero-overlay {
-  background: linear-gradient(90deg, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0.4) 100%);
-}
-body {
-  min-height: max(884px, 100dvh);
-  font-family: 'Inter', sans-serif;
-}
-h1, h2, h3 {
-  font-family: 'Work Sans', sans-serif;
-}
-/* Hide broken image alt text */
-img {
-  text-indent: -9999px;
-}
+ .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+  body{font-family:'Inter',sans-serif}
+  h1,h2,h3{font-family:'Work Sans',sans-serif}
 </style>
 </head>
-<body class="bg-background text-on-surface">
+<body class="bg-white text-on-surface">
 <header class="bg-white border-b border-outline sticky top-0 z-50">
   <div class="max-w-[1200px] mx-auto px-5">
     <div class="flex justify-between items-center h-20">
       <a href="/" class="text-[1.375rem] font-bold text-primary uppercase tracking-[-0.5px]">AL HARTHY TRANSPORTERS</a>
       <nav class="hidden md:flex items-center gap-9">
-        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase tracking-[0.5px]" href="index.html">Home</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase tracking-[0.5px]" href="service.html">Services</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase tracking-[0.5px]" href="safety.html">Safety</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase tracking-[0.5px]" href="security.html">Security</a>
-        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase tracking-[0.5px]" href="fleet.html">Fleet</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase" href="index.html">Home</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase" href="service.html">Services</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase" href="safety.html">Safety</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors font-semibold text-[0.9rem] uppercase" href="fleet.html">Fleet</a>
         <a href="quote.html">
-          <button class="bg-secondary text-on-secondary px-6 py-3 font-button text-button uppercase tracking-wider hover:bg-secondary-container transition-all rounded-md">
-            Request Quote
-          </button>
+          <button class="bg-secondary text-white px-6 py-3 font-semibold text-[0.875rem] uppercase tracking-wider hover:bg-[#003d99] transition-all rounded-md">Request Quote</button>
         </a>
       </nav>
     </div>
@@ -91,109 +52,101 @@ img {
 </header>
 
 <main>
-<section class="relative min-h-[500px] flex items-center overflow-hidden bg-primary">
-  <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover" 
-         src="https://images.unsplash.com/photo-1601584115197-04ecc0da3d0d?q=80&w=2070&auto=format&fit=crop" 
-         alt=""
-         onerror="this.style.display='none'"/>
-    <div class="hero-overlay absolute inset-0"></div>
-  </div>
-  <div class="relative z-10 max-w-[1200px] mx-auto px-5 w-full">
-    <div class="max-w-2xl">
-      <span class="text-secondary font-label-caps uppercase mb-4 block">JOIN OUR TEAM</span>
-      <h1 class="font-h1 text-h1 text-white mb-6">Drive With The Best</h1>
-      <p class="font-body-lg text-body-lg text-slate-200 mb-8">Join our fleet of 8x4 Scania V8s. Heavy haulage, crane, and ADR operations across UAE, KSA, and Oman.</p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="https://wa.me/971501234567?text=I'm%20interested%20in%20driver%20vacancies" target="_blank">
-          <button class="bg-secondary text-on-secondary px-8 py-4 font-button text-button uppercase tracking-wider hover:bg-secondary-container transition-all rounded-md w-full sm:w-auto">
-            APPLY ON WHATSAPP
-          </button>
-        </a>
-        <a href="#vacancies">
-          <button class="border-2 border-white text-white px-8 py-4 font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all rounded-md w-full sm:w-auto">
-            VIEW VACANCIES
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+  <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-primary">
+    <img class="absolute inset-0 w-full h-full object-cover"
+         src="images/career-hero.jpg"
+         alt="Al Harthy Transporters Team"
+         style="filter:sepia(1) hue-rotate(190deg) saturate(2) brightness(.85) contrast(1.1)"
+         loading="eager"/>
+    <div class="absolute inset-0" style="background:rgba(10,37,64,.6);mix-blend-mode:color"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(90deg,rgba(10,37,64,.9) 0%,rgba(10,37,64,.4) 100%)"></div>
 
-<!-- Rest of sections same as before -->
-<section class="py-section-padding bg-white">
-  <div class="max-w-[1200px] mx-auto px-5">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="font-h2 text-h2 text-primary mb-4">Why Join Us?</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant">We invest in the people who power our fleet.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-      <div class="text-center p-8 border border-outline rounded-lg">
-        <span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="payments">payments</span>
-        <h3 class="font-h3 text-h3 text-primary mb-3">Top Industry Pay</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant">Competitive salaries, trip bonuses, and on-time payment. Earn what you're worth.</p>
-      </div>
-      <div class="text-center p-8 border border-outline rounded-lg">
-        <span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="school">school</span>
-        <h3 class="font-h3 text-h3 text-primary mb-3">Continuous Training</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant">ADR, defensive driving, and heavy lift certification paid by us. Upgrade your skills.</p>
-      </div>
-      <div class="text-center p-8 border border-outline rounded-lg">
-        <span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="health_and_safety">health_and_safety</span>
-        <h3 class="font-h3 text-h3 text-primary mb-3">Safety First</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant">Newest Euro 6 Scania V8s with full safety tech. We get you home safe every time.</p>
+    <div class="relative z-10 max-w-[1200px] mx-auto px-5 w-full">
+      <div class="max-w-2xl">
+        <span class="text-[#60a5fa] font-bold text-[0.75rem] uppercase tracking-[0.1em] mb-4 block">JOIN OUR TEAM</span>
+        <h1 class="text-white text-[clamp(2rem,6vw,3rem)] font-bold leading-[1.1] mb-6">Drive With The Best</h1>
+        <p class="text-[1.125rem] text-slate-200 mb-8 leading-[1.6]">Join our fleet of 8x4 Scania V8s. Heavy haulage, crane, and ADR operations across UAE, KSA, and Oman.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/971501234567?text=I'm%20interested%20in%20driver%20vacancies" target="_blank">
+            <button class="bg-secondary text-white px-8 py-4 font-semibold text-[0.875rem] uppercase tracking-wider hover:bg-[#003d99] transition-all rounded-md w-full sm:w-auto">APPLY ON WHATSAPP</button>
+          </a>
+          <a href="#vacancies">
+            <button class="border-2 border-white text-white px-8 py-4 font-semibold text-[0.875rem] uppercase tracking-wider hover:bg-white/10 transition-all rounded-md w-full sm:w-auto">VIEW VACANCIES</button>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="vacancies" class="py-section-padding bg-surface">
-  <div class="max-w-[1200px] mx-auto px-5">
-    <h2 class="font-h2 text-h2 text-primary mb-12 text-center">Current Vacancies</h2>
-    <div class="space-y-6">
-      <div class="bg-white border border-outline p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div>
-          <h3 class="font-h3 text-h3 text-primary mb-2">Heavy Haulage Driver - 8x4 Scania</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant mb-4">UAE | KSA | Oman | Full-time</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">ADR Required</span>
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">5+ Years Experience</span>
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">GCC License</span>
-          </div>
-        </div>
-        <a href="https://wa.me/971501234567?text=Applying%20for%20Heavy%20Haulage%20Driver" target="_blank">
-          <button class="bg-secondary text-on-secondary px-6 py-3 font-button text-button uppercase tracking-wider hover:bg-secondary-container transition-all rounded-md whitespace-nowrap">
-            Apply Now
-          </button>
-        </a>
+  <section class="py-[100px] bg-white">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-primary text-[2.25rem] font-bold mb-4">Why Join Us?</h2>
+        <p class="text-[1.125rem] text-on-surface-variant">We invest in the people who power our fleet.</p>
       </div>
-      
-      <div class="bg-white border border-outline p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div>
-          <h3 class="font-h3 text-h3 text-primary mb-2">Mobile Crane Operator</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant mb-4">UAE | Full-time</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">Liebherr/Tadano</span>
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">3+ Years Experience</span>
-            <span class="bg-secondary-container text-on-primary px-3 py-1 rounded-full text-sm">Certified</span>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center p-8 border border-outline rounded-lg">
+          <span class="material-symbols-outlined text-secondary text-5xl mb-6">payments</span>
+          <h3 class="text-primary text-[1.5rem] font-semibold mb-3">Top Industry Pay</h3>
+          <p class="text-on-surface-variant">Competitive salaries, trip bonuses, and on-time payment. Earn what you're worth.</p>
         </div>
-        <a href="https://wa.me/971501234567?text=Applying%20for%20Crane%20Operator" target="_blank">
-          <button class="bg-secondary text-on-secondary px-6 py-3 font-button text-button uppercase tracking-wider hover:bg-secondary-container transition-all rounded-md whitespace-nowrap">
-            Apply Now
-          </button>
-        </a>
+        <div class="text-center p-8 border border-outline rounded-lg">
+          <span class="material-symbols-outlined text-secondary text-5xl mb-6">school</span>
+          <h3 class="text-primary text-[1.5rem] font-semibold mb-3">Continuous Training</h3>
+          <p class="text-on-surface-variant">ADR, defensive driving, and heavy lift certification paid by us. Upgrade your skills.</p>
+        </div>
+        <div class="text-center p-8 border border-outline rounded-lg">
+          <span class="material-symbols-outlined text-secondary text-5xl mb-6">health_and_safety</span>
+          <h3 class="text-primary text-[1.5rem] font-semibold mb-3">Safety First</h3>
+          <p class="text-on-surface-variant">Newest Euro 6 Scania V8s with full safety tech. We get you home safe every time.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="vacancies" class="py-[100px] bg-[#F8FAFC]">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <h2 class="text-primary text-[2.25rem] font-bold mb-12 text-center">Current Vacancies</h2>
+      <div class="space-y-6">
+        <div class="bg-white border border-outline p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <h3 class="text-primary text-[1.5rem] font-semibold mb-2">Heavy Haulage Driver - 8x4 Scania</h3>
+            <p class="text-on-surface-variant mb-4">UAE | KSA | Oman | Full-time</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">ADR Required</span>
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">5+ Years Experience</span>
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">GCC License</span>
+            </div>
+          </div>
+          <a href="https://wa.me/971501234567?text=Applying%20for%20Heavy%20Haulage%20Driver" target="_blank">
+            <button class="bg-secondary text-white px-6 py-3 font-semibold text-[0.875rem] uppercase tracking-wider hover:bg-[#003d99] transition-all rounded-md whitespace-nowrap">Apply Now</button>
+          </a>
+        </div>
+
+        <div class="bg-white border border-outline p-8 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <h3 class="text-primary text-[1.5rem] font-semibold mb-2">Mobile Crane Operator</h3>
+            <p class="text-on-surface-variant mb-4">UAE | Full-time</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">Liebherr/Tadano</span>
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">3+ Years Experience</span>
+              <span class="bg-[#003d99] text-white px-3 py-1 rounded-full text-sm">Certified</span>
+            </div>
+          </div>
+          <a href="https://wa.me/971501234567?text=Applying%20for%20Crane%20Operator" target="_blank">
+            <button class="bg-secondary text-white px-6 py-3 font-semibold text-[0.875rem] uppercase tracking-wider hover:bg-[#003d99] transition-all rounded-md whitespace-nowrap">Apply Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="bg-primary text-[#B8C5D6] pt-16 pb-8">
   <div class="max-w-[1200px] mx-auto px-5">
     <div class="flex justify-between mb-10 flex-wrap gap-10">
       <div class="max-w-[320px]">
-        <span class="text-secondary text-[1.375rem] font-bold uppercase tracking-[-0.5px] block mb-4">AL HARTHY TRANSPORTERS</span>
+        <span class="text-[#60a5fa] text-[1.375rem] font-bold uppercase tracking-[-0.5px] block mb-4">AL HARTHY TRANSPORTERS</span>
         <p class="text-[#B8C5D6] text-[0.95rem]">Setting the standard in heavy haulage and industrial logistics across the continent with precision and integrity.</p>
       </div>
       <div class="flex gap-10 flex-wrap">
@@ -205,9 +158,8 @@ img {
         <a class="text-[#B8C5D6] hover:text-white transition-colors text-[0.9rem]" href="contact.html">Contact</a>
       </div>
     </div>
-    <div class="border-t border-[#1A3A5C] pt-8 text-center text-[0.875rem] text-[#7A8FA6]">
-      © 2026 Al Harthy Transporters. All rights reserved.
-    </div>
+    <div class="border-t border-[#1A3A5C] pt-8 text-center text-[0.875rem] text-[#7A8FA6]">© 2026 Al Harthy Transporters. All rights reserved.</div>
   </div>
 </footer>
-</body></html>
+</body>
+</html>
