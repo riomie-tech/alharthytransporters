@@ -1,288 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Commercial Quote | Al Harthy Transporters</title>
-    <meta name="description" content="Request a detailed quote for heavy-duty hauling and logistics. Al Harthy Transporters provides precise estimates for industrial transport across Oman and East Africa.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a detailed quote for heavy-duty hauling and logistics. Al Harthy Transporters provides precise estimates for industrial transport across Oman and East Africa.">
+  <title>Request a Commercial Quote | Al Harthy Transporters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0A2540',
-                        secondary: '#F59E0B'
-                    },
-                    fontFamily: {
-                        'work': ['Work Sans', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    h1, h2, h3 { font-family: 'Work Sans', sans-serif; }
 
-    <style>
-      .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-      .form-focus:focus {
-            outline: none;
-            border-color: #F59E0B!important;
-            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1);
-        }
-        body {
-            min-height: 100dvh;
-        }
-    </style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E0E3E5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #0A2540;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #5A6473;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active { color: #0052CC; }
+
+    .btn {
+      background-color: #0052CC;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn:hover { background-color: #003d99; }
+
+    .btn-secondary {
+      background-color: #F59E0B;
+      color: #0A2540;
+    }
+
+    .btn-secondary:hover { background-color: #D97706; }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
+                  url('/images/quote-hero.jpg') center/cover;
+      color: #FFFFFF;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #F59E0B;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 100px 0;
+      background-color: #F8F9FA;
+    }
+
+    .form-layout {
+      display: flex;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .form-main {
+      flex: 2;
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+      border-radius: 8px;
+      padding: 48px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .form-step {
+      margin-bottom: 48px;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      background-color: #0A2540;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+
+    .step-header h3 {
+      font-size: 1.5rem;
+      color: #0A2540;
+      font-weight: 700;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #5A6473;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1px solid #E0E3E5;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #333333;
+      background-color: #F8F9FA;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #F59E0B;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Sidebar Cards */
+    .sidebar-card {
+      padding: 32px;
+      border-radius: 8px;
+    }
+
+    .sidebar-card.primary {
+      background-color: #0A2540;
+      color: #FFFFFF;
+    }
+
+    .sidebar-card.white {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E3E5;
+    }
+
+    .sidebar-card.dashed {
+      border: 2px dashed #E0E3E5;
+      text-align: center;
+    }
+
+    .sidebar-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-card.primary h3 {
+      color: #FFFFFF;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: start;
+    }
+
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #F59E0B;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .benefit-text strong {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .benefit-text p {
+      font-size: 0.875rem;
+      color: #B8C5D6;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .testimonial-stars {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      font-size: 1.125rem;
+    }
+
+    .testimonial-text {
+      color: #5A6473;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      background-color: #E0E3E5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #0A2540;
+    }
+
+    .author-info strong {
+      display: block;
+      color: #0A2540;
+      font-weight: 700;
+    }
+
+    .author-info span {
+      font-size: 0.75rem;
+      color: #5A6473;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-urgent h4 {
+      font-size: 0.75rem;
+      color: #5A6473;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-urgent .phone {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0A2540;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .contact-urgent a {
+      color: #F59E0B;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-urgent a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0A2540;
+      color: #B8C5D6;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand .logo {
+      color: #F59E0B;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #B8C5D6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      border-top: 1px solid #1A3A5C;
+      padding-top: 30px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #7A8FA6;
+    }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      .form-layout { flex-direction: column; }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2.25rem; }
+      nav { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-main { padding: 32px 24px; }
+      .page-hero { padding: 80px 0; }
+      .form-section { padding: 80px 0; }
+    }
+  </style>
+  <link rel="preload" as="image" href="/images/quote-hero.jpg">
 </head>
-<body class="bg-gray-50 font-inter text-slate-800">
+<body>
 
-    <!-- Header -->
-    <header class="bg-primary text-white sticky top-0 z-50">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
-                    <h1 class="font-work font-black uppercase tracking-tighter text-2xl">Al Harthy Transporters</h1>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Al Harthy Transporters</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="btn">Contact Support</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-badge">Global Logistics Solutions</span>
+        <h1>Request a Commercial Quote</h1>
+        <p>Detailed pricing for your heavy-duty hauling and logistics needs. Our team provides precise estimates based on cargo weight, route complexity, and service requirements.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container">
+        <div class="form-layout">
+          <div class="form-main">
+            <form action="/submit-quote" method="POST">
+              <div class="form-step">
+                <div class="step-header">
+                  <div class="step-number">1</div>
+                  <h3>Service Details</h3>
                 </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="services.html">Services</a>
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="fleet.html">Fleet</a>
-                    <a class="text-slate-300 hover:text-secondary transition-colors font-work font-bold uppercase tracking-tight" href="safety.html">Safety</a>
-                    <a class="text-secondary font-work font-bold uppercase tracking-tight border-b-2 border-secondary pb-1" href="quote.html">Request Quote</a>
-                </nav>
-                <a href="contact.html">
-                    <button class="bg-secondary text-primary px-6 py-3 font-semibold text-sm rounded-lg hover:bg-amber-500 transition-all">
-                        Contact Support
-                    </button>
-                </a>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="service">Service Type</label>
+                    <select id="service" name="service" required>
+                      <option value="">Select service</option>
+                      <option>Long-Haul Freight</option>
+                      <option>Heavy Machinery Transport</option>
+                      <option>Cross-Border Logistics</option>
+                      <option>Specialized Oversized Cargo</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="cargo">Cargo Description</label>
+                    <input type="text" id="cargo" name="cargo" placeholder="e.g. Industrial Generators" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="weight">Weight (Tons)</label>
+                    <input type="number" id="weight" name="weight" placeholder="0.00" step="0.01" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="volume">Volume (CBM)</label>
+                    <input type="number" id="volume" name="volume" placeholder="0.00" step="0.01" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-step">
+                <div class="step-header">
+                  <div class="step-number">2</div>
+                  <h3>Route Information</h3>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="origin">Origin</label>
+                    <input type="text" id="origin" name="origin" placeholder="City or Port of Origin" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Delivery Destination" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-step">
+                <div class="step-header">
+                  <div class="step-number">3</div>
+                  <h3>Contact Information</h3>
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your Business Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Contact Person" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="email@company.com" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+968 XXXX XXXX" required>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-secondary" style="width: 100%; padding: 16px;">
+                Submit Quote Request
+              </button>
+              <p style="text-align: center; color: #5A6473; font-size: 0.75rem; margin-top: 16px;">By submitting, you agree to our processing of your logistics data according to our privacy policy.</p>
+            </form>
+          </div>
+
+          <div class="form-sidebar">
+            <div class="sidebar-card primary">
+              <h3>Why Al Harthy?</h3>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text">
+                  <strong>Fully Bonded & Insured</strong>
+                  <p>Every shipment is protected by comprehensive industrial transit insurance.</p>
+                </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text">
+                  <strong>Real-time GPS Tracking</strong>
+                  <p>Full visibility into your cargo's location from origin to destination.</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text">
+                  <strong>24/7 Logistics Support</strong>
+                  <p>A dedicated account manager for your commercial contract needs.</p>
+                </div>
+              </div>
             </div>
+
+            <div class="sidebar-card white">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Al Harthy Transporters handled our industrial machinery relocation across three borders with zero delays. Their attention to safety protocols is unmatched in the region."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SM</div>
+                <div class="author-info">
+                  <strong>Samuel M.</strong>
+                  <span>Project Director, BuildCorp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card dashed contact-urgent">
+              <h4>Need Urgent Help?</h4>
+              <span class="phone">+968 2450 0000</span>
+              <a href="mailto:quotes@alharthy.com">quotes@alharthy.com</a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <!-- Hero Title Section -->
-        <section class="relative h-[400px] flex items-center px-6 md:px-12 bg-primary">
-            <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover opacity-40"
-                     src="/images/quote-hero.jpg"
-                     alt="Al Harthy Transporters heavy haulage operations"/>
-            </div>
-            <div class="relative z-10 max-w-3xl">
-                <span class="font-bold text-xs text-secondary uppercase tracking-widest mb-4 block">GLOBAL LOGISTICS SOLUTIONS</span>
-                <h2 class="font-work font-bold text-5xl text-white mb-6 leading-tight">Request a Commercial Quote</h2>
-                <p class="text-lg text-slate-300 leading-relaxed">Detailed pricing for your heavy-duty hauling and logistics needs. Our team provides precise estimates based on cargo weight, route complexity, and service requirements.</p>
-            </div>
-        </section>
-
-        <!-- Quote Form Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-8">
-
-                <!-- Main Form Column -->
-                <div class="lg:w-2/3 bg-white p-8 md:p-12 shadow-lg border border-slate-100 rounded-xl">
-                    <form class="space-y-12">
-
-                        <!-- Step 1: Logistics Details -->
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4 mb-6">
-                                <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</span>
-                                <h3 class="font-work font-bold text-2xl text-primary">Service Details</h3>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Service Type</label>
-                                    <select class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all">
-                                        <option>Long-Haul Freight</option>
-                                        <option>Heavy Machinery Transport</option>
-                                        <option>Cross-Border Logistics</option>
-                                        <option>Specialized Oversized Cargo</option>
-                                    </select>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Cargo Description</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="e.g. Industrial Generators" type="text"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Weight (Tons)</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="0.00" type="number"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Volume (CBM)</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="0.00" type="number"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Route Information -->
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4 mb-6">
-                                <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</span>
-                                <h3 class="font-work font-bold text-2xl text-primary">Route Information</h3>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="space-y-2 relative">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Origin</label>
-                                    <div class="relative">
-                                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">location_on</span>
-                                        <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg pl-10 pr-4 form-focus transition-all" placeholder="City or Port of Origin" type="text"/>
-                                    </div>
-                                </div>
-                                <div class="space-y-2 relative">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Destination</label>
-                                    <div class="relative">
-                                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">flag</span>
-                                        <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg pl-10 pr-4 form-focus transition-all" placeholder="Delivery Destination" type="text"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 3: Contact Information -->
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4 mb-6">
-                                <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</span>
-                                <h3 class="font-work font-bold text-2xl text-primary">Contact Information</h3>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Company Name</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="Your Business Name" type="text"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Full Name</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="Contact Person" type="text"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Email Address</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="email@company.com" type="email"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wider">Phone Number</label>
-                                    <input class="w-full h-12 bg-gray-50 border border-slate-200 rounded-lg px-4 form-focus transition-all" placeholder="+968 XXXX XXXX" type="tel"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-8">
-                            <button class="w-full bg-secondary text-primary py-4 px-8 font-bold text-sm rounded-lg hover:bg-amber-500 transition-all flex items-center justify-center gap-2 shadow-lg" type="submit">
-                                <span class="material-symbols-outlined">send</span>
-                                SUBMIT QUOTE REQUEST
-                            </button>
-                            <p class="text-center text-slate-500 text-xs mt-4">By submitting, you agree to our processing of your logistics data according to our privacy policy.</p>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Sidebar Content -->
-                <div class="lg:w-1/3 space-y-8">
-                    <!-- Why Us Card -->
-                    <div class="bg-primary text-white p-8 rounded-xl space-y-6">
-                        <h3 class="font-work font-bold text-2xl">Why Al Harthy?</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-secondary">verified</span>
-                                <div>
-                                    <p class="font-bold">Fully Bonded & Insured</p>
-                                    <p class="text-slate-300 text-sm">Every shipment is protected by comprehensive industrial transit insurance.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-secondary">speed</span>
-                                <div>
-                                    <p class="font-bold">Real-time GPS Tracking</p>
-                                    <p class="text-slate-300 text-sm">Full visibility into your cargo's location from origin to destination.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-secondary">support_agent</span>
-                                <div>
-                                    <p class="font-bold">24/7 Logistics Support</p>
-                                    <p class="text-slate-300 text-sm">A dedicated account manager for your commercial contract needs.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Testimonial -->
-                    <div class="bg-white p-8 rounded-xl border border-slate-200">
-                        <div class="flex items-center gap-1 text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
-                        </div>
-                        <p class="italic text-slate-600 mb-4">"Al Harthy Transporters handled our industrial machinery relocation across three borders with zero delays. Their attention to safety protocols is unmatched in the region."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-primary font-bold">SM</div>
-                            <div>
-                                <p class="font-bold text-primary">Samuel M.</p>
-                                <p class="text-xs uppercase text-slate-500">Project Director, BuildCorp</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Direct Support -->
-                    <div class="p-8 border-2 border-dashed border-slate-200 rounded-xl text-center">
-                        <h4 class="font-work font-bold text-slate-500 mb-2 uppercase tracking-widest text-xs">Need Urgent Help?</h4>
-                        <p class="text-primary font-bold text-xl mb-4">+968 2450 0000</p>
-                        <a class="text-secondary font-bold hover:underline" href="mailto:quotes@alharthy.com">quotes@alharthy.com</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12">
-            <div class="space-y-6 max-w-sm">
-                <h2 class="text-xl font-work font-black text-secondary">Al Harthy Transporters</h2>
-                <p class="text-slate-400 text-sm">Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
-                <div class="flex gap-4">
-                    <a href="https://facebook.com/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">share</span></a>
-                    <a href="https://linkedin.com/company/alharthytransporters"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">public</span></a>
-                    <a href="mailto:info@alharthy.com"><span class="material-symbols-outlined text-slate-400 hover:text-secondary cursor-pointer">mail</span></a>
-                </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Navigation</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="services.html">Services</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="about.html">About Us</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="safety.html">Safety</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Opportunities</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="careers.html">Careers</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="partners.html">Partnerships</a>
-                    </nav>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Legal</h4>
-                    <nav class="flex flex-col gap-2">
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="privacy.html">Privacy</a>
-                        <a class="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="contact.html">Contact</a>
-                    </nav>
-                </div>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Al Harthy Transporters</span>
+          <p>Industrial-grade haulage solutions for global supply chains. Reliability built on precision and fleet excellence.</p>
         </div>
-        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 text-sm">© 2026 Al Harthy Transporters. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <span class="text-slate-500 text-xs">OMAN HQ</span>
-                <span class="text-slate-500 text-xs">UAE LOGISTICS HUB</span>
-            </div>
+        <div class="footer-links">
+          <a href="equipment.html">Fleet</a>
+          <a href="career.html">Careers</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </footer>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Al Harthy Transporters. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
