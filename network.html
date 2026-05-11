@@ -7,594 +7,115 @@
     <meta name="description" content="Al Harthy Transporters global logistics network. Strategic hubs across Middle East, Europe, Asia, and Africa.">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #FFFFFF;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #FFFFFF; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
         /* Header */
-        header {
-            background-color: #FFFFFF;
-            border-bottom: 1px solid #E0E3E5;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        header { background-color: #FFFFFF; border-bottom: 1px solid #E0E3E5; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.375rem; font-weight: 700; color: #0A2540; text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
+        nav { display: flex; gap: 36px; align-items: center; }
+        nav a { color: #5A6473; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s ease; }
+        nav a:hover, nav a.active { color: #0052CC; }
+        .btn { background-color: #0052CC; color: #FFFFFF; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background-color 0.2s ease; border: none; cursor: pointer; display: inline-block; }
+        .btn:hover { background-color: #003d99; }
+        .btn-outline { background-color: transparent; color: #FFFFFF; border: 2px solid #FFFFFF; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s ease; }
+        .btn-outline:hover { background-color: #FFFFFF; color: #0A2540; }
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: #0A2540;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-
-        nav {
-            display: flex;
-            gap: 36px;
-            align-items: center;
-        }
-
-        nav a {
-            color: #5A6473;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:hover, nav a.active {
-            color: #0052CC;
-        }
-
-        .btn {
-            background-color: #0052CC;
-            color: #FFFFFF;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #003d99;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: #FFFFFF;
-            border: 2px solid #FFFFFF;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-outline:hover {
-            background-color: #FFFFFF;
-            color: #0A2540;
-        }
-
-        /* Page Hero */
+        /* Page Hero - YOUR IMAGE */
         .page-hero {
             background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.7)), 
                         url('/images/network-hero.jpg') center/cover;
-            color: #FFFFFF;
-            padding: 100px 0;
-            text-align: center;
+            color: #FFFFFF; padding: 100px 0; text-align: center;
         }
-
-        .page-hero h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .page-hero p {
-            font-size: 1.125rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin: 0 auto 32px;
-            line-height: 1.7;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            color: #7AB8FF;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .page-hero h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -1px; }
+        .page-hero p { font-size: 1.125rem; opacity: 0.95; max-width: 700px; margin: 0 auto 32px; line-height: 1.7; color: #B8C5D6; }
+        .hero-badge { display: inline-block; color: #7AB8FF; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
         /* Content Sections */
-        .content-section {
-            padding: 100px 0;
-        }
-
-        .content-section.alt {
-            background-color: #F8F9FA;
-        }
-
-        .section-top {
-            margin-bottom: 60px;
-        }
-
-        .section-top.center {
-            text-align: center;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-label {
-            color: #0052CC;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            color: #0A2540;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 16px;
-        }
-
-        .section-desc {
-            color: #5A6473;
-            font-size: 1.0625rem;
-            line-height: 1.7;
-        }
+        .content-section { padding: 100px 0; }
+        .content-section.alt { background-color: #F8F9FA; }
+        .section-top { margin-bottom: 60px; }
+        .section-top.center { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .section-label { color: #0052CC; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .section-title { font-size: 2.25rem; color: #0A2540; font-weight: 700; line-height: 1.3; margin-bottom: 16px; }
+        .section-desc { color: #5A6473; font-size: 1.0625rem; line-height: 1.7; }
 
         /* Hubs Grid */
-        .hubs-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .hub-card {
-            border: 1px solid #E0E3E5;
-            border-radius: 8px;
-            padding: 32px;
-            background-color: #FFFFFF;
-            transition: all 0.25s ease;
-        }
-
-        .hub-card:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-            transform: translateY(-2px);
-        }
-
-        .hub-card.featured {
-            grid-column: span 2;
-            background-color: #0A2540;
-            color: #FFFFFF;
-            border-color: #0A2540;
-        }
-
-        .hub-card.wide {
-            grid-column: span 2;
-            background-color: #F8F9FA;
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .hub-icon {
-            width: 48px;
-            height: 48px;
-            background-color: rgba(0, 82, 204, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        .hub-card.featured .hub-icon {
-            background-color: #0052CC;
-        }
-
-        .hub-card h3 {
-            font-size: 1.25rem;
-            color: #0A2540;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .hub-card.featured h3 {
-            color: #FFFFFF;
-        }
-
-        .hub-card p {
-            color: #5A6473;
-            line-height: 1.6;
-        }
-
-        .hub-card.featured p {
-            color: #B8C5D6;
-        }
-
-        .hub-link {
-            color: #0052CC;
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 16px;
-            display: inline-block;
-        }
-
-        .hub-image {
-            width: 50%;
-            height: 200px;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .hub-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
-
-        .hub-card:hover .hub-image img {
-            filter: grayscale(0%);
-        }
+        .hubs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .hub-card { border: 1px solid #E0E3E5; border-radius: 8px; padding: 32px; background-color: #FFFFFF; transition: all 0.25s ease; }
+        .hub-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); transform: translateY(-2px); }
+        .hub-card.featured { grid-column: span 2; background-color: #0A2540; color: #FFFFFF; border-color: #0A2540; }
+        .hub-card.wide { grid-column: span 2; background-color: #F8F9FA; display: flex; gap: 24px; align-items: center; }
+        .hub-icon { width: 48px; height: 48px; background-color: rgba(0, 82, 204, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+        .hub-card.featured .hub-icon { background-color: #0052CC; }
+        .hub-card h3 { font-size: 1.25rem; color: #0A2540; margin-bottom: 12px; font-weight: 600; }
+        .hub-card.featured h3 { color: #FFFFFF; }
+        .hub-card p { color: #5A6473; line-height: 1.6; }
+        .hub-card.featured p { color: #B8C5D6; }
+        .hub-link { color: #0052CC; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 16px; display: inline-block; text-decoration: none; }
+        .hub-image-placeholder { width: 50%; height: 200px; border-radius: 6px; background-color: #0A2540; display: flex; align-items: center; justify-content: center; }
+        .hub-image-placeholder svg { opacity: 0.2; }
 
         /* Corridors */
-        .corridors {
-            background-color: #0A2540;
-            color: #FFFFFF;
-            padding: 100px 0;
-        }
-
-        .corridors-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .corridor-item {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-left: 3px solid #0052CC;
-            margin-bottom: 20px;
-        }
-
-        .corridor-icon {
-            width: 48px;
-            height: 48px;
-            background-color: #0052CC;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .corridor-item h4 {
-            font-size: 1.125rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .corridor-item p {
-            color: #B8C5D6;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .corridor-image {
-            position: relative;
-            height: 500px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .corridor-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .corridor-stat {
-            position: absolute;
-            bottom: -24px;
-            left: -24px;
-            background-color: #0052CC;
-            padding: 24px;
-            color: #FFFFFF;
-            max-width: 280px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .corridor-stat .value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .corridor-stat .label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+        .corridors { background-color: #0A2540; color: #FFFFFF; padding: 100px 0; }
+        .corridors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .corridor-item { display: flex; gap: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.05); border-left: 3px solid #0052CC; margin-bottom: 20px; border-radius: 4px; }
+        .corridor-icon { width: 48px; height: 48px; background-color: #0052CC; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .corridor-item h4 { font-size: 1.125rem; margin-bottom: 8px; font-weight: 600; }
+        .corridor-item p { color: #B8C5D6; font-size: 0.9rem; line-height: 1.6; }
+        .corridor-visual { position: relative; height: 500px; border-radius: 8px; overflow: hidden; background-color: #1A3A5C; }
+        .corridor-stat { position: absolute; bottom: -24px; left: -24px; background-color: #0052CC; padding: 24px; color: #FFFFFF; max-width: 280px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border-radius: 8px; }
+        .corridor-stat .value { font-size: 2.5rem; font-weight: 700; display: block; margin-bottom: 4px; }
+        .corridor-stat .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
 
         /* Expertise Grid */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .expertise-card {
-            border: 1px solid #E0E3E5;
-            border-radius: 8px;
-            padding: 32px;
-            background-color: #FFFFFF;
-            transition: all 0.25s ease;
-        }
-
-        .expertise-card:hover {
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .expertise-icon {
-            width: 56px;
-            height: 56px;
-            background-color: rgba(0, 82, 204, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .expertise-card h3 {
-            font-size: 1.25rem;
-            color: #0A2540;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .expertise-card p {
-            color: #5A6473;
-            line-height: 1.6;
-        }
+        .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .expertise-card { border: 1px solid #E0E3E5; border-radius: 8px; padding: 32px; background-color: #FFFFFF; transition: all 0.25s ease; }
+        .expertise-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); }
+        .expertise-icon { width: 56px; height: 56px; background-color: rgba(0, 82, 204, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .expertise-card h3 { font-size: 1.25rem; color: #0A2540; margin-bottom: 12px; font-weight: 600; }
+        .expertise-card p { color: #5A6473; line-height: 1.6; }
 
         /* Partners */
-        .partners {
-            padding: 100px 0;
-            background-color: #F8F9FA;
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .partner-logos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .partner-logo {
-            background-color: #FFFFFF;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #E0E3E5;
-            border-radius: 6px;
-            filter: grayscale(100%);
-            transition: all 0.3s ease;
-            font-weight: 900;
-            font-size: 1rem;
-            color: #0A2540;
-            opacity: 0.4;
-        }
-
-        .partner-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
+        .partners { padding: 100px 0; background-color: #F8F9FA; }
+        .partners-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; }
+        .partner-logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .partner-logo { background-color: #FFFFFF; height: 120px; display: flex; align-items: center; justify-content: center; border: 1px solid #E0E3E5; border-radius: 6px; transition: all 0.3s ease; font-weight: 900; font-size: 1rem; color: #0A2540; opacity: 0.6; }
+        .partner-logo:hover { opacity: 1; border-color: #0052CC; }
 
         /* CTA */
-        .cta {
-            padding: 100px 0;
-            background-color: #0A2540;
-            color: #FFFFFF;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-icon {
-            position: absolute;
-            top: 0;
-            right: 0;
-            opacity: 0.1;
-            font-size: 300px;
-        }
-
-        .cta h2 {
-            font-size: 2.75rem;
-            margin-bottom: 16px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta p {
-            font-size: 1.125rem;
-            color: #B8C5D6;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
-        }
+        .cta { padding: 100px 0; background-color: #0A2540; color: #FFFFFF; text-align: center; position: relative; overflow: hidden; }
+        .cta-icon { position: absolute; top: 0; right: 0; opacity: 0.1; font-size: 300px; }
+        .cta h2 { font-size: 2.75rem; margin-bottom: 16px; font-weight: 700; position: relative; z-index: 1; }
+        .cta p { font-size: 1.125rem; color: #B8C5D6; max-width: 600px; margin: 0 auto 40px; position: relative; z-index: 1; }
+        .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
 
         /* Footer */
-        footer {
-            background-color: #0A2540;
-            color: #B8C5D6;
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .footer-brand {
-            max-width: 320px;
-        }
-
-        .footer-brand .logo {
-            color: #0052CC;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #B8C5D6;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            color: #FFFFFF;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #1A3A5C;
-            padding-top: 30px;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #7A8FA6;
-        }
+        footer { background-color: #0A2540; color: #B8C5D6; padding: 60px 0 30px; }
+        .footer-grid { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 40px; }
+        .footer-brand { max-width: 320px; }
+        .footer-brand .logo { color: #0052CC; margin-bottom: 16px; display: block; }
+        .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+        .footer-links a { color: #B8C5D6; text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: #FFFFFF; }
+        .footer-bottom { border-top: 1px solid #1A3A5C; padding-top: 30px; text-align: center; font-size: 0.875rem; color: #7A8FA6; }
 
         /* Mobile */
         @media (max-width: 768px) {
-            .page-hero h1 {
-                font-size: 2.25rem;
-            }
-            
-            nav {
-                display: none;
-            }
-
-            .hubs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hub-card.featured,
-            .hub-card.wide {
-                grid-column: span 1;
-            }
-
-            .hub-card.wide {
-                flex-direction: column;
-            }
-
-            .hub-image {
-                width: 100%;
-            }
-
-            .corridors-grid,
-            .partners-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .partner-logos {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cta h2 {
-                font-size: 2rem;
-            }
-
-            .page-hero {
-                padding: 80px 0;
-            }
+            .page-hero h1 { font-size: 2.25rem; }
+            nav { display: none; }
+            .hubs-grid { grid-template-columns: 1fr; }
+            .hub-card.featured, .hub-card.wide { grid-column: span 1; }
+            .hub-card.wide { flex-direction: column; }
+            .hub-image-placeholder { width: 100%; }
+            .corridors-grid, .partners-grid { grid-template-columns: 1fr; gap: 40px; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .partner-logos { grid-template-columns: repeat(2, 1fr); }
+            .cta h2 { font-size: 2rem; }
+            .page-hero { padding: 80px 0; }
         }
     </style>
 </head>
@@ -607,7 +128,7 @@
                 <nav>
                     <a href="/">Home</a>
                     <a href="service.html">Services</a>
-                    <a href="trailers.html">Fleet</a>
+                    <a href="fleet.html">Fleet</a>
                     <a href="network.html" class="active">Network</a>
                     <a href="safety.html">Safety</a>
                     <a href="contact.html" class="btn">Request Quote</a>
@@ -617,13 +138,14 @@
     </header>
 
     <main>
+        <!-- HERO USES YOUR IMAGE -->
         <section class="page-hero">
             <div class="container">
                 <span class="hero-badge">International Logistics Excellence</span>
                 <h1>Al Harthy's Global Reach: Connecting Industrial Hubs Across Continents</h1>
                 <div class="hero-actions">
                     <a href="#hubs" class="btn">Explore Network</a>
-                    <a href="trailers.html" class="btn-outline">Download Fleet Specs</a>
+                    <a href="fleet.html" class="btn-outline">Download Fleet Specs</a>
                 </div>
             </div>
         </section>
@@ -631,6 +153,7 @@
         <section class="content-section" id="hubs">
             <div class="container">
                 <div class="section-top">
+                    <span class="section-label">Our Network</span>
                     <h2 class="section-title">Strategic Regional Hubs</h2>
                     <p class="section-desc">We maintain a physical presence in the world's most critical industrial zones, ensuring local expertise with a global standard of service.</p>
                 </div>
@@ -642,7 +165,7 @@
                         </div>
                         <h3>Middle East (HQ)</h3>
                         <p>Centralized operations in Muscat and Dubai, serving as the gateway between East and West with premier sea-to-land connectivity.</p>
-                        <span class="hub-link">Regional Logistics Center →</span>
+                        <a href="#" class="hub-link">Regional Logistics Center →</a>
                     </div>
 
                     <div class="hub-card">
@@ -664,13 +187,13 @@
                     <div class="hub-card wide">
                         <div>
                             <div class="hub-icon">
-                                <svg width="24" height="24" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg width="24" height="24" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
                             <h3>Emerging Africa</h3>
                             <p>Expanding network across East and North Africa, connecting mineral-rich regions to global export markets.</p>
                         </div>
-                        <div class="hub-image">
-                            <img src="/images/network-hero.jpg" alt="Africa logistics hub">
+                        <div class="hub-image-placeholder">
+                            <svg width="60" height="60" fill="none" stroke="#0052CC" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                     </div>
 
@@ -706,7 +229,7 @@
 
                         <div class="corridor-item">
                             <div class="corridor-icon">
-                                <svg width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                <svg width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                             </div>
                             <div>
                                 <h4>Pan-Asian Heavy Corridor</h4>
@@ -716,7 +239,7 @@
 
                         <div class="corridor-item">
                             <div class="corridor-icon">
-                                <svg width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                                <svg width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
                             </div>
                             <div>
                                 <h4>Southbound Industrial Link</h4>
@@ -725,8 +248,7 @@
                         </div>
                     </div>
 
-                    <div class="corridor-image">
-                        <img src="/images/network-hero.jpg" alt="Global transport corridors">
+                    <div class="corridor-visual">
                         <div class="corridor-stat">
                             <span class="value">99.8%</span>
                             <span class="label">On-Time Delivery Rate Across Global Routes</span>
@@ -739,6 +261,7 @@
         <section class="content-section">
             <div class="container">
                 <div class="section-top center">
+                    <span class="section-label">Our Expertise</span>
                     <h2 class="section-title">Navigating Complexity</h2>
                     <p class="section-desc">International logistics is more than moving cargo—it's about moving through regulations. Our experts manage the details so your business doesn't have to.</p>
                 </div>
@@ -762,7 +285,7 @@
 
                     <div class="expertise-card">
                         <div class="expertise-icon">
-                            <svg width="28" height="28" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            <svg width="28" height="28" fill="none" stroke="#0052CC" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
                         <h3>Transit Permits</h3>
                         <p>Specialized handling of hazardous materials (HAZMAT) and oversized cargo permits across multiple international borders.</p>
@@ -775,6 +298,7 @@
             <div class="container">
                 <div class="partners-grid">
                     <div>
+                        <span class="section-label">Our Partners</span>
                         <h2 class="section-title">Global Alliances, Local Strength.</h2>
                         <p class="section-desc">We partner with the world's leading shipping lines and regional logistics authorities to provide a unified service experience.</p>
                         <a href="contact.html" style="color: #0A2540; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-top: 24px; text-decoration: none;">
@@ -816,7 +340,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="service.html">Services</a>
-                    <a href="trailers.html">Fleet</a>
+                    <a href="fleet.html">Fleet</a>
                     <a href="safety.html">Safety</a>
                     <a href="about.html">About</a>
                     <a href="career.html">Careers</a>
