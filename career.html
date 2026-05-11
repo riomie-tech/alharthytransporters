@@ -63,10 +63,13 @@ body {
 h1, h2, h3 {
   font-family: 'Work Sans', sans-serif;
 }
+/* Hide broken image alt text */
+img {
+  text-indent: -9999px;
+}
 </style>
 </head>
 <body class="bg-background text-on-surface">
-<!-- Header -->
 <header class="bg-white border-b border-outline sticky top-0 z-50">
   <div class="max-w-[1200px] mx-auto px-5">
     <div class="flex justify-between items-center h-20">
@@ -88,10 +91,12 @@ h1, h2, h3 {
 </header>
 
 <main>
-<!-- Hero Section -->
-<section class="relative min-h-[500px] flex items-center overflow-hidden">
+<section class="relative min-h-[500px] flex items-center overflow-hidden bg-primary">
   <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1601584115197-04ecc0da3d0d?q=80&w=2070&auto=format&fit=crop" alt="Al Harthy Transporters Scania V8 fleet at sunset"/>
+    <img class="w-full h-full object-cover" 
+         src="https://images.unsplash.com/photo-1601584115197-04ecc0da3d0d?q=80&w=2070&auto=format&fit=crop" 
+         alt=""
+         onerror="this.style.display='none'"/>
     <div class="hero-overlay absolute inset-0"></div>
   </div>
   <div class="relative z-10 max-w-[1200px] mx-auto px-5 w-full">
@@ -115,7 +120,7 @@ h1, h2, h3 {
   </div>
 </section>
 
-<!-- Why Join Us Section -->
+<!-- Rest of sections same as before -->
 <section class="py-section-padding bg-white">
   <div class="max-w-[1200px] mx-auto px-5">
     <div class="text-center max-w-2xl mx-auto mb-16">
@@ -142,7 +147,6 @@ h1, h2, h3 {
   </div>
 </section>
 
-<!-- Vacancies Section -->
 <section id="vacancies" class="py-section-padding bg-surface">
   <div class="max-w-[1200px] mx-auto px-5">
     <h2 class="font-h2 text-h2 text-primary mb-12 text-center">Current Vacancies</h2>
@@ -185,7 +189,6 @@ h1, h2, h3 {
 </section>
 </main>
 
-<!-- Footer -->
 <footer class="bg-primary text-[#B8C5D6] pt-16 pb-8">
   <div class="max-w-[1200px] mx-auto px-5">
     <div class="flex justify-between mb-10 flex-wrap gap-10">
